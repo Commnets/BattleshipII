@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Worlds>
+
+	<!-- Includes -->
+	<Include file="adworlds.xml"/>
+
+	<!-- The very basic world.
+		 Used just like a template to create the rest in a real game 
+		 It is made up of a single scene -->
+	<World id="50000">
+		<Scenes>
+			<Scene id="60000">
+				<Actions>
+				</Actions>
+				<Attributes>
+					<Attribute id="NAME" value="Example"/>
+					<Attribute id="MOVEMENT" value="1,1,0"/> 
+					<!-- To indicate the axis the scene can move to
+						 Notice that by default X and Y axis are allowed. 
+						 Whether the scene move or not actually will depend on the size of the foreground map 
+						 @see BKSpace1.xml and so on as an example. 
+						 Initially the moving space is a little bit widder than the screen. -->
+					<Attribute id="BACKGROUNDMUSIC" value="50001"/> <!-- The music in the background if it is on -->
+					
+					<!-- Specific of the scene example -->
+					<Attribute id="NUMBERASTEROIDS" value="3"/> <!-- The maximum number of asteroids in the scene -->
+					<Attribute id="SCENETIME" value="120"/> <!-- The time the scene is going to last (seconds) -->
+				</Attributes>
+				<Maps>
+					<!-- The backgrounds with beautiful space material 
+						 and initially widder than the screen. @see conf.xml -->
+					<Map id="50100" file="maps/BKSpace1.xml"/>
+					<Map id="50101" file="maps/BKSpace2.xml"/>
+					<Map id="50102" file="maps/BKSpace3.xml"/>
+					<Map id="50103" file="maps/BKSpace4.xml"/>
+					<Map id="50104" file="maps/BKSpace5.xml"/>
+					<Map id="50105" file="maps/BKSpace6.xml"/>
+				
+					<!-- A background with starts and planets and with the same width than the standard screen 
+						 @see conf.xml -->
+					<Map id="60000" file="maps/background.xml"/>
+					
+					<!-- A map totally transparent. 
+						 The map has initially the same width than the standard screen (@see conf.xml)
+						 It can be changed to create different visual effects -->
+					<Map id="70000" file="maps/nomap.xml"/>
+				</Maps>
+				<Entities>
+				</Entities>
+			</Scene>
+		</Scenes>
+		<Attributes>
+			<Attribute id="NAME" value="Example"/>
+		</Attributes>
+	</World>
+
+</Worlds>

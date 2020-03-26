@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Movements>
+
+	<!-- Includes -->
+	<Include file="admovements.xml"/>
+
+	<!-- Battleship type 1 movements -->
+	<!-- Linear movement in the space for the battleship -->
+	<Movement id="50000">
+		<!-- Speed -->
+		<Variable id="0" value="6"/>
+	</Movement>
+	<!-- Staying movement -->
+	<Movement id="50001"/>
+
+	<!-- Battleship type 2 movements -->
+	<!-- Linear movement in the space for the battleship -->
+	<Movement id="50002">
+		<!-- Speed -->
+		<Variable id="0" value="6"/>
+	</Movement>
+	<!-- Staying movement -->
+	<Movement id="50003"/>
+	
+	<!-- Shooting movements -->
+	<!-- The number of max movements will depend on the max number of enemies possible simultaneously in the scene (0)
+		 and the max number of simultaneously shootings per enemy in the scene (10), 
+		 max the max number of them used in the battleship (100). So total = 100 
+		 All these variables are defined at bsdatagame.hpp / cpp. If those are changed, these ones should do too. 
+		 The hole for movements is prepared up to a maximum of 1100 (10 enemies). -->
+	<!-- Linear movement in the space of any shooting -->
+	<SetOfMovements fromId="50100" number="100">
+		<!-- Double speed than the one of the battleship -->
+		<Variable id="0" value="6"/>
+	</SetOfMovements>
+	<!-- When disappearing, there is no movement -->
+	<SetOfMovements fromId="51200" number="100"/>
+	
+	<!-- Asteroid movements -->
+	<!-- Linear movement in the space of any asteroid -->
+	<SetOfMovements fromId="53000" number="50">
+		<!-- A little bit faster than the one of the battleship -->
+		<Variable id="0" value="3"/>
+	</SetOfMovements>
+	<!-- When disappearing, there is no movement -->
+	<SetOfMovements fromId="53100" number="50"/>
+	
+	<!-- Things to catch movements.
+		 In the default implementation, the only valid thing to catch is a pill to increment the power.
+		 In the default implementation, only one at the same time in the scene is allowed. -->
+	<!-- Linear movement in the space of any of these -->
+	<SetOfMovements fromId="54000" number="1">
+		<!-- Speed -->
+		<Variable id="0" value="2"/>
+	</SetOfMovements>
+	<!-- Staying movement -->
+	<SetOfMovements fromId="54100" number="1"/>
+	
+	<!-- Energy Elements movements 
+		 In the default implementation, only one at the same timne is allowed. -->
+	<!-- Linear movement in the space of any of these. -->
+	<SetOfMovements fromId="55000" number="1">
+		<!-- Speed -->
+		<Variable id="0" value="2"/>
+	</SetOfMovements>
+	<!-- Staying movement -->
+	<SetOfMovements fromId="55100" number="1"/>
+
+</Movements>

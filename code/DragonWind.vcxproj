@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{876C13CE-69BC-4945-BCDE-0BD12193E383}</ProjectGuid>
+    <RootNamespace>DragonWind</RootNamespace>
+    <ProjectName>DragonWind</ProjectName>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\..\exe\</OutDir>
+    <IntDir>..\..\obj\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\exe\</OutDir>
+    <IntDir>..\..\obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)D</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\include;..\..\projects\tinyxml;..\..\projects\tmxparser;..\..\projects\zpplib;$(SDL_HOME)\include;$(SDLIMAGE_HOME)\include;$(SDLMIXER_HOME)\include;$(SDLGFX_HOME);$(SDLTTF_HOME)\include;$(FMOD_HOME)\api\lowlevel\inc</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\lib;$(SDL_HOME)\lib\x86;$(SDLIMAGE_HOME)\lib\x86;$(SDLMIXER_HOME)\lib\x86;$(SDLGFX_HOME)\Win32\Debug;$(SDLTTF_HOME)\lib\x86;$(FMOD_HOME)\api\lowlevel\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ArcadeLibD.lib;CommonlibD.lib;CommonSDLD.lib;tinyxmlD.lib;SDL2.lib;SDL2_image.lib;SDL2_mixer.lib;TmxParserD.lib;SDL2_gfx.lib;zpplibD.lib;SDL2_ttf.lib;FMODD.lib;fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\include;..\..\projects\tinyxml;..\..\projects\tmxparser;..\..\projects\zpplib;$(SDL_HOME)\include;$(SDLIMAGE_HOME)\include;$(SDLMIXER_HOME)\include;$(SDLGFX_HOME);$(SDLTTF_HOME)\include;$(FMOD_HOME)\api\lowlevel\inc</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\lib;$(SDL_HOME)\lib\x86;$(SDLIMAGE_HOME)\lib\x86;$(SDLMIXER_HOME)\lib\x86;$(SDLGFX_HOME)\Win32\Release;$(SDLTTF_HOME)\lib\x86;$(FMOD_HOME)\api\lowlevel\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Commonlib.lib;ArcadeLib.lib;CommonSDL.lib;tinyxml.lib;SDL2.lib;SDL2_image.lib;TmxParser.lib;SDL2_mixer.lib;SDL2_gfx.lib;zpplib.lib;SDL2_ttf.lib;SDL2main.lib;FMOD.lib;fmod_vc.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Artist.hpp" />
+    <ClInclude Include="CityScenes.hpp" />
+    <ClInclude Include="CityWorld.hpp" />
+    <ClInclude Include="DarkForestScenes.hpp" />
+    <ClInclude Include="DarkForestWorld.hpp" />
+    <ClInclude Include="Defs.hpp" />
+    <ClInclude Include="DessertScenes.hpp" />
+    <ClInclude Include="DessertWorld.hpp" />
+    <ClInclude Include="doxy.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Entities.hpp" />
+    <ClInclude Include="EntitiesBuilder.hpp" />
+    <ClInclude Include="EnvConditions.hpp" />
+    <ClInclude Include="Game.hpp" />
+    <ClInclude Include="GameStates.hpp" />
+    <ClInclude Include="InputHandler.hpp" />
+    <ClInclude Include="LandscapeScenes.hpp" />
+    <ClInclude Include="LandscapeWorld.hpp" />
+    <ClInclude Include="Layers.hpp" />
+    <ClInclude Include="Maps.hpp" />
+    <ClInclude Include="MapsBuilder.hpp" />
+    <ClInclude Include="MountainsScenes.hpp" />
+    <ClInclude Include="MountainsWorld.hpp" />
+    <ClInclude Include="Movements.hpp" />
+    <ClInclude Include="MovementsBuilder.hpp" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Scenes.hpp" />
+    <ClInclude Include="ScoreObjects.hpp" />
+    <ClInclude Include="Shoot.hpp" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StepsGenerator.hpp" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TempleScenes.hpp" />
+    <ClInclude Include="TempleWorld.hpp" />
+    <ClInclude Include="TileLayers.hpp" />
+    <ClInclude Include="Tiles.hpp" />
+    <ClInclude Include="ToCatch.hpp" />
+    <ClInclude Include="ToEat.hpp" />
+    <ClInclude Include="TowerScenes.hpp" />
+    <ClInclude Include="TrainingScenes.hpp" />
+    <ClInclude Include="TrainingWorld.hpp" />
+    <ClInclude Include="Worlds.hpp" />
+    <ClInclude Include="WorldsBuilder.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Artists.cpp" />
+    <ClCompile Include="CityScenes.cpp" />
+    <ClCompile Include="CityWorld.cpp" />
+    <ClCompile Include="DarkForestScenes.cpp" />
+    <ClCompile Include="DarkForestWorld.cpp" />
+    <ClCompile Include="DessertScenes.cpp" />
+    <ClCompile Include="DessertWorld.cpp" />
+    <ClCompile Include="Entities.cpp" />
+    <ClCompile Include="EntitiesBuilder.cpp" />
+    <ClCompile Include="EnvConditions.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameStates.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="LandscapeScenes.cpp" />
+    <ClCompile Include="LandscapeWorld.cpp" />
+    <ClCompile Include="Layers.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Maps.cpp" />
+    <ClCompile Include="MapsBuilder.cpp" />
+    <ClCompile Include="MountainsScenes.cpp" />
+    <ClCompile Include="MountainsWorld.cpp" />
+    <ClCompile Include="Movements.cpp" />
+    <ClCompile Include="MovementsBuilder.cpp" />
+    <ClCompile Include="Scenes.cpp" />
+    <ClCompile Include="ScoreObjects.cpp" />
+    <ClCompile Include="Shoot.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="StepsGenerator.cpp" />
+    <ClCompile Include="TempleScenes.cpp" />
+    <ClCompile Include="TempleWorld.cpp" />
+    <ClCompile Include="TileLayers.cpp" />
+    <ClCompile Include="TIles.cpp" />
+    <ClCompile Include="ToCatch.cpp" />
+    <ClCompile Include="ToEat.cpp" />
+    <ClCompile Include="TowerScenes.cpp" />
+    <ClCompile Include="TrainingScenes.cpp" />
+    <ClCompile Include="TrainingWorld.cpp" />
+    <ClCompile Include="Worlds.cpp" />
+    <ClCompile Include="WorldsBuilder.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="conf.xml" />
+    <Xml Include="entities.xml" />
+    <Xml Include="forms.xml" />
+    <Xml Include="maps.xml" />
+    <Xml Include="movements.xml" />
+    <Xml Include="objects.xml" />
+    <Xml Include="sounds.xml" />
+    <Xml Include="worlds.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DragonWind.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="forms\DragonIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
