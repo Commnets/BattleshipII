@@ -12,7 +12,7 @@
 
 #include "TestBattleship.hpp"
 
-using namespace TestBattleship;
+using namespace BattleshipII;
 
 #ifndef _CONSOLE
 #include <SDL.h>

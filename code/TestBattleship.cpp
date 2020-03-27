@@ -2,14 +2,14 @@
 
 // --------------------------------------------------------------------------------
 // ---
-QGAMES::World* TestBattleship::WorldBuilder::createWorldObject (int no, const QGAMES::Scenes& s, 
+QGAMES::World* BattleshipII::WorldBuilder::createWorldObject (int no, const QGAMES::Scenes& s, 
 		const QGAMES::WorldProperties& p)
 {
 	return (BATTLESHIP::WorldBuilder::createWorldObject (no, s, p));
 }
 
 // ---
-QGAMES::Scene* TestBattleship::WorldBuilder::createSceneObject (int ns, const QGAMES::Maps& m, 
+QGAMES::Scene* BattleshipII::WorldBuilder::createSceneObject (int ns, const QGAMES::Maps& m, 
 		const QGAMES::Scene::Connections& cn, 
 		const QGAMES::SceneProperties& p, const QGAMES::EntitiesPerLayer& ePL)
 {
@@ -19,14 +19,14 @@ QGAMES::Scene* TestBattleship::WorldBuilder::createSceneObject (int ns, const QG
 
 // --------------------------------------------------------------------------------
 // ---
-void TestBattleship::Game::Conf::adjustToPlayers (int nP)
+void BattleshipII::Game::Conf::adjustToPlayers (int nP)
 {
 	BATTLESHIP::Game::Conf::adjustToPlayers (nP);
 	for (int i = 1; i <= numberPlayers (); setNumberLives (i++, _maxLives)); // Set the number of lives per player...
 }
 
 // ---
-void TestBattleship::Game::setShowFPS (bool s)
+void BattleshipII::Game::setShowFPS (bool s)
 {
 	_showFPS = s;
 
@@ -40,7 +40,7 @@ void TestBattleship::Game::setShowFPS (bool s)
 }
 
 // ---
-void TestBattleship::Game::processEvent (const QGAMES::Event& evnt)
+void BattleshipII::Game::processEvent (const QGAMES::Event& evnt)
 {
 	if (evnt.code () == __QGAMES_KEYBOARDEVENT__)
 	{
@@ -53,14 +53,14 @@ void TestBattleship::Game::processEvent (const QGAMES::Event& evnt)
 }
 
 // ---
-QGAMES::Game::Configuration* TestBattleship::Game::createConfiguration ()
+QGAMES::Game::Configuration* BattleshipII::Game::createConfiguration ()
 { 
 	return (new Conf 
 		(1 /** Default players */, std::atoi (parameter (__GAMETEST_MAXNUMBEROFLIVESPARAMETER__).c_str ()))); 
 }
 
 // ---
-std::string TestBattleship::Game::defaultParameter (const std::string& p) const
+std::string BattleshipII::Game::defaultParameter (const std::string& p) const
 {
 	std::string result (__NULL_STRING__);
 	if (p == std::string (__GAMETEST_MAXNUMBEROFLIVESPARAMETER__))
@@ -74,7 +74,7 @@ std::string TestBattleship::Game::defaultParameter (const std::string& p) const
 }
 
 // ---
-void TestBattleship::Game::initialize ()
+void BattleshipII::Game::initialize ()
 {
 	if (isInitialized ())
 		return; // Only once...
@@ -112,7 +112,7 @@ void TestBattleship::Game::initialize ()
 }
 
 // ---
-void TestBattleship::Game::finalize ()
+void BattleshipII::Game::finalize ()
 {
 	unObserve (inputHandler ());
 

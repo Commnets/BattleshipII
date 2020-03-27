@@ -1,23 +1,23 @@
-/** \ingroup Example */
+/** \ingroup BSII */
 /*@{*/
 
 /**	
  *	@file	
- *	File: TestBattleship.hpp \n
+ *	File: Battleship II.hpp \n
  *	Framework: Commty Game Library (CGL) \n
  *	Author: Ignacio Cea Forniés (Community Networks) \n
- *	Creation Date: 02/11/2019 \n
- *	Description: Testing how the Battleship library works. \n
+ *	Creation Date: 23/03/2020 \n
+ *	Description: Very simple and basic Battleship game. \n
  *	Versions: 1.0 Initial
  */
 
-#ifndef __GAMETEST_BATTLESHIPGAME__
-#define __GAMETEST_BATTLESHIPGAME__
+#ifndef __BATTLESHIPIIGAME__
+#define __BATTLESHIPIIGAME__
 
 #include "Defs.hpp"
 #include <BattleshipLike/bsinclude.hpp>
 
-namespace TestBattleship
+namespace BattleshipII
 {
 	// -------The world, scenes and maps-------------------------------------------------------------------------
 	/** The extension to create worlds. */
