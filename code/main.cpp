@@ -4,13 +4,13 @@
  *	Framework: Commty Game Library (CGL) \n
  *	Author: Ignacio Cea Forniés (Community Networks) \n
  *	Creation Date: 02/11/2019 \n
- *	Description: Main program for testing Battleship Games
+ *	Description: Main program for Battleship II
  *	Versions: 1.0 Initial
  */
 
 #include "stdafx.h"
 
-#include "TestBattleship.hpp"
+#include "Game.hpp"
 
 using namespace BattleshipII;
 

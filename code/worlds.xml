@@ -4,4 +4,7 @@
 	<!-- Includes -->
 	<Include file="bsworlds.xml"/>
 	
+	<!-- The first stage world -->
+	<Include file="stage1world.xml"/>
+	
 </Worlds>

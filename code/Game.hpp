@@ -3,41 +3,23 @@
 
 /**	
  *	@file	
- *	File: Battleship II.hpp \n
- *	Framework: Commty Game Library (CGL) \n
+ *	File: Game.hpp \n
+ *	Game: Battleship II \n
  *	Author: Ignacio Cea Forniés (Community Networks) \n
  *	Creation Date: 23/03/2020 \n
- *	Description: Very simple and basic Battleship game. \n
+ *	Description: To manipulate the very basics of the Battleship II game. \n
  *	Versions: 1.0 Initial
  */
 
-#ifndef __BATTLESHIPIIGAME__
-#define __BATTLESHIPIIGAME__
+#ifndef __BATTLESHIPII_GAME__
+#define __BATTLESHIPII_GAME__
 
 #include "Defs.hpp"
+#include "Builders.hpp"
 #include <BattleshipLike/bsinclude.hpp>
 
 namespace BattleshipII
 {
-	// -------The world, scenes and maps-------------------------------------------------------------------------
-	/** The extension to create worlds. */
-	class WorldBuilder : public BATTLESHIP::WorldBuilder
-	{
-		public: 
-		WorldBuilder (const std::string& eDef, QGAMES::MapBuilder* mB)
-			: BATTLESHIP::WorldBuilder (eDef, mB)
-							{ }
-
-		private:
-		virtual QGAMES::World* createWorldObject (int no, const QGAMES::Scenes& s, 
-			const QGAMES::WorldProperties& p);
-		virtual QGAMES::Scene* createSceneObject (int ns, const QGAMES::Maps& m, 
-			const QGAMES::Scene::Connections& cn, 
-			const QGAMES::SceneProperties& p, const QGAMES::EntitiesPerLayer& ePL);
-	};
-	// --------------------------------------------------------------------------------
-
-	// -------The Game-------------------------------------------------------------------------
 	class Game : public BATTLESHIP::Game
 	{
 		public:
@@ -100,7 +82,6 @@ namespace BattleshipII
 		/** To show or not the FPS in the right bottom corner. */
 		bool _showFPS;
 	};
-	// --------------------------------------------------------------------------------
 }
 
 #endif

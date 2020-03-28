@@ -99,17 +99,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Builders.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Scenes.cpp" />
+    <ClCompile Include="Stage1Scenes.cpp" />
+    <ClCompile Include="Stage1Worlds.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="TestBattleship.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Worlds.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Builders.hpp" />
     <ClInclude Include="Defs.hpp" />
     <ClInclude Include="doxy.hpp" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Scenes.hpp" />
+    <ClInclude Include="Stage1Scenes.hpp" />
+    <ClInclude Include="Stage1Worlds.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="TestBattleship.hpp" />
+    <ClInclude Include="Game.hpp" />
+    <ClInclude Include="Worlds.hpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="battleshipicon.ico" />
@@ -693,6 +703,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </Xml>
     <Xml Include="sounds.xml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </Xml>
+    <Xml Include="stage1world.xml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </Xml>
     <Xml Include="worlds.xml">

@@ -31,15 +31,42 @@
     <Filter Include="Data\Forms\Sources">
       <UniqueIdentifier>{8f2045d3-c1af-462a-a705-e61933c7f8e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Archivos de código fuente\Scenes">
+      <UniqueIdentifier>{adf8a1ac-9fd7-45d7-81d0-46de49c74375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de código fuente\Worlds">
+      <UniqueIdentifier>{27f18fac-890e-4e8c-9d93-307119512058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Scenes">
+      <UniqueIdentifier>{0fdf84f0-7ab1-4f12-a405-28e8c4bb474c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Worlds">
+      <UniqueIdentifier>{6e9ac917-f5e1-4f02-9221-651f9fecd377}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestBattleship.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="Builders.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="Scenes.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage1Worlds.cpp">
+      <Filter>Archivos de código fuente\Worlds</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage1Scenes.cpp">
+      <Filter>Archivos de código fuente\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Worlds.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,13 +80,28 @@
     <ClInclude Include="targetver.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="TestBattleship.hpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="doxy.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Builders.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Scenes.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage1Worlds.hpp">
+      <Filter>Archivos de encabezado\Worlds</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage1Scenes.hpp">
+      <Filter>Archivos de encabezado\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Worlds.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -509,6 +551,9 @@
     </Xml>
     <Xml Include="maps\nomap.xml">
       <Filter>Data\Maps</Filter>
+    </Xml>
+    <Xml Include="stage1world.xml">
+      <Filter>Configuration</Filter>
     </Xml>
   </ItemGroup>
   <ItemGroup>

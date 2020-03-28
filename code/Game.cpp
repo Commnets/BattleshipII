@@ -1,23 +1,5 @@
-#include "TestBattleship.hpp"
+#include "Game.hpp"
 
-// --------------------------------------------------------------------------------
-// ---
-QGAMES::World* BattleshipII::WorldBuilder::createWorldObject (int no, const QGAMES::Scenes& s, 
-		const QGAMES::WorldProperties& p)
-{
-	return (BATTLESHIP::WorldBuilder::createWorldObject (no, s, p));
-}
-
-// ---
-QGAMES::Scene* BattleshipII::WorldBuilder::createSceneObject (int ns, const QGAMES::Maps& m, 
-		const QGAMES::Scene::Connections& cn, 
-		const QGAMES::SceneProperties& p, const QGAMES::EntitiesPerLayer& ePL)
-{
-	return (BATTLESHIP::WorldBuilder::createSceneObject (ns, m, cn, p, ePL));
-}
-// --------------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------------
 // ---
 void BattleshipII::Game::Conf::adjustToPlayers (int nP)
 {
@@ -56,18 +38,18 @@ void BattleshipII::Game::processEvent (const QGAMES::Event& evnt)
 QGAMES::Game::Configuration* BattleshipII::Game::createConfiguration ()
 { 
 	return (new Conf 
-		(1 /** Default players */, std::atoi (parameter (__GAMETEST_MAXNUMBEROFLIVESPARAMETER__).c_str ()))); 
+		(1 /** Default players */, std::atoi (parameter (__BATTLESHIPII_MAXNUMBEROFLIVESPARAMETER__).c_str ()))); 
 }
 
 // ---
 std::string BattleshipII::Game::defaultParameter (const std::string& p) const
 {
 	std::string result (__NULL_STRING__);
-	if (p == std::string (__GAMETEST_MAXNUMBEROFLIVESPARAMETER__))
-		result = std::string (__GAMETEST_DEFAULTMAXNUMBEROFLIVESPARAMETER__);
+	if (p == std::string (__BATTLESHIPII_MAXNUMBEROFLIVESPARAMETER__))
+		result = std::string (__BATTLESHIPII_DEFAULTMAXNUMBEROFLIVESPARAMETER__);
 	else
-	if (p == std::string (__GAMETEST_SHOWFPSPARAMETER__))
-		result = std::string (__GAMETEST_DEFAULTSHOWFPSPARAMETER__);
+	if (p == std::string (__BATTLESHIPII_SHOWFPSPARAMETER__))
+		result = std::string (__BATTLESHIPII_DEFAULTSHOWFPSPARAMETER__);
 	else
 		result = BATTLESHIP::Game::defaultParameter (p);
 	return (result);
@@ -102,7 +84,7 @@ void BattleshipII::Game::initialize ()
 #ifndef NDEBUG
 	setShowFPS (true);
 #else
-	std::string sfps = parameter (std::string (__GAMETEST_SHOWFPSPARAMETER__));
+	std::string sfps = parameter (std::string (__BATTLESHIPII_SHOWFPSPARAMETER__));
 	setShowFPS (QGAMES::toUpper (QGAMES::trim (sfps)) == std::string (__YES_STRING__));
 #endif
 
@@ -118,4 +100,3 @@ void BattleshipII::Game::finalize ()
 
 	BATTLESHIP::Game::finalize ();
 }
-// --------------------------------------------------------------------------------

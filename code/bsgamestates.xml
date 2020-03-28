@@ -432,9 +432,9 @@
 					<Instruction line="but it doesn't matter, because" type="0" font="20021" position="0.5" reference="0"/> 
 					<Instruction line="your guns will destroy all of them!" type="0" font="20021" position="0.5" reference="0"/> 
 					<Instruction line=" " type="0" font="20021" position="0.5" reference="0"/> 
-					<Instruction line="Take care alsso with the asteroids," type="0" font="20021" position="0.5" reference="0"/> 
+					<Instruction line="Take care also with the asteroids," type="0" font="20021" position="0.5" reference="0"/> 
 					<Instruction line="the space is plenty of them." type="0" font="20021" position="0.5" reference="0"/> 
-					<Instruction line="Get the fuel you find" type="0" font="20021" position="0.5" reference="0"/> 
+					<Instruction line="Get the fuel pills you come across" type="0" font="20021" position="0.5" reference="0"/> 
 					<Instruction line="to continue your fight!" type="0" font="20021" position="0.5" reference="0"/> 
 					<Instruction line=" " type="0" font="20021" position="0.5" reference="0"/> 
 					<Instruction line="Enjoy and good luck" type="0" font="20022" position="0.5" reference="0"/> 
@@ -577,7 +577,7 @@
 			<!-- A message to point that the goal has been reached -->
 			<GameState id="50112" type="10003" name="Get Message" main="NO"> <!-- Type TEXT Shown -->
 				<Attributes>
-					<Attribute id="TEXT" value="You did it!"/>
+					<Attribute id="TEXT" value="Stage cleaned!"/>
 					<Attribute id="FONT" value="20032"/>
 					<Attribute id="FADE" value="255"/>
 					<Attribute id="POSITION" value="0.5,0.5,0"/>

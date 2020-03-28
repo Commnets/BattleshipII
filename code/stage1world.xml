@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Worlds>
+	
+	<!-- Asteroids -->
+	<World id="50001">
+	
+		<Scenes>
+			<Scene id="60010">
+				<Actions>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="NAME" value="First Stage"/>
+					<Attribute id="MOVEMENT" value="1,1,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="50001"/> 
+					<Attribute id="NUMBERASTEROIDS" value="3"/> 
+					<Attribute id="SCENETIME" value="10"/> 
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="60011" at="0"/>
+				</Conexions>
+				
+				<Maps>
+					<Map id="50100" file="maps/BKSpace1.xml"/>
+					<Map id="70000" file="maps/nomap.xml"/>
+				</Maps>
+				
+				<Entities>
+				</Entities>
+				
+			</Scene>
+			
+			<Scene id="60011">
+				<Actions>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="NAME" value="Second Stage"/>
+					<Attribute id="MOVEMENT" value="1,1,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="50001"/> 
+					<Attribute id="NUMBERASTEROIDS" value="3"/> 
+					<Attribute id="SCENETIME" value="10"/> 
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="60012" at="0"/>
+				</Conexions>
+				
+				<Maps>
+					<Map id="50100" file="maps/BKSpace1.xml"/>
+					<Map id="70000" file="maps/nomap.xml"/>
+				</Maps>
+				
+				<Entities>
+				</Entities>
+
+			</Scene>
+			
+			<Scene id="60012">
+				<Actions>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="NAME" value="Third Stage"/>
+					<Attribute id="MOVEMENT" value="1,1,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="50001"/> 
+					<Attribute id="NUMBERASTEROIDS" value="3"/> 
+					<Attribute id="SCENETIME" value="10"/> 
+				</Attributes>
+				
+				<Maps>
+					<Map id="50100" file="maps/BKSpace1.xml"/>
+					<Map id="70000" file="maps/nomap.xml"/>
+				</Maps>
+				
+				<Entities>
+				</Entities>
+				
+			</Scene>
+		</Scenes>
+		<Attributes>
+			<Attribute id="NAME" value="Asteroids"/>
+		</Attributes>
+		
+	</World>
+	
+</Worlds>
