@@ -7,5 +7,5 @@ void BattleshipII::Stage1Scene::initialize ()
 
 	setMap (__BATTLESHIP_COMPLEXSTARTSMOVINGBACKGROUNDMAP1ID__);
 
-	BATTLESHIP::BasicScene::initialize ();
+	BATTLESHIP::TimeLimitScene::initialize ();
 }

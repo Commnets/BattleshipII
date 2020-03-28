@@ -20,14 +20,14 @@
 namespace BattleshipII
 {
 	/** Base for Stage 1 Scenes */
-	class Stage1Scene : public BATTLESHIP::BasicScene
+	class Stage1Scene : public BATTLESHIP::TimeLimitScene
 	{
 		public:
 		Stage1Scene (int c, const QGAMES::Maps& m, 
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: BATTLESHIP::BasicScene (c, m, cn, p, ePL)
+			: BATTLESHIP::TimeLimitScene (c, m, cn, p, ePL)
 							{ }
 
 		/** @see parent. */

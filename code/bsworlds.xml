@@ -10,22 +10,80 @@
 	<World id="50000">
 		<Scenes>
 			<Scene id="60000">
+			
 				<Actions>
+					<!-- Related with asteroids -->
+					<!-- Asteroid 1 -->
+					<Action id="70000">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="0"/>
+							<Attribute id="ProbabilityToAppear" value="100"/> 
+							<Attribute id="Type" value="-1"/>
+							<Attribute id="MovType" value="0"/>
+							<Attribute id="PointsGiven" value="100"/>
+							<Attribute id="Speed" value="-3"/>
+						</Attributes>
+					</Action>
+					<!-- Asteroid 2 -->
+					<Action id="70001">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/> 
+							<Attribute id="Type" value="-1"/>
+							<Attribute id="MovType" value="0"/>
+							<Attribute id="PointsGiven" value="100"/>
+							<Attribute id="Speed" value="-3"/>
+						</Attributes>
+					</Action>
+					<!-- Asteroid 3 -->
+					<Action id="70002">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/> 
+							<Attribute id="Type" value="-1"/>
+							<Attribute id="MovType" value="0"/>
+							<Attribute id="PointsGiven" value="100"/>
+							<Attribute id="Speed" value="-3"/>
+						</Attributes>
+					</Action>
+
+					<!-- Related with the fuel pill -->
+					<Action id="71000">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="5"/>
+							<Attribute id="ProbabilityToAppear" value="40"/> 
+							<Attribute id="Type" value="0"/>
+							<Attribute id="MovType" value="0"/>
+							<Attribute id="EnergyAdded" value="1000"/>
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
+
+					<!-- Related with the type of shooting pill -->
+					<Action id="72000">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="6"/>
+							<Attribute id="ProbabilityToAppear" value="50"/> 
+							<Attribute id="Type" value="0"/>
+							<Attribute id="MovType" value="0"/>
+							<Attribute id="TypeShooting" value="-2"/>
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
 				</Actions>
+				
 				<Attributes>
 					<Attribute id="NAME" value="Example"/>
-					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<!-- To indicate the axis the scene can move to
 						 Notice that by default X and Y axis are allowed. 
 						 Whether the scene move or not actually will depend on the size of the foreground map 
 						 @see BKSpace1.xml and so on as an example. 
 						 Initially the moving space is a little bit widder than the screen. -->
+					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="50001"/> <!-- The music in the background if it is on -->
-					
-					<!-- Specific of the scene example -->
-					<Attribute id="NUMBERASTEROIDS" value="3"/> <!-- The maximum number of asteroids in the scene -->
 					<Attribute id="SCENETIME" value="60"/> <!-- The time the scene is going to last (seconds) -->
 				</Attributes>
+				
 				<Maps>
 					<!-- The backgrounds with beautiful space material 
 						 and initially widder than the screen. @see conf.xml -->
@@ -45,10 +103,13 @@
 						 It can be changed to create different visual effects -->
 					<Map id="70000" file="maps/nomap.xml"/>
 				</Maps>
+				
 				<Entities>
 				</Entities>
+				
 			</Scene>
 		</Scenes>
+		
 		<Attributes>
 			<Attribute id="NAME" value="Example"/>
 		</Attributes>
