@@ -268,7 +268,7 @@
 				</Attributes>
 			</State>
 			<!-- Moving backward -->
-			<State id="7" animation="2" movement="50000">
+			<State id="7" animation="2" movement="50002">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>

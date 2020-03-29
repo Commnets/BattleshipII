@@ -20,6 +20,10 @@
 	<Form id="50006" name="BattleshipRotating" file="forms/battleshiprotating.png" width="990" height="220" 
             fSpacing="0" fMargin="0" fWidth="110" fHeight="110" aColor="255" nFrames="18"/>
 
+	<!-- Lives -->
+	<Form id="50009" name="BattleshipLives" file="forms/battleshiplives.png" width="100" height="46" 
+            fSpacing="0" fMargin="0" fWidth="50" fHeight="46" aColor="255" nFrames="2"/>
+
 	<!-- Explosion -->
 	<Form id="50100" name="Explosion" file="forms/explosion.png" width="1280" height="1280"
 			fSpacing="0" fMargin="0" fWidth="256" fHeight="256" aColor="255" nFrames="25"/>
