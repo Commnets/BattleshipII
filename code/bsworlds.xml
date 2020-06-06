@@ -81,8 +81,12 @@
 						 Initially the moving space is a little bit widder than the screen. -->
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="50001"/> <!-- The music in the background if it is on -->
-					<Attribute id="SCENETIME" value="60"/> <!-- The time the scene is going to last (seconds) -->
+					<Attribute id="SCENETIME" value="20"/> <!-- The time the scene is going to last (seconds) -->
 				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="60000" at="0"/> <!-- Pure cyclic, for ever -->
+				</Conexions>
 				
 				<Maps>
 					<!-- The backgrounds with beautiful space material 

@@ -3,7 +3,7 @@
 
 	<!-- General Properties -->
 	<!-- The name of the game -->
-	<Property id="GAMENAME" value="Space Battleship"/>
+	<Property id="GAMENAME" value="Space Battleship Strickes Back"/>
 	<!-- The icon of the game -->
 	<Property id="GAMEICON" value="50000"/> <!-- Represents the logo of Battleship -->
 	<!-- Where the temporal files are stored in release version, and also the configuration saved -->

@@ -148,13 +148,13 @@
 	<Entity id="50001">
 		<Forms>
 			<!-- Right -->
-			<Form id="50001"/>
+			<Form id="50151"/>
 			<!-- Left -->
-			<Form id="50002"/>
+			<Form id="50152"/>
 			<!-- Stay -->
-			<Form id="50003"/>
+			<Form id="50153"/>
 			<!-- Rotating -->
-			<Form id="50006"/>
+			<Form id="50156"/>
 			<!-- Exploding -->
 			<Form id="50100"/>
 		</Forms>
@@ -168,7 +168,7 @@
 			<!-- Moving to the right -->
 			<Animation id="0" type="0">
 				<Attributes>
-					<Attribute id="FORM" value="50001"/>
+					<Attribute id="FORM" value="50151"/>
 					<Attribute id="INITIALASPECT" value="0"/>
 					<Attribute id="FINALASPECT" value="3"/>
 					<Attribute id="FRACTIONTOCHANGE" value="6"/>
@@ -179,7 +179,7 @@
 			<!-- Moving to the left -->
 			<Animation id="1" type="0">
 				<Attributes>
-					<Attribute id="FORM" value="50002"/>
+					<Attribute id="FORM" value="50152"/>
 					<Attribute id="INITIALASPECT" value="0"/>
 					<Attribute id="FINALASPECT" value="3"/>
 					<Attribute id="FRACTIONTOCHANGE" value="6"/>
@@ -190,7 +190,7 @@
 			<!-- Staying -->
 			<Animation id="2" type="0">
 				<Attributes>
-					<Attribute id="FORM" value="50003"/>
+					<Attribute id="FORM" value="50153"/>
 					<Attribute id="INITIALASPECT" value="0"/>
 					<Attribute id="FINALASPECT" value="3"/>
 					<Attribute id="FRACTIONTOCHANGE" value="6"/>
@@ -201,7 +201,7 @@
 			<!-- Rotating -->
 			<Animation id="3" type="0">
 				<Attributes>
-					<Attribute id="FORM" value="50006"/>
+					<Attribute id="FORM" value="50156"/>
 					<Attribute id="INITIALASPECT" value="0"/>
 					<Attribute id="FINALASPECT" value="18"/>
 					<Attribute id="FRACTIONTOCHANGE" value="4"/>

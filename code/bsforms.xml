@@ -4,29 +4,39 @@
 	<!-- Includes -->
 	<Include file="adforms.xml"/>
 	
-	<!-- The battle spaceship -->
+	<!-- The battle spaceship standard (Armagedon) -->
 	<Form id="50000" name="BattleshipGameLogo" file="forms/battleshipgamelogo.png" width="32" height="32" 
             fSpacing="0" fMargin="0" fWidth="32" fHeight="32" aColor="255" nFrames="1"/>
-	<Form id="50001" name="SpaceshipRight" file="forms/spaceshipright.png" width="110" height="330" 
+	<Form id="50001" name="SpaceshipRightArmagedon" file="forms/spaceshipright.png" width="110" height="330" 
             fSpacing="0" fMargin="0" fWidth="110" fHeight="110" aColor="255" nFrames="3"/>
-	<Form id="50002" name="SpaceshipLeft" file="forms/spaceshipleft.png" width="110" height="330" 
+	<Form id="50002" name="SpaceshipLeftArmagedon" file="forms/spaceshipleft.png" width="110" height="330" 
             fSpacing="0" fMargin="0" fWidth="110" fHeight="110" aColor="255" nFrames="3"/>
-	<Form id="50003" name="SpaceshipStay" file="forms/spaceshipstay.png" width="110" height="330" 
+	<Form id="50003" name="SpaceshipStayArmagedon" file="forms/spaceshipstay.png" width="110" height="330" 
             fSpacing="0" fMargin="0" fWidth="110" fHeight="110" aColor="255" nFrames="3"/>
 	<Form id="50004" name="Battleship" file="forms/battleship.png" width="276" height="255" 
             fSpacing="0" fMargin="0" fWidth="276" fHeight="255" aColor="255" nFrames="1"/>
 	<Form id="50005" name="BattleshipLittle" file="forms/battleshiplittle.png" width="50" height="46" 
             fSpacing="0" fMargin="0" fWidth="50" fHeight="46" aColor="255" nFrames="1"/>
-	<Form id="50006" name="BattleshipRotating" file="forms/battleshiprotating.png" width="990" height="220" 
+	<Form id="50006" name="BattleshipRotatingArmagedon" file="forms/battleshiprotating.png" width="990" height="220" 
             fSpacing="0" fMargin="0" fWidth="110" fHeight="110" aColor="255" nFrames="18"/>
 
-	<!-- Lives -->
+	<!-- Lives (different forms for Armagedon and Docomo) -->
 	<Form id="50009" name="BattleshipLives" file="forms/battleshiplives.png" width="100" height="46" 
             fSpacing="0" fMargin="0" fWidth="50" fHeight="46" aColor="255" nFrames="2"/>
 
 	<!-- Explosion -->
 	<Form id="50100" name="Explosion" file="forms/explosion.png" width="1280" height="1280"
 			fSpacing="0" fMargin="0" fWidth="256" fHeight="256" aColor="255" nFrames="25"/>
+			
+	<!-- The battle spaceship modified (Docomo) -->
+	<Form id="50151" name="SpaceshipRightDocomo" file="forms/spaceshiprightdocomo.png" width="110" height="330" 
+            fSpacing="0" fMargin="0" fWidth="110" fHeight="110" aColor="255" nFrames="3"/>
+	<Form id="50152" name="SpaceshipLeftDocomo" file="forms/spaceshipleftdocomo.png" width="110" height="330" 
+            fSpacing="0" fMargin="0" fWidth="110" fHeight="110" aColor="255" nFrames="3"/>
+	<Form id="50153" name="SpaceshipStayDocomo" file="forms/spaceshipstaydocomo.png" width="110" height="330" 
+            fSpacing="0" fMargin="0" fWidth="110" fHeight="110" aColor="255" nFrames="3"/>
+	<Form id="50156" name="BattleshipRotatingDocomo" file="forms/battleshiprotatingdocomo.png" width="990" height="220" 
+            fSpacing="0" fMargin="0" fWidth="110" fHeight="110" aColor="255" nFrames="18"/>
 			
 	<!-- The asteroids -->
 	<!-- asteroid type 1 -->
