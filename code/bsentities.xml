@@ -290,7 +290,7 @@
 		 max the max number of them used in the battleship (100). So total = 100 
 		 All these variables are defined at bsdatagame.hpp / cpp. If those are changed, these ones should do too. 
 		 The hole for shootings is prepared up to a maximum of 1100 (10 enemies). -->
-	<SetOfEntities fromId="50100" number="100">
+	<SetOfEntities fromId="50100" number="1100">
 		<Forms>
 			<!-- Different forms of the shooting -->
 			<Form id="50400"/>
@@ -667,7 +667,7 @@
 				<Attributes>
 					<Attribute id="FORM" value="50100"/>
 					<Attribute id="INITIALASPECT" value="0"/>
-					<Attribute id="FINALASPECT" value="24"/>
+					<Attribute id="FINALASPECT" value="25"/>
 					<Attribute id="FRACTIONTOCHANGE" value="4"/>
 					<Attribute id="LOOP" value="0"/>
 					<!-- Not linked with anyone -->
@@ -739,7 +739,7 @@
 				<Attributes>
 					<Attribute id="FORM" value="50100"/>
 					<Attribute id="INITIALASPECT" value="0"/>
-					<Attribute id="FINALASPECT" value="24"/>
+					<Attribute id="FINALASPECT" value="25"/>
 					<Attribute id="FRACTIONTOCHANGE" value="4"/>
 					<Attribute id="LOOP" value="0"/>
 					<!-- Not linked with anyone -->
@@ -759,6 +759,89 @@
 			<State id="1" animation="1" movementBase="55100"/>
 			<!-- Null state when caught -->
 			<State id="2" animation="2" movementBase="55100"/>
+		</States>
+	</SetOfEntities>
+
+	<!-- The UFOs -->
+	<SetOfEntities fromId="56000" number="10">
+		<Forms>
+			<!-- Different UFO forms -->
+			<!-- UFO 1 -->
+			<Form id="50800"/>
+			<!-- UFO 2 -->
+			<Form id="50801"/>
+			<!-- UFO 3 -->
+			<Form id="50802"/>
+			<!-- Little Explosion-->
+			<Form id="50101"/>
+		</Forms>
+		<MovementsBase>
+			<!-- Moving -->
+			<Movement id="56000"/>
+			<!-- Staying -->
+			<Movement id="56100"/>
+		</MovementsBase>
+		<Animations>
+			<!-- Type of UFO 1 -->
+			<Animation id="0" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50800"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="6"/>
+					<Attribute id="FRACTIONTOCHANGE" value="2"/>
+					<Attribute id="LOOP" value="1"/>
+					<!-- Not linked with anyone -->
+				</Attributes>
+			</Animation>
+			<!-- Type of UFO 2 -->
+			<Animation id="1" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50801"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="6"/>
+					<Attribute id="FRACTIONTOCHANGE" value="2"/>
+					<Attribute id="LOOP" value="1"/>
+					<!-- Not linked with anyone -->
+				</Attributes>
+			</Animation>
+			<!-- Type of UFO 3 -->
+			<Animation id="2" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50802"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="4"/>
+					<Attribute id="FRACTIONTOCHANGE" value="2"/>
+					<Attribute id="LOOP" value="1"/>
+					<!-- Not linked with anyone -->
+				</Attributes>
+			</Animation>
+			<!-- When the UFO is exploding -->
+			<Animation id="3" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50101"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="25"/>
+					<Attribute id="FRACTIONTOCHANGE" value="4"/>
+					<Attribute id="LOOP" value="0"/>
+					<!-- Not linked with anyone -->
+				</Attributes>
+			</Animation>
+			<!-- No animation when it has been destroyed -->
+			<Animation id="4" type="-1"/>
+		</Animations>
+		<States>
+			<!-- Note tha none of the movements define the direction.
+				 It is defined by the block the UFO is contained in, through the parameter "TypeMovement" -->
+			<!-- Moving UFO 1 -->
+			<State id="0" animation="0" movementBase="56000"/>
+			<!-- Moving UFO 2 -->
+			<State id="1" animation="1" movementBase="56000"/>
+			<!-- Moving UFO 3 -->
+			<State id="2" animation="2" movementBase="56000"/>
+			<!-- Exploding -->
+			<State id="3" animation="3" movementBase="56100"/>
+			<!-- Disappearing from the screen -->
+			<State id="4" animation="4" movementBase="56100"/>
 		</States>
 	</SetOfEntities>
 

@@ -29,12 +29,12 @@
 		 All these variables are defined at bsdatagame.hpp / cpp. If those are changed, these ones should do too. 
 		 The hole for movements is prepared up to a maximum of 1100 (10 enemies). -->
 	<!-- Linear movement in the space of any shooting -->
-	<SetOfMovements fromId="50100" number="100">
+	<SetOfMovements fromId="50100" number="1100">
 		<!-- Double speed than the one of the battleship -->
 		<Variable id="0" value="6"/>
 	</SetOfMovements>
 	<!-- When disappearing, there is no movement -->
-	<SetOfMovements fromId="51200" number="100"/>
+	<SetOfMovements fromId="51200" number="1100"/>
 	
 	<!-- Asteroid movements -->
 	<!-- Linear movement in the space of any asteroid -->
@@ -65,5 +65,16 @@
 	</SetOfMovements>
 	<!-- Staying movement -->
 	<SetOfMovements fromId="55100" number="1"/>
+	
+	<!-- UFO movements -->
+	<!-- Linear movement in the space of any UFO (following a Curve) -->
+	<SetOfMovements fromId="56000" number="10">
+		<!-- A little bit faster than the one of the battleship -->
+		<Variable id="0" value="1"/>
+		<Variable id="1" value="100"/> <!-- The number of steps by default -->
+		<Variable id="2" value="1"/> <!-- Cyclic -->
+	</SetOfMovements>
+	<!-- When disappearing, there is no movement -->
+	<SetOfMovements fromId="56100" number="10"/>
 
 </Movements>

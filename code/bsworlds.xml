@@ -70,6 +70,42 @@
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
 					</Action>
+					
+					<!-- Related with an UFO -->
+					<Action id="73000">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="90"/>
+							<Attribute id="Type" value="0"/>
+							<Attribute id="MovType" value="1"/>
+							<Attribute id="TypeShooting" value="0"/>
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Related with an UFO -->
+					<Action id="73001">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="90"/>
+							<Attribute id="Type" value="1"/>
+							<Attribute id="MovType" value="1"/>
+							<Attribute id="TypeShooting" value="0"/>
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
+					
+					<!-- Related with an UFO -->
+					<Action id="73002">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="90"/>
+							<Attribute id="Type" value="2"/>
+							<Attribute id="MovType" value="1"/>
+							<Attribute id="TypeShooting" value="0"/>
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
 				</Actions>
 				
 				<Attributes>
