@@ -556,46 +556,58 @@
 			<Animation id="7" type="-1"/>
 		</Animations>
 		<States>
+			<!-- Frozen asteroid type 0 -->
+			<State id="0" animation="0" movementBase="53100"/>
 			<!-- Moving asteroid type 0 -->
-			<State id="0" animation="0" movementBase="53000">
+			<State id="1" animation="0" movementBase="53000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>
 			</State>
+			<!-- Frozen asteroid type 1 -->
+			<State id="2" animation="1" movementBase="53100"/>
 			<!-- Moving asteroid type 1 -->
-			<State id="1" animation="1" movementBase="53000">
+			<State id="3" animation="1" movementBase="53000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>
 			</State>
+			<!-- Frozen asteroid type 2 -->
+			<State id="4" animation="2" movementBase="53100"/>
 			<!-- Moving asteroid type 2 -->
-			<State id="2" animation="2" movementBase="53000">
+			<State id="5" animation="2" movementBase="53000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>
 			</State>
+			<!-- Frozen asteroid type 3 -->
+			<State id="6" animation="3" movementBase="53100"/>
 			<!-- Moving asteroid type 3 -->
-			<State id="3" animation="3" movementBase="53000">
+			<State id="7" animation="3" movementBase="53000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>
 			</State>
+			<!-- Frozen asteroid type 4 -->
+			<State id="8" animation="4" movementBase="53100"/>
 			<!-- Moving asteroid type 4 -->
-			<State id="4" animation="4" movementBase="53000">
+			<State id="9" animation="4" movementBase="53000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>
 			</State>
+			<!-- Frozen asteroid type 5 -->
+			<State id="10" animation="5" movementBase="53100"/>
 			<!-- Moving asteroid type 5 -->
-			<State id="5" animation="5" movementBase="53000">
+			<State id="11" animation="5" movementBase="53000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>
 			</State>
 			<!-- Exploding -->
-			<State id="6" animation="6" movementBase="53100"/>
+			<State id="12" animation="6" movementBase="53100"/>
 			<!-- Disappearing from the screen -->
-			<State id="7" animation="7" movementBase="53100"/>
+			<State id="13" animation="7" movementBase="53100"/>
 		</States>
 	</SetOfEntities>
 
@@ -677,34 +689,42 @@
 			<Animation id="5" type="-1"/>
 		</Animations>
 		<States>
+			<!-- Frozen shooting to catch type 1 -->
+			<State id="0" animation="0" movementBase="54100"/>
 			<!-- Moving shooting to catch type 1 -->
-			<State id="0" animation="0" movementBase="54000">
+			<State id="1" animation="0" movementBase="54000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>
 			</State>
+			<!-- Frozen shooting to catch type 2 -->
+			<State id="2" animation="1" movementBase="54100"/>
 			<!-- Moving shooting to catch type 2 -->
-			<State id="1" animation="1" movementBase="54000">
+			<State id="3" animation="1" movementBase="54000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>
 			</State>
+			<!-- Frozen shooting to catch type 3 -->
+			<State id="4" animation="2" movementBase="54100"/>
 			<!-- Moving shooting to catch type 3 -->
-			<State id="2" animation="2" movementBase="54000">
+			<State id="5" animation="2" movementBase="54000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>
 			</State>
+			<!-- Frozen shooting to catch type 4 -->
+			<State id="6" animation="3" movementBase="54100"/>
 			<!-- Moving shooting to catch type 4 -->
-			<State id="3" animation="3" movementBase="54000">
+			<State id="7" animation="3" movementBase="54000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>
 			</State>
 			<!-- Exploding -->
-			<State id="4" animation="4" movementBase="54100"/>
+			<State id="8" animation="4" movementBase="54100"/>
 			<!-- Die (null state) -->
-			<State id="5" animation="5" movementBase="54100"/>
+			<State id="9" animation="5" movementBase="54100"/>
 		</States>
 	</SetOfEntities>
 
@@ -749,16 +769,18 @@
 			<Animation id="2" type="-1"/>
 		</Animations>
 		<States>
+			<!-- Frozen tank of fuel -->
+			<State id="0" animation="0" movementBase="55100"/>
 			<!-- Moving tank of fuel -->
-			<State id="0" animation="0" movementBase="55000">
+			<State id="1" animation="0" movementBase="55000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>
 			</State>
 			<!-- Exploding -->
-			<State id="1" animation="1" movementBase="55100"/>
+			<State id="2" animation="1" movementBase="55100"/>
 			<!-- Null state when caught -->
-			<State id="2" animation="2" movementBase="55100"/>
+			<State id="3" animation="2" movementBase="55100"/>
 		</States>
 	</SetOfEntities>
 
@@ -832,16 +854,22 @@
 		<States>
 			<!-- Note tha none of the movements define the direction.
 				 It is defined by the block the UFO is contained in, through the parameter "TypeMovement" -->
+			<!-- Freeze UFO 1 -->
+			<State id="0" animation="0" movementBase="56100"/>
 			<!-- Moving UFO 1 -->
-			<State id="0" animation="0" movementBase="56000"/>
+			<State id="1" animation="0" movementBase="56000"/>
+			<!-- Freeze UFO 2 -->
+			<State id="2" animation="1" movementBase="56100"/>
 			<!-- Moving UFO 2 -->
-			<State id="1" animation="1" movementBase="56000"/>
+			<State id="3" animation="1" movementBase="56000"/>
+			<!-- Freeze UFO 3 -->
+			<State id="4" animation="2" movementBase="56100"/>
 			<!-- Moving UFO 3 -->
-			<State id="2" animation="2" movementBase="56000"/>
+			<State id="5" animation="2" movementBase="56000"/>
 			<!-- Exploding -->
-			<State id="3" animation="3" movementBase="56100"/>
+			<State id="6" animation="3" movementBase="56100"/>
 			<!-- Disappearing from the screen -->
-			<State id="4" animation="4" movementBase="56100"/>
+			<State id="7" animation="4" movementBase="56100"/>
 		</States>
 	</SetOfEntities>
 

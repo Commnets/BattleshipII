@@ -77,9 +77,9 @@
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="90"/>
 							<Attribute id="Type" value="0"/>
-							<Attribute id="MovType" value="1"/>
+							<Attribute id="MovType" value="0"/>
 							<Attribute id="TypeShooting" value="0"/>
-							<Attribute id="Speed" value="1"/>
+							<Attribute id="Speed" value="5"/>
 						</Attributes>
 					</Action>
 					
@@ -91,7 +91,7 @@
 							<Attribute id="Type" value="1"/>
 							<Attribute id="MovType" value="1"/>
 							<Attribute id="TypeShooting" value="0"/>
-							<Attribute id="Speed" value="1"/>
+							<Attribute id="Speed" value="6"/>
 						</Attributes>
 					</Action>
 					
@@ -100,10 +100,11 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="90"/>
+							<Attribute id="Emerge" value="YES"/>
 							<Attribute id="Type" value="2"/>
-							<Attribute id="MovType" value="1"/>
+							<Attribute id="MovType" value="2"/>
 							<Attribute id="TypeShooting" value="0"/>
-							<Attribute id="Speed" value="1"/>
+							<Attribute id="Speed" value="4"/>
 						</Attributes>
 					</Action>
 				</Actions>
