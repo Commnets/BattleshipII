@@ -24,17 +24,17 @@
 	
 	<!-- Shooting movements -->
 	<!-- The number of max movements will depend on the max number of enemies possible simultaneously in the scene (0)
-		 and the max number of simultaneously shootings per enemy in the scene (10), 
-		 max the max number of them used in the battleship (100). So total = 100 
+		 and the max number of simultaneously shootings per enemy in the scene (50), 
+		 max the max number of them used in the battleship (50). 
 		 All these variables are defined at bsdatagame.hpp / cpp. If those are changed, these ones should do too. 
-		 The hole for movements is prepared up to a maximum of 1100 (10 enemies). -->
+		 The hole for movements is prepared up to a maximum of 2550 (50 enemies plus 1 battleship). -->
 	<!-- Linear movement in the space of any shooting -->
-	<SetOfMovements fromId="50100" number="1100">
+	<SetOfMovements fromId="550000" number="2550">
 		<!-- Double speed than the one of the battleship -->
 		<Variable id="0" value="6"/>
 	</SetOfMovements>
 	<!-- When disappearing, there is no movement -->
-	<SetOfMovements fromId="51200" number="1100"/>
+	<SetOfMovements fromId="570000" number="2550"/>
 	
 	<!-- Asteroid movements -->
 	<!-- Linear movement in the space of any asteroid -->
@@ -68,13 +68,13 @@
 	
 	<!-- UFO movements -->
 	<!-- Linear movement in the space of any UFO (following a Curve) -->
-	<SetOfMovements fromId="56000" number="10">
+	<SetOfMovements fromId="56000" number="50">
 		<!-- A little bit faster than the one of the battleship -->
 		<Variable id="0" value="1"/>
 		<Variable id="1" value="100"/> <!-- The number of steps by default -->
 		<Variable id="2" value="1"/> <!-- Cyclic -->
 	</SetOfMovements>
 	<!-- When disappearing, there is no movement -->
-	<SetOfMovements fromId="56100" number="10"/>
+	<SetOfMovements fromId="56100" number="50"/>
 
 </Movements>

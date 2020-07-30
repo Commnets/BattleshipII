@@ -290,7 +290,7 @@
 		 max the max number of them used in the battleship (100). So total = 100 
 		 All these variables are defined at bsdatagame.hpp / cpp. If those are changed, these ones should do too. 
 		 The hole for shootings is prepared up to a maximum of 1100 (10 enemies). -->
-	<SetOfEntities fromId="50100" number="1100">
+	<SetOfEntities fromId="550000" number="2550">
 		<Forms>
 			<!-- Different forms of the shooting -->
 			<Form id="50400"/>
@@ -299,9 +299,9 @@
 		</Forms>
 		<MovementsBase>
 			<!-- Moving forward -->
-			<Movement id="50100"/>
+			<Movement id="550000"/>
 			<!-- Staying -->
-			<Movement id="51200"/>
+			<Movement id="570000"/>
 		</MovementsBase>
 		<Animations>
 			<!-- Type of shooting 0 (short yellow) -->
@@ -397,55 +397,55 @@
 		</Animations>
 		<States>
 			<!-- Moving shooting type 0 (short yellow) -->
-			<State id="0" animation="0" movementBase="50100">
+			<State id="0" animation="0" movementBase="550000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-1,0"/>
 				</Attributes>
 			</State>
 			<!-- Moving shooting type 1 (short green) -->
-			<State id="1" animation="1" movementBase="50100">
+			<State id="1" animation="1" movementBase="550000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-1,0"/>
 				</Attributes>
 			</State>
 			<!-- Moving shooting type 2 (short blue) -->
-			<State id="2" animation="2" movementBase="50100">
+			<State id="2" animation="2" movementBase="550000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-1,0"/>
 				</Attributes>
 			</State>
 			<!-- Moving shooting type 3 (long yellow) -->
-			<State id="3" animation="3" movementBase="50100">
+			<State id="3" animation="3" movementBase="550000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-1,0"/>
 				</Attributes>
 			</State>
 			<!-- Moving shooting type 4 (long orange) -->
-			<State id="4" animation="4" movementBase="50100">
+			<State id="4" animation="4" movementBase="550000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-1,0"/>
 				</Attributes>
 			</State>
 			<!-- Moving shooting type 5 (long red) -->
-			<State id="5" animation="5" movementBase="50100">
+			<State id="5" animation="5" movementBase="550000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-1,0"/>
 				</Attributes>
 			</State>
 			<!-- Moving shooting type 6 (double yellow) -->
-			<State id="6" animation="6" movementBase="50100">
+			<State id="6" animation="6" movementBase="550000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-1,0"/>
 				</Attributes>
 			</State>
 			<!-- Moving shooting type 7 (double red) -->
-			<State id="7" animation="7" movementBase="50100">
+			<State id="7" animation="7" movementBase="550000">
 				<Attributes>
 					<Attribute id="DIRECTION" value="0,-1,0"/>
 				</Attributes>
 			</State>
 			<!-- Disappearing from the screen -->
-			<State id="8" animation="8" movementBase="51200"/>
+			<State id="8" animation="8" movementBase="570000"/>
 		</States>
 	</SetOfEntities>
 	
@@ -785,7 +785,7 @@
 	</SetOfEntities>
 
 	<!-- The UFOs -->
-	<SetOfEntities fromId="56000" number="10">
+	<SetOfEntities fromId="56000" number="50">
 		<Forms>
 			<!-- Different UFO forms -->
 			<!-- UFO 1 -->
