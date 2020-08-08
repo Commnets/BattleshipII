@@ -72,7 +72,7 @@
 					</Action>
 					
 					<!-- Related with an UFO -->
-					<Action id="73001">
+					<Action id="73000">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="90"/>
@@ -82,11 +82,13 @@
 							<Attribute id="InitialPosition" value="0.15,0.25,0.5"/>
 							<Attribute id="Type" value="1"/>
 							<Attribute id="MovType" value="2"/>
-							<Attribute id="TypeShooting" value="0"/>
+							<Attribute id="TypeShooting" value="1"/>
+							<Attribute id="TimeToShoot" value="2"/>
+							<Attribute id="ProbabilityToShoot" value="50"/>
 							<Attribute id="Speed" value="4"/>
 						</Attributes>
 					</Action>
-					<Action id="73002">
+					<Action id="73001">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="90"/>
@@ -95,8 +97,10 @@
 							<Attribute id="Regenerate" value="YES"/>
 							<Attribute id="InitialPosition" value="0.65,0.25,0.5"/>
 							<Attribute id="Type" value="2"/>
-							<Attribute id="MovType" value="2"/>
+							<Attribute id="MovType" value="3"/>
 							<Attribute id="TypeShooting" value="0"/>
+							<Attribute id="TimeToShoot" value="3"/>
+							<Attribute id="ProbabilityToShoot" value="50"/>
 							<Attribute id="Speed" value="4.5"/>
 						</Attributes>
 					</Action>
