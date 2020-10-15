@@ -27,7 +27,7 @@ namespace BattleshipII
 		{
 			public:
 			Conf (int nP, int mL = 3)
-				: BATTLESHIP::Game::Conf (nP, __BATTLESHIP_EXAMPLEWORLDID__, __BATTLESHIP_EXAMPLESCENEID__),
+				: BATTLESHIP::Game::Conf (nP, __BATTLESHIP_EXAMPLEWORLDID__, __BATTLESHIP_TIMELIMITEXAMPLESCENEID__),
 				  _maxLives (mL)
 							{ adjustToPlayers (nP); }
 

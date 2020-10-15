@@ -9,37 +9,54 @@
 		 It is made up of a single scene -->
 	<World id="50000">
 		<Scenes>
+			<!-- From 60000 to 60099 are type TimeLimit -->
+			<!-- 60000 is a specific implementation of TimeLimit -->
+			<!-- This example includes all types of elements possible in a scene -->
 			<Scene id="60000">
 			
 				<Actions>
+					<!-- From 70000 to 70999 are block actions reserved to control asteriods -->
 					<!-- Related with asteroids -->
 					<!-- Asteroid 1 -->
 					<Action id="70000">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="0"/>
-							<Attribute id="ProbabilityToAppear" value="100"/> 
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="NO"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Regenerate" value="YES"/>
+							<!-- InitialPosition is not defined, 
+								 so it means random at the top of the moving zone -->
+							<!-- MaxTimeAction in not defined either, 
+								 so it means no limit to the time of the action block -->
+							<Attribute id="Type" value="-1"/> <!-- Meaning random (in the possibilities) -->
+							<Attribute id="MovType" value="0"/> <!-- It is not really taken into account in the default implementation -->
 							<Attribute id="PointsGiven" value="100"/>
-							<Attribute id="Speed" value="-3"/>
+							<Attribute id="Speed" value="-3"/> <!-- Meaning random (up to 3) -->
 						</Attributes>
 					</Action>
-					<!-- Asteroid 2 -->
+					<!-- Asteroid 2 (see definitions above) -->
 					<Action id="70001">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
-							<Attribute id="ProbabilityToAppear" value="100"/> 
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="NO"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Regenerate" value="YES"/>
 							<Attribute id="Type" value="-1"/>
 							<Attribute id="MovType" value="0"/>
 							<Attribute id="PointsGiven" value="100"/>
 							<Attribute id="Speed" value="-3"/>
 						</Attributes>
 					</Action>
-					<!-- Asteroid 3 -->
+					<!-- Asteroid 3 (see definitions above) -->
 					<Action id="70002">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="1"/>
-							<Attribute id="ProbabilityToAppear" value="100"/> 
+							<Attribute id="TimeToAppear" value="2"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="NO"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Regenerate" value="YES"/>
 							<Attribute id="Type" value="-1"/>
 							<Attribute id="MovType" value="0"/>
 							<Attribute id="PointsGiven" value="100"/>
@@ -47,67 +64,69 @@
 						</Attributes>
 					</Action>
 
+					<!-- From 71000 to 71999 are block actions reserved to control pills of energy -->
 					<!-- Related with the fuel pill -->
 					<Action id="71000">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
-							<Attribute id="ProbabilityToAppear" value="40"/> 
+							<Attribute id="ProbabilityToAppear" value="40"/>
+							<Attribute id="Emerge" value="NO"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Regenerate" value="YES"/>
+							<!-- InitialPosition is not defined, 
+								 so it means random at the top of the moving zone -->
+							<!-- MaxTimeAction in not defined either, 
+								 so it means no limit to the time of the action block -->
 							<Attribute id="Type" value="0"/>
-							<Attribute id="MovType" value="0"/>
+							<Attribute id="MovType" value="0"/> <!-- It is not really taken into account in the default implementation -->
 							<Attribute id="EnergyAdded" value="1000"/>
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
 					</Action>
 
+					<!-- From 72000 to 72999 are block actions reserved to control shooting pills -->
 					<!-- Related with the type of shooting pill -->
 					<Action id="72000">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
-							<Attribute id="ProbabilityToAppear" value="50"/> 
+							<Attribute id="ProbabilityToAppear" value="50"/>
+							<Attribute id="Emerge" value="NO"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Regenerate" value="YES"/>
+							<!-- InitialPosition is not defined, 
+								 so it means random at the top of the moving zone -->
+							<!-- MaxTimeAction in not defined either, 
+								 so it means no limit to the time of the action block -->
 							<Attribute id="Type" value="0"/>
-							<Attribute id="MovType" value="0"/>
-							<Attribute id="TypeShooting" value="-2"/>
+							<Attribute id="MovType" value="0"/> <!-- It is not really taken into account in the default implementation -->
+							<Attribute id="TypeShooting" value="-2"/> <!-- meaning "the next of the current" -->
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
 					</Action>
 					
+					<!-- From 73000 to 73999 are block actions reserved to control ufos (enemies) -->
 					<!-- Related with an UFO -->
 					<Action id="73000">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="1"/>
-							<Attribute id="ProbabilityToAppear" value="90"/>
+							<Attribute id="TimeToAppear" value="30"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
 							<Attribute id="Emerge" value="YES"/>
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="YES"/>
-							<Attribute id="InitialPosition" value="0.15,0.25,0.5"/>
-							<Attribute id="Type" value="1"/>
-							<Attribute id="MovType" value="2"/>
+							<Attribute id="InitialPosition" value="0.25,0.25,0.0"/>
+							<Attribute id="MaxTimeAction" value="-1"/>
+							<Attribute id="Type" value="-1"/> <!-- Meaning random -->
+							<Attribute id="MovType" value="-1"/> <!-- Meaning random -->
 							<Attribute id="TypeShooting" value="1"/>
 							<Attribute id="TimeToShoot" value="2"/>
-							<Attribute id="ProbabilityToShoot" value="50"/>
-							<Attribute id="Speed" value="4"/>
-						</Attributes>
-					</Action>
-					<Action id="73001">
-						<Attributes>
-							<Attribute id="TimeToAppear" value="1"/>
-							<Attribute id="ProbabilityToAppear" value="90"/>
-							<Attribute id="Emerge" value="YES"/>
-							<Attribute id="TimeToMove" value="1"/>
-							<Attribute id="Regenerate" value="YES"/>
-							<Attribute id="InitialPosition" value="0.65,0.25,0.5"/>
-							<Attribute id="Type" value="2"/>
-							<Attribute id="MovType" value="3"/>
-							<Attribute id="TypeShooting" value="0"/>
-							<Attribute id="TimeToShoot" value="3"/>
-							<Attribute id="ProbabilityToShoot" value="50"/>
-							<Attribute id="Speed" value="4.5"/>
+							<Attribute id="ProbabilityToShoot" value="60"/>
+							<Attribute id="Speed" value="7"/>
 						</Attributes>
 					</Action>
 				</Actions>
 				
 				<Attributes>
-					<Attribute id="NAME" value="Example"/>
+					<Attribute id="NAME" value="Example Time"/>
 					<!-- To indicate the axis the scene can move to
 						 Notice that by default X and Y axis are allowed. 
 						 Whether the scene move or not actually will depend on the size of the foreground map 
@@ -115,11 +134,11 @@
 						 Initially the moving space is a little bit widder than the screen. -->
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="50001"/> <!-- The music in the background if it is on -->
-					<Attribute id="SCENETIME" value="20"/> <!-- The time the scene is going to last (seconds) -->
+					<Attribute id="SCENETIME" value="60"/> <!-- (60 seconds) The time the scene is going to last (seconds) -->
 				</Attributes>
 				
 				<Conexions>
-					<Conexion id="0" with="60000" at="0"/> <!-- Pure cyclic, for ever -->
+					<Conexion id="0" with="60100" at="0"/> 
 				</Conexions>
 				
 				<Maps>
@@ -143,9 +162,141 @@
 				</Maps>
 				
 				<Entities>
+					<!-- No order has been determined for the entities in the screen -->
 				</Entities>
 				
 			</Scene>
+			
+			<!-- 60100 to 60199 Are scenes to control a set of action block sequentially -->
+			<Scene id="60100">
+			
+				<Actions>
+					<!-- A pill of energy is also needed -->
+					<Action id="71001">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="5"/>
+							<Attribute id="ProbabilityToAppear" value="40"/>
+							<Attribute id="Emerge" value="NO"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Regenerate" value="YES"/>
+							<Attribute id="Type" value="0"/>
+							<Attribute id="MovType" value="0"/> 
+							<Attribute id="EnergyAdded" value="1000"/>
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
+
+					<!-- And something to reload the shootings -->
+					<Action id="72001">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="6"/>
+							<Attribute id="ProbabilityToAppear" value="50"/>
+							<Attribute id="Emerge" value="NO"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Regenerate" value="YES"/>
+							<Attribute id="Type" value="0"/>
+							<Attribute id="MovType" value="0"/> 
+							<Attribute id="TypeShooting" value="-2"/> 
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
+					
+					<!-- From 74000 to 74999 is a combat formation of UFO -->
+					<Action id="74000">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="YES"/>
+							<Attribute id="TimeToMove" value="1"/> 
+							<Attribute id="Regenerate" value="NO"/>
+							<Attribute id="InitialPosition" value="0.23,0.25,0.0"/>
+							<Attribute id="MaxTimeAction" value="-1"/>
+							<Attribute id="Type" value="2"/> 
+							<Attribute id="MovType" value="4"/> 
+							<Attribute id="TypeShooting" value="1"/>
+							<Attribute id="TimeToShoot" value="1"/>
+							<Attribute id="ProbabilityToShoot" value="30"/>
+							<Attribute id="Speed" value="2"/>
+							<Attribute id="CombatFormation" value="0"/> 
+							<Attribute id="NumberUFOS" value="14"/>
+							<Attribute id="TimerEvery" value="3"/> 
+						</Attributes>
+					</Action>
+
+					<Action id="74001">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="YES"/>
+							<Attribute id="TimeToMove" value="1"/> 
+							<Attribute id="Regenerate" value="NO"/>
+							<Attribute id="InitialPosition" value="0.1,0.1,0.0"/>
+							<Attribute id="MaxTimeAction" value="-1"/>
+							<Attribute id="Type" value="1"/> 
+							<Attribute id="MovType" value="0"/> 
+							<Attribute id="TypeShooting" value="2"/>
+							<Attribute id="TimeToShoot" value="1"/>
+							<Attribute id="ProbabilityToShoot" value="70"/>
+							<Attribute id="Speed" value="7"/>
+							<Attribute id="CombatFormation" value="1"/> 
+							<Attribute id="NumberUFOS" value="10"/>
+							<Attribute id="TimerEvery" value="0"/> 
+						</Attributes>
+					</Action>
+
+					<Action id="74002">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="YES"/>
+							<Attribute id="TimeToMove" value="1"/> 
+							<Attribute id="Regenerate" value="NO"/>
+							<Attribute id="InitialPosition" value="0.9,0.1,0.0"/>
+							<Attribute id="MaxTimeAction" value="-1"/>
+							<Attribute id="Type" value="2"/> 
+							<Attribute id="MovType" value="0"/> 
+							<Attribute id="TypeShooting" value="3"/>
+							<Attribute id="TimeToShoot" value="1"/>
+							<Attribute id="ProbabilityToShoot" value="70"/>
+							<Attribute id="Speed" value="7"/>
+							<Attribute id="CombatFormation" value="1"/> 
+							<Attribute id="NumberUFOS" value="5"/>
+							<Attribute id="TimerEvery" value="0"/> 
+						</Attributes>
+					</Action>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="NAME" value="Example Blocks"/>
+					<Attribute id="MOVEMENT" value="1,1,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="50001"/> 
+					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74000,74001,74002"/> 
+				</Attributes>
+				
+				<Conexions>
+					<!-- No more conecctions have been defined, 
+						 so the game finishes when the scene finishes -->
+				</Conexions>
+				
+				<Maps>
+					<Map id="50100" file="maps/BKSpace1.xml"/>
+					<Map id="50101" file="maps/BKSpace2.xml"/>
+					<Map id="50102" file="maps/BKSpace3.xml"/>
+					<Map id="50103" file="maps/BKSpace4.xml"/>
+					<Map id="50104" file="maps/BKSpace5.xml"/>
+					<Map id="50105" file="maps/BKSpace6.xml"/>
+				
+					<Map id="60000" file="maps/background.xml"/>
+					
+					<Map id="70000" file="maps/nomap.xml"/>
+				</Maps>
+				
+				<Entities>
+					<!-- No order has been determined for the entities in the screen -->
+				</Entities>
+			
+			</Scene>
+			
 		</Scenes>
 		
 		<Attributes>
