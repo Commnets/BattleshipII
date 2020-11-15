@@ -54,6 +54,12 @@
     <ClCompile Include="Worlds.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
+    <ClCompile Include="Stage2Scenes.cpp">
+      <Filter>Archivos de código fuente\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage2Worlds.cpp">
+      <Filter>Archivos de código fuente\Worlds</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Defs.hpp">
@@ -190,6 +196,9 @@
       <Filter>Configuration</Filter>
     </Xml>
     <Xml Include="stage1world.xml">
+      <Filter>Configuration</Filter>
+    </Xml>
+    <Xml Include="stage2world.xml">
       <Filter>Configuration</Filter>
     </Xml>
   </ItemGroup>

@@ -220,6 +220,8 @@
 							<Attribute id="CombatFormation" value="0"/> 
 							<Attribute id="NumberUFOS" value="14"/>
 							<Attribute id="TimerEvery" value="3"/> 
+							<Attribute id="TimerForHowMany" value="-1"/>
+							<Attribute id="TimerProbability" value="100"/>
 						</Attributes>
 					</Action>
 
@@ -241,6 +243,8 @@
 							<Attribute id="CombatFormation" value="1"/> 
 							<Attribute id="NumberUFOS" value="10"/>
 							<Attribute id="TimerEvery" value="0"/> 
+							<Attribute id="TimerForHowMany" value="-1"/>
+							<Attribute id="TimerProbability" value="100"/>
 						</Attributes>
 					</Action>
 
@@ -262,6 +266,8 @@
 							<Attribute id="CombatFormation" value="1"/> 
 							<Attribute id="NumberUFOS" value="5"/>
 							<Attribute id="TimerEvery" value="0"/> 
+							<Attribute id="TimerForHowMany" value="-1"/>
+							<Attribute id="TimerProbability" value="100"/>
 						</Attributes>
 					</Action>
 				</Actions>

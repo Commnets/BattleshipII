@@ -24,13 +24,18 @@
 #define __BATTLESHIPII_DEFAULTSHOWFPSPARAMETER__			"NO"
 
 // The worlds of the game (stages)
-#define __BATTLESHIPII_STAGE1WORLDID__						50001
+#define __BATTLESHIPII_STAGE1WORLDID__						50001 // Asteroids
+#define __BATTLESHIPII_STAGE2WORLDID__						50002 // UFOs
 
 // The scenes of the game
 // Scenes for the stage 1
-#define __BATTLESHIPII_STAGE1SCENE1__						60010
-#define __BATTLESHIPII_STAGE1SCENE2__						60011
-#define __BATTLESHIPII_STAGE1SCENE3__						60012
+#define __BATTLESHIPII_STAGE1SCENE1__						70000
+#define __BATTLESHIPII_STAGE1SCENE2__						70001
+#define __BATTLESHIPII_STAGE1SCENE3__						70002
+// Scenes for the stage 2
+#define __BATTLESHIPII_STAGE2SCENE1__						70010
+#define __BATTLESHIPII_STAGE2SCENE2__						70011
+#define __BATTLESHIPII_STAGE2SCENE3__						70012
 
 #endif
   

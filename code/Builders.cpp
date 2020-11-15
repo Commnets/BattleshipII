@@ -11,6 +11,9 @@ QGAMES::World* BattleshipII::WorldBuilder::createWorldObject (int no, const QGAM
 	if (no == __BATTLESHIPII_STAGE1WORLDID__)
 		result = new BattleshipII::Stage1World (s, p);
 	else
+	if (no == __BATTLESHIPII_STAGE2WORLDID__)
+		result = new BattleshipII::Stage2World (s, p);
+	else
 		result = BATTLESHIP::WorldBuilder::createWorldObject (no, s, p);
 
 	return (result);
@@ -23,6 +26,7 @@ QGAMES::Scene* BattleshipII::WorldBuilder::createSceneObject (int ns, const QGAM
 {
 	QGAMES::Scene* result = NULL;
 
+	// World Stage 1...
 	if (ns == __BATTLESHIPII_STAGE1SCENE1__)
 		result = new BattleshipII::Stage1Scene1 (m, cn, p, ePL);
 	else
@@ -32,7 +36,18 @@ QGAMES::Scene* BattleshipII::WorldBuilder::createSceneObject (int ns, const QGAM
 	if (ns == __BATTLESHIPII_STAGE1SCENE3__)
 		result = new BattleshipII::Stage1Scene3 (m, cn, p, ePL);
 	else
+	// World Stage 2...
+	if (ns == __BATTLESHIPII_STAGE2SCENE1__)
+		result = new BattleshipII::Stage2Scene1 (m, cn, p, ePL);
+	else
+	if (ns == __BATTLESHIPII_STAGE2SCENE2__)
+		result = new BattleshipII::Stage2Scene2 (m, cn, p, ePL);
+	else
+	if (ns == __BATTLESHIPII_STAGE2SCENE3__)
+		result = new BattleshipII::Stage2Scene3 (m, cn, p, ePL);
+	else
 		result = BATTLESHIP::WorldBuilder::createSceneObject (ns, m, cn, p, ePL);
+
 
 	return (result);
 }

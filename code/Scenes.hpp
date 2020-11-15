@@ -18,6 +18,7 @@
 #include <BattleshipLike/bsinclude.hpp>
 
 #include "Stage1Scenes.hpp"
+#include "Stage2Scenes.hpp"
 
 #endif
   

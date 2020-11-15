@@ -104,6 +104,8 @@
     <ClCompile Include="Scenes.cpp" />
     <ClCompile Include="Stage1Scenes.cpp" />
     <ClCompile Include="Stage1Worlds.cpp" />
+    <ClCompile Include="Stage2Scenes.cpp" />
+    <ClCompile Include="Stage2Worlds.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Worlds.cpp" />
@@ -249,6 +251,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </Xml>
+    <Xml Include="stage2world.xml" />
     <Xml Include="worlds.xml">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>

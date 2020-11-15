@@ -18,6 +18,7 @@
 #include <BattleshipLike/bsinclude.hpp>
 
 #include "Stage1Worlds.hpp"
+#include "Stage2Worlds.hpp"
 
 #endif
   

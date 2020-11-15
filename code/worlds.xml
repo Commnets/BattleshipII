@@ -4,7 +4,10 @@
 	<!-- Includes -->
 	<Include file="bsworlds.xml"/>
 	
+	<!-- Every world consists on three different scenes -->
 	<!-- The first stage world -->
 	<Include file="stage1world.xml"/>
+	<!-- The second stage world -->
+	<Include file="stage2world.xml"/>
 	
 </Worlds>
