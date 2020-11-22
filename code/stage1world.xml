@@ -11,37 +11,43 @@
 			<!-- Starting the travel -->
 			<Scene id="70000">
 				<Actions>
+				
 					<!-- Blocks related with asteroids -->
 					<Action id="70100">
 						<Attributes>
+							<!-- In this first definition all attributes are explained
+								 But not all are necessary. So, some of them are avoided in further definitions -->
 							<Attribute id="TimeToAppear" value="0"/>
 							<Attribute id="ProbabilityToAppear" value="100"/> <!-- Always -->
-							<!-- By default:
-								 NOT to emerge
-								 Time to move = 0 = Inmediate
-								 To Regenerate. That is: to start back when exit the window or it is destroyed -->
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/> <!-- Random among all types possible -->
-							<Attribute id="PointsGiven" value="100"/>
+							<Attribute id="Emerge" value="NO"/> <!-- Default value, meaning not to appear little by little -->
+							<Attribute id="TimeToMove" value="0"/> <!-- Default value. Inmediate -->
+							<Attribute id="Regenerate" value="YES"/> <!-- Default value, meaning to start back when destroyed o exited the screen -->
+							<Attribute id="Roll" value="NO"/> <!-- Default value, meaning not to appear in the other side of the screen when exited this one -->
+							<!-- Initial position not defined, meaning random
+								 depending the type of element and movement (in the top of the visual zone for asteroids -->
+							<Attribute id="MaxTimeAction" value="-1"/> <!-- Default value, meaning no end -->
+							<Attribute id="Type" value="-1"/> <!-- Default value, meaning random -->
+							<Attribute id="MovType" value="0"/> <!-- Default value. No really used in this standard definition -->
+							<Attribute id="PointsGiven" value="100"/> <!-- When destroyed -->
 							<Attribute id="Speed" value="-3"/> <!-- Random up to 3 -->
+							<!-- Anyway the speed of the element will be finally this one plus the speed of the screen, 
+								 determined by the difficuly level -->
 						</Attributes>
 					</Action>
+					
 					<Action id="70101">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
-							<Attribute id="ProbabilityToAppear" value="80"/> 
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/>
+							<Attribute id="ProbabilityToAppear" value="60"/> 
 							<Attribute id="PointsGiven" value="100"/>
 							<Attribute id="Speed" value="-3"/>
 						</Attributes>
 					</Action>
+					
 					<Action id="70102">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
-							<Attribute id="ProbabilityToAppear" value="80"/> 
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/>
+							<Attribute id="ProbabilityToAppear" value="50"/> 
 							<Attribute id="PointsGiven" value="100"/>
 							<Attribute id="Speed" value="-3"/>
 						</Attributes>
@@ -50,14 +56,20 @@
 					<!-- A pill to load energy -->
 					<Action id="71100">
 						<Attributes>
+							<!-- In this first definition all attributes are explained
+								 But not all are necessary. So, some of them are avoided in further definitions -->
 							<Attribute id="TimeToAppear" value="5"/> <!-- Every 5 seconds -->
-							<Attribute id="ProbabilityToAppear" value="40"/> <!-- 40% probable to appear -->
-							<Attribute id="Emerge" value="NO"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Regenerate" value="YES"/> <!-- After passed another one is generated -->
-							<Attribute id="Type" value="0"/>
-							<Attribute id="MovType" value="0"/> 
-							<Attribute id="EnergyAdded" value="1000"/> <!-- Fully loaded -->
+							<Attribute id="ProbabilityToAppear" value="50"/> <!-- 40% probable to appear -->
+							<Attribute id="Emerge" value="NO"/> <!-- Default value, meaning not to appear little by little -->
+							<Attribute id="TimeToMove" value="0"/> <!-- Default value. Inmediate -->
+							<Attribute id="Regenerate" value="YES"/> <!-- Default value, After passed another one is generated -->
+							<Attribute id="Roll" value="NO"/> <!-- Default value, meaning not to appear in the other side of the screen when exited this one -->
+							<!-- Initial position not defined, meaning random
+								 depending the type of element and movement (in the top of the visual zone for asteroids -->
+							<Attribute id="MaxTimeAction" value="-1"/> <!-- Default value, meaning no end -->
+							<Attribute id="Type" value="0"/> <!-- The standard definition includes only one type -->
+							<Attribute id="MovType" value="0"/> <!-- Default value. No really used in this standard definition -->
+							<Attribute id="EnergyAdded" value="50"/> <!-- 50% more loaded (up to 100 fully loaded" -->
 							<Attribute id="Speed" value="1"/> <!-- Slow to facilitate to pick it up -->
 						</Attributes>
 					</Action>
@@ -65,13 +77,18 @@
 					<!-- A shooting pill -->
 					<Action id="72100">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="6"/>
+							<!-- In this first definition all attributes are explained
+								 But not all are necessary. So, some of them are avoided in further definitions -->
+							<Attribute id="TimeToAppear" value="6"/> <!-- Every 6 seconds -->
 							<Attribute id="ProbabilityToAppear" value="50"/> <!-- In this level more probable to appear -->
-							<Attribute id="Emerge" value="NO"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Regenerate" value="YES"/>
-							<Attribute id="Type" value="0"/>
-							<Attribute id="MovType" value="0"/> 
+							<Attribute id="Emerge" value="NO"/> <!-- Default value, meaning not to appear little by little -->
+							<Attribute id="TimeToMove" value="0"/> <!-- Default value. Inmediate -->
+							<Attribute id="Regenerate" value="YES"/> <!-- Default value, After passed another one is generated -->
+							<Attribute id="Roll" value="NO"/> <!-- Default value, meaning not to appear in the other side of the screen when exited this one -->
+							<!-- Initial position not defined, meaning random
+								 depending the type of element and movement (in the top of the visual zone for asteroids -->
+							<Attribute id="Type" value="0"/> <!-- The standard definition includes only one type -->
+							<Attribute id="MovType" value="0"/> <!-- Default value. No really used in the standard definition. -->
 							<Attribute id="TypeShooting" value="-2"/> <!-- Meaning the next level of the current one -->
 							<Attribute id="Speed" value="1"/> <!-- Again slow -->
 						</Attributes>
@@ -105,43 +122,39 @@
 					<!-- Related with asteroids -->
 					<Action id="70110">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="0"/>
+							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/> 
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/>
 							<Attribute id="PointsGiven" value="100"/>
 							<Attribute id="Speed" value="-3"/>
 						</Attributes>
 					</Action>
+					
 					<Action id="70111">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
-							<Attribute id="ProbabilityToAppear" value="100"/> 
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/>
+							<Attribute id="ProbabilityToAppear" value="80"/> 
 							<Attribute id="PointsGiven" value="100"/>
 							<Attribute id="Speed" value="-3"/>
 						</Attributes>
 					</Action>
+					
 					<Action id="70112">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
-							<Attribute id="ProbabilityToAppear" value="80"/> 
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/>
-							<Attribute id="PointsGiven" value="100"/>
+							<Attribute id="ProbabilityToAppear" value="60"/> 
+							<Attribute id="PointsGiven" value="200"/>
 							<Attribute id="Speed" value="-4"/> <!-- One of them will be even quicker -->
 						</Attributes>
 					</Action>
 
-					<!-- An Energy pill -->
+					<!-- An energy pill -->
 					<Action id="71110">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="40"/> 
-							<Attribute id="Type" value="0"/>
-							<Attribute id="MovType" value="0"/>
-							<Attribute id="EnergyAdded" value="1000"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Type" value="0"/> 
+							<Attribute id="EnergyAdded" value="50"/>
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
 					</Action>
@@ -150,9 +163,9 @@
 					<Action id="72110">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
-							<Attribute id="ProbabilityToAppear" value="40"/> <!-- Less probable than in the previous scene -->
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/>
+							<Attribute id="ProbabilityToAppear" value="40"/> 
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Type" value="0"/> 
 							<Attribute id="TypeShooting" value="-2"/>
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
@@ -188,41 +201,35 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="0"/>
 							<Attribute id="ProbabilityToAppear" value="100"/> 
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/>
 							<Attribute id="PointsGiven" value="100"/>
 							<Attribute id="Speed" value="-3"/>
 						</Attributes>
 					</Action>
+					
 					<Action id="70121">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/> 
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/>
 							<Attribute id="PointsGiven" value="100"/>
 							<Attribute id="Speed" value="-3"/>
 						</Attributes>
 					</Action>
+					
 					<Action id="70122">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/> 
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/>
-							<Attribute id="PointsGiven" value="100"/>
+							<Attribute id="PointsGiven" value="200"/>
 							<Attribute id="Speed" value="-4"/>
 						</Attributes>
 					</Action>
-					<!-- Now we could have 4 asteroids simultaneously -->
+					
 					<Action id="70123">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="2"/>
 							<Attribute id="ProbabilityToAppear" value="70"/> 
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/>
-							<Attribute id="PointsGiven" value="100"/>
-							<Attribute id="Speed" value="-4"/> <!-- Quick -->
+							<Attribute id="PointsGiven" value="200"/>
+							<Attribute id="Speed" value="-4"/> 
 						</Attributes>
 					</Action>
 
@@ -231,9 +238,9 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="40"/> 
+							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
-							<Attribute id="MovType" value="0"/>
-							<Attribute id="EnergyAdded" value="1000"/>
+							<Attribute id="EnergyAdded" value="50"/>
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
 					</Action>
@@ -241,10 +248,10 @@
 					<!-- A shooting pill -->
 					<Action id="72120">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="6"/> <!-- Every much more time than before -->
-							<Attribute id="ProbabilityToAppear" value="30"/> <!-- Low probability to appear -->
-							<Attribute id="Type" value="-1"/>
-							<Attribute id="MovType" value="0"/>
+							<Attribute id="TimeToAppear" value="6"/> 
+							<Attribute id="ProbabilityToAppear" value="30"/> 
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Type" value="0"/>
 							<Attribute id="TypeShooting" value="-2"/>
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
