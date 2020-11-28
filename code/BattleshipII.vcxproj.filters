@@ -60,6 +60,9 @@
     <ClCompile Include="Stage2Worlds.cpp">
       <Filter>Archivos de código fuente\Worlds</Filter>
     </ClCompile>
+    <ClCompile Include="SceneActionBlocks.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Defs.hpp">
@@ -93,6 +96,9 @@
       <Filter>Archivos de encabezado\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="Worlds.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneActionBlocks.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

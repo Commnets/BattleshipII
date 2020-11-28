@@ -19,6 +19,27 @@
 
 namespace BattleshipII
 {
+	/** To create the special curves of this game. */
+	class CurveBuilder : public QGAMES::CurveTemplateBuilder
+	{
+		public:
+		/** @see parent. */
+		virtual QGAMES::FollowingACurveMovement::CurveTemplate* createCurve 
+			(int t, const std::map <int, double>& prms) override final; // No extension possible...
+	};
+
+	/** To create the movements of the game.
+		The previous curve factory has to be taken into account. */
+	class MovementBuilder : public BATTLESHIP::MovementBuilder
+	{
+		public:
+		MovementBuilder (const std::string& fDef)
+			: BATTLESHIP::MovementBuilder (fDef, new CurveBuilder) // Needs the curves of this type of game...
+								{ }
+
+		// But no special movements have been added...
+	};
+
 	/** The extension to create worlds. */
 	class WorldBuilder : public BATTLESHIP::WorldBuilder
 	{
@@ -28,11 +49,14 @@ namespace BattleshipII
 							{ }
 
 		private:
+		/** @see parent. */
 		virtual QGAMES::World* createWorldObject (int no, const QGAMES::Scenes& s, 
-			const QGAMES::WorldProperties& p);
+			const QGAMES::WorldProperties& p) override final;
 		virtual QGAMES::Scene* createSceneObject (int ns, const QGAMES::Maps& m, 
 			const QGAMES::Scene::Connections& cn, 
-			const QGAMES::SceneProperties& p, const QGAMES::EntitiesPerLayer& ePL);
+			const QGAMES::SceneProperties& p, const QGAMES::EntitiesPerLayer& ePL) override final;
+		virtual QGAMES::SceneActionBlock* createSceneActionBlockObject (int nAB, 
+			const QGAMES::SceneActionBlockProperties& prps) override final;
 	};
 }
 

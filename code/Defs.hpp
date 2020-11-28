@@ -23,6 +23,24 @@
 #define __BATTLESHIPII_SHOWFPSPARAMETER__					"FPS"
 #define __BATTLESHIPII_DEFAULTSHOWFPSPARAMETER__			"NO"
 
+// The new types of curves defined for the BattleshipII::CurveFactory 
+// used in the BattleshipII::MovementBuilder, defined at BattleshipII::Game level 
+#define __BATTLESHIPII_SINUSOIDEGOANDBACK__					1000
+
+// The different types of movements that the UFOs have in a BattleshipII game
+// A sinusoide from the angle 0 to the angle 2PI and back (from the left to the right)
+#define __BATTLESHIPII_SINUSOIDE1UFOSMOVEMENT__				1000
+// A sinusoide from the angle PI/2 to the angle 3PI/2 and back (from the left to the right)
+#define __BATTLESHIPII_SINUSOIDE2UFOSMOVEMENT__				1001
+// A sinusoide from the angle 0 to the angle 2PI and back (from the right to the left)
+#define __BATTLESHIPII_SINUSOIDE3UFOSMOVEMENT__				1002
+// A sinusoide from the angle PI/2 to the angle 3PI/2 and back (from the right to the left)
+#define __BATTLESHIPII_SINUSOIDE4UFOSMOVEMENT__				1003
+
+// The different types of combat blocks
+#define __BATTLESHIPII_STAYANDMOVESINFROMLEFTTORIGHT__		1000
+#define __BATTLESHIPII_STAYANDMOVESINFROMRIGHTTOLEFT__		1001
+
 // The worlds of the game (stages)
 #define __BATTLESHIPII_STAGE1WORLDID__						50001 // Asteroids
 #define __BATTLESHIPII_STAGE2WORLDID__						50002 // UFOs

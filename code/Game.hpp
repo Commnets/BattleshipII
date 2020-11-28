@@ -61,6 +61,8 @@ namespace BattleshipII
 		/** see parent. */
 		virtual QGAMES::InputHandler* createInputHandler ()
 							{ return (implementation () -> createInputHandler (new BATTLESHIP::InputHandlerBehaviour ())); }
+		virtual QGAMES::MovementBuilder* createMovementBuilder () 
+							{ return (new MovementBuilder (parameter (__GAME_PROPERTYMOVEMENTSFILE__))); }
 		virtual QGAMES::WorldBuilder* createWorldBuilder ()
 							{ return (new WorldBuilder (parameter (__GAME_PROPERTYWORLDSFILE__), 
 								mapBuilder ())); }

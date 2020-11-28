@@ -101,6 +101,7 @@
   <ItemGroup>
     <ClCompile Include="Builders.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SceneActionBlocks.cpp" />
     <ClCompile Include="Scenes.cpp" />
     <ClCompile Include="Stage1Scenes.cpp" />
     <ClCompile Include="Stage1Worlds.cpp" />
@@ -115,6 +116,7 @@
     <ClInclude Include="Defs.hpp" />
     <ClInclude Include="doxy.hpp" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SceneActionBlocks.hpp" />
     <ClInclude Include="Scenes.hpp" />
     <ClInclude Include="Stage1Scenes.hpp" />
     <ClInclude Include="Stage1Worlds.hpp" />
