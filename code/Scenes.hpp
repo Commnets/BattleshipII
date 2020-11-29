@@ -19,6 +19,9 @@
 
 #include "Stage1Scenes.hpp"
 #include "Stage2Scenes.hpp"
+#include "Stage3Scenes.hpp"
+#include "Stage4Scenes.hpp"
+#include "Stage5Scenes.hpp"
 
 #endif
   

@@ -63,6 +63,24 @@
     <ClCompile Include="SceneActionBlocks.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
+    <ClCompile Include="Stage3Worlds.cpp">
+      <Filter>Archivos de código fuente\Worlds</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage4Worlds.cpp">
+      <Filter>Archivos de código fuente\Worlds</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage5Worlds.cpp">
+      <Filter>Archivos de código fuente\Worlds</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage3Scenes.cpp">
+      <Filter>Archivos de código fuente\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage4Scenes.cpp">
+      <Filter>Archivos de código fuente\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Stage5Scenes.cpp">
+      <Filter>Archivos de código fuente\Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Defs.hpp">
@@ -100,6 +118,30 @@
     </ClInclude>
     <ClInclude Include="SceneActionBlocks.hpp">
       <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage2Scenes.hpp">
+      <Filter>Archivos de encabezado\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage3Scenes.hpp">
+      <Filter>Archivos de encabezado\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage4Scenes.hpp">
+      <Filter>Archivos de encabezado\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage5Scenes.hpp">
+      <Filter>Archivos de encabezado\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage2Worlds.hpp">
+      <Filter>Archivos de encabezado\Worlds</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage3Worlds.hpp">
+      <Filter>Archivos de encabezado\Worlds</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage4Worlds.hpp">
+      <Filter>Archivos de encabezado\Worlds</Filter>
+    </ClInclude>
+    <ClInclude Include="Stage5Worlds.hpp">
+      <Filter>Archivos de encabezado\Worlds</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

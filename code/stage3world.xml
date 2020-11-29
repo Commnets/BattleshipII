@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<Worlds>
+	
+	<!-- UFOs -->
+	<!-- This world is the world of the UFOs -->
+	<World id="50003">
+	
+		<Scenes>
+		
+			<Scene id="70020">
+				<Actions>
+
+					<!-- A pill of fuel -->
+					<Action id="71300">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="5"/>
+							<Attribute id="ProbabilityToAppear" value="40"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Type" value="0"/>
+							<Attribute id="EnergyAdded" value="1000"/>
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
+
+					<!-- A shooting pill -->
+					<Action id="72300">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="6"/>
+							<Attribute id="ProbabilityToAppear" value="50"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Type" value="0"/>
+							<Attribute id="TypeShooting" value="-2"/> 
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="NAME" value="Remember"/>
+					<Attribute id="MOVEMENT" value="1,1,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="60001"/> 
+					<Attribute id="SCENETIME" value="60"/> 
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="70021" at="0"/>
+				</Conexions>
+				
+				<Maps>
+					<Map id="50102" file="maps/BKSpace3.xml"/>
+					<Map id="70000" file="maps/nomap.xml"/>
+				</Maps>
+				
+				<Entities>
+				</Entities>
+				
+			</Scene>
+		
+			<Scene id="70021">
+				<Actions>
+
+					<!-- A pill of fuel -->
+					<Action id="71310">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="5"/>
+							<Attribute id="ProbabilityToAppear" value="40"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Type" value="0"/>
+							<Attribute id="EnergyAdded" value="1000"/>
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
+
+					<!-- A shooting pill -->
+					<Action id="72310">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="6"/>
+							<Attribute id="ProbabilityToAppear" value="50"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Type" value="0"/>
+							<Attribute id="TypeShooting" value="-2"/> 
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="NAME" value="Remember"/>
+					<Attribute id="MOVEMENT" value="1,1,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="60001"/> 
+					<Attribute id="SCENETIME" value="60"/> 
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="70022" at="0"/>
+				</Conexions>
+				
+				<Maps>
+					<Map id="50102" file="maps/BKSpace3.xml"/>
+					<Map id="70000" file="maps/nomap.xml"/>
+				</Maps>
+				
+				<Entities>
+				</Entities>
+				
+			</Scene>
+		
+			<Scene id="70022">
+				<Actions>
+
+					<!-- A pill of fuel -->
+					<Action id="71320">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="5"/>
+							<Attribute id="ProbabilityToAppear" value="40"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Type" value="0"/>
+							<Attribute id="EnergyAdded" value="1000"/>
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
+
+					<!-- A shooting pill -->
+					<Action id="72320">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="6"/>
+							<Attribute id="ProbabilityToAppear" value="50"/>
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Type" value="0"/>
+							<Attribute id="TypeShooting" value="-2"/> 
+							<Attribute id="Speed" value="1"/>
+						</Attributes>
+					</Action>
+				</Actions>
+				
+				<Attributes>
+					<Attribute id="NAME" value="Remember"/>
+					<Attribute id="MOVEMENT" value="1,1,0"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="60001"/> 
+					<Attribute id="SCENETIME" value="60"/> 
+				</Attributes>
+				
+				<Conexions>
+					<Conexion id="0" with="70030" at="0"/>
+				</Conexions>
+				
+				<Maps>
+					<Map id="50102" file="maps/BKSpace3.xml"/>
+					<Map id="70000" file="maps/nomap.xml"/>
+				</Maps>
+				
+				<Entities>
+				</Entities>
+				
+			</Scene>
+			
+		</Scenes>
+		<Attributes>
+			<Attribute id="NAME" value="UFOs"/>
+		</Attributes>
+		
+	</World>
+	
+</Worlds>

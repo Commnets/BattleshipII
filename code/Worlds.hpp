@@ -19,6 +19,9 @@
 
 #include "Stage1Worlds.hpp"
 #include "Stage2Worlds.hpp"
+#include "Stage3Worlds.hpp"
+#include "Stage4Worlds.hpp"
+#include "Stage5Worlds.hpp"
 
 #endif
   

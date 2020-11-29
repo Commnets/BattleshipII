@@ -51,6 +51,15 @@ QGAMES::World* BattleshipII::WorldBuilder::createWorldObject (int no, const QGAM
 	if (no == __BATTLESHIPII_STAGE2WORLDID__)
 		result = new BattleshipII::Stage2World (s, p);
 	else
+	if (no == __BATTLESHIPII_STAGE3WORLDID__)
+		result = new BattleshipII::Stage3World (s, p);
+	else
+	if (no == __BATTLESHIPII_STAGE4WORLDID__)
+		result = new BattleshipII::Stage4World (s, p);
+	else
+	if (no == __BATTLESHIPII_STAGE5WORLDID__)
+		result = new BattleshipII::Stage5World (s, p);
+	else
 		result = BATTLESHIP::WorldBuilder::createWorldObject (no, s, p);
 
 	return (result);
@@ -73,6 +82,7 @@ QGAMES::Scene* BattleshipII::WorldBuilder::createSceneObject (int ns, const QGAM
 	if (ns == __BATTLESHIPII_STAGE1SCENE3__)
 		result = new BattleshipII::Stage1Scene3 (m, cn, p, ePL);
 	else
+
 	// World Stage 2...
 	if (ns == __BATTLESHIPII_STAGE2SCENE1__)
 		result = new BattleshipII::Stage2Scene1 (m, cn, p, ePL);
@@ -82,6 +92,41 @@ QGAMES::Scene* BattleshipII::WorldBuilder::createSceneObject (int ns, const QGAM
 	else
 	if (ns == __BATTLESHIPII_STAGE2SCENE3__)
 		result = new BattleshipII::Stage2Scene3 (m, cn, p, ePL);
+	else
+
+	// World Stage 3...
+	if (ns == __BATTLESHIPII_STAGE3SCENE1__)
+		result = new BattleshipII::Stage3Scene1 (m, cn, p, ePL);
+	else
+	if (ns == __BATTLESHIPII_STAGE3SCENE2__)
+		result = new BattleshipII::Stage3Scene2 (m, cn, p, ePL);
+	else
+	if (ns == __BATTLESHIPII_STAGE3SCENE3__)
+		result = new BattleshipII::Stage3Scene3 (m, cn, p, ePL);
+	else
+
+	// World Stage 4...
+	if (ns == __BATTLESHIPII_STAGE4SCENE1__)
+		result = new BattleshipII::Stage4Scene1 (m, cn, p, ePL);
+	else
+	if (ns == __BATTLESHIPII_STAGE4SCENE2__)
+		result = new BattleshipII::Stage4Scene2 (m, cn, p, ePL);
+	else
+	if (ns == __BATTLESHIPII_STAGE4SCENE3__)
+		result = new BattleshipII::Stage4Scene3 (m, cn, p, ePL);
+	else
+
+	// World Stage 5...
+	if (ns == __BATTLESHIPII_STAGE5SCENE1__)
+		result = new BattleshipII::Stage5Scene1 (m, cn, p, ePL);
+	else
+	if (ns == __BATTLESHIPII_STAGE5SCENE2__)
+		result = new BattleshipII::Stage5Scene2 (m, cn, p, ePL);
+	else
+	if (ns == __BATTLESHIPII_STAGE5SCENE3__)
+		result = new BattleshipII::Stage5Scene3 (m, cn, p, ePL);
+
+	// Any other
 	else
 		result = BATTLESHIP::WorldBuilder::createSceneObject (ns, m, cn, p, ePL);
 

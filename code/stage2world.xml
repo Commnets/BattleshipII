@@ -11,7 +11,7 @@
 			<Scene id="70010">
 				<Actions>
 					<!-- Related with a set of UFO's moving left to right and then attacking-->
-					<Action id="74120">
+					<Action id="74200">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/>
@@ -81,7 +81,7 @@
 					</Action>
 
 					<!-- A set of UFO's moving left to right and then attacking quicker -->
-					<Action id="74121">
+					<Action id="74201">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/>
@@ -105,7 +105,7 @@
 					</Action>
 
 					<!-- A set of UFO's moving left to right and then attacking quicker -->
-					<Action id="74122">
+					<Action id="74202">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/>
@@ -129,7 +129,7 @@
 					</Action>
 
 					<!-- A pill of fuel -->
-					<Action id="71120">
+					<Action id="71200">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="40"/>
@@ -141,7 +141,7 @@
 					</Action>
 
 					<!-- A shooting pill -->
-					<Action id="72120">
+					<Action id="72200">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="50"/>
@@ -156,10 +156,9 @@
 				<Attributes>
 					<Attribute id="NAME" value="Remember"/>
 					<!-- The blocks that are managed sequentially -->
-					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74120,74121,74122"/>
+					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74200,74201,74202"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
-					<Attribute id="BACKGROUNDMUSIC" value="50001"/> 
-					<Attribute id="SCENETIME" value="60"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="60000"/> 
 				</Attributes>
 				
 				<Conexions>
@@ -167,7 +166,7 @@
 				</Conexions>
 				
 				<Maps>
-					<Map id="50100" file="maps/BKSpace1.xml"/>
+					<Map id="50101" file="maps/BKSpace2.xml"/>
 					<Map id="70000" file="maps/nomap.xml"/>
 				</Maps>
 				
@@ -181,7 +180,7 @@
 			<Scene id="70011">
 				<Actions>
 					<!-- A se of UFOS moving in circle from the left down corner -->
-					<Action id="74130">
+					<Action id="74210">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/>
@@ -206,7 +205,7 @@
 					</Action>
 					
 					<!-- Same from the other corner -->
-					<Action id="74131">
+					<Action id="74211">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/>
@@ -231,7 +230,7 @@
 					</Action>
 					
 					<!-- Same from one side -->
-					<Action id="74132">
+					<Action id="74212">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/>
@@ -256,7 +255,7 @@
 					</Action>
 
 					<!-- A pill of fuel -->
-					<Action id="71130">
+					<Action id="71210">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="40"/>
@@ -268,7 +267,7 @@
 					</Action>
 
 					<!-- A shooting pill -->
-					<Action id="72130">
+					<Action id="72210">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="40"/> 
@@ -283,10 +282,9 @@
 				<Attributes>
 					<Attribute id="NAME" value="UFOS moving"/>
 					<!-- The blocks that are managed sequential -->
-					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74130,74131,74132"/>
+					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74210,74211,74212"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
-					<Attribute id="BACKGROUNDMUSIC" value="50001"/> 
-					<Attribute id="SCENETIME" value="60"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="60000"/> 
 				</Attributes>
 				
 				<Conexions>
@@ -294,7 +292,7 @@
 				</Conexions>
 				
 				<Maps>
-					<Map id="50100" file="maps/BKSpace1.xml"/>
+					<Map id="50101" file="maps/BKSpace2.xml"/>
 					<Map id="70000" file="maps/nomap.xml"/>
 				</Maps>
 				
@@ -307,7 +305,7 @@
 			<Scene id="70012">
 				<Actions>
 					<!-- A se of UFOS moving in circle from the left down corner -->
-					<Action id="74140">
+					<Action id="74220">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/>
@@ -332,7 +330,7 @@
 					</Action>
 					
 					<!-- A pill of fuel -->
-					<Action id="71140">
+					<Action id="71220">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="40"/>
@@ -344,7 +342,7 @@
 					</Action>
 
 					<!-- A shooting pill -->
-					<Action id="72140">
+					<Action id="72220">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="40"/> 
@@ -359,18 +357,17 @@
 				<Attributes>
 					<Attribute id="NAME" value="Guauuu"/>
 					<!-- The blocks that are managed sequentially -->
-					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74140"/>
+					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74220"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
-					<Attribute id="BACKGROUNDMUSIC" value="50001"/> 
-					<Attribute id="SCENETIME" value="60"/> 
+					<Attribute id="BACKGROUNDMUSIC" value="60000"/> 
 				</Attributes>
 				
 				<Conexions>
-					<!-- Here the game finishes -->
+					<Conexion id="0" with="70020" at="0"/>
 				</Conexions>
 				
 				<Maps>
-					<Map id="50100" file="maps/BKSpace1.xml"/>
+					<Map id="50101" file="maps/BKSpace2.xml"/>
 					<Map id="70000" file="maps/nomap.xml"/>
 				</Maps>
 				

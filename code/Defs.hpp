@@ -44,6 +44,9 @@
 // The worlds of the game (stages)
 #define __BATTLESHIPII_STAGE1WORLDID__						50001 // Asteroids
 #define __BATTLESHIPII_STAGE2WORLDID__						50002 // UFOs
+#define __BATTLESHIPII_STAGE3WORLDID__						50003
+#define __BATTLESHIPII_STAGE4WORLDID__						50004
+#define __BATTLESHIPII_STAGE5WORLDID__						50005
 
 // The scenes of the game
 // Scenes for the stage 1
@@ -54,6 +57,18 @@
 #define __BATTLESHIPII_STAGE2SCENE1__						70010
 #define __BATTLESHIPII_STAGE2SCENE2__						70011
 #define __BATTLESHIPII_STAGE2SCENE3__						70012
+// Scenes for the stage 3
+#define __BATTLESHIPII_STAGE3SCENE1__						70020
+#define __BATTLESHIPII_STAGE3SCENE2__						70021
+#define __BATTLESHIPII_STAGE3SCENE3__						70022
+// Scenes for the stage 4
+#define __BATTLESHIPII_STAGE4SCENE1__						70030
+#define __BATTLESHIPII_STAGE4SCENE2__						70031
+#define __BATTLESHIPII_STAGE4SCENE3__						70032
+// Scenes for the stage 5
+#define __BATTLESHIPII_STAGE5SCENE1__						70040
+#define __BATTLESHIPII_STAGE5SCENE2__						70041
+#define __BATTLESHIPII_STAGE5SCENE3__						70042
 
 #endif
   

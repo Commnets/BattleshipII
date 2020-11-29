@@ -9,5 +9,11 @@
 	<Include file="stage1world.xml"/>
 	<!-- The second stage world -->
 	<Include file="stage2world.xml"/>
+	<!-- The third stage world -->
+	<Include file="stage3world.xml"/>
+	<!-- The fourth stage world -->
+	<Include file="stage4world.xml"/>
+	<!-- The fifth stage world -->
+	<Include file="stage5world.xml"/>
 	
 </Worlds>
