@@ -14,10 +14,10 @@
 					<Action id="71500">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
-							<Attribute id="ProbabilityToAppear" value="40"/>
+							<Attribute id="ProbabilityToAppear" value="30"/>
 							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
-							<Attribute id="EnergyAdded" value="1000"/>
+							<Attribute id="EnergyAdded" value="20"/>
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
 					</Action>
@@ -26,11 +26,11 @@
 					<Action id="72500">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
-							<Attribute id="ProbabilityToAppear" value="50"/>
+							<Attribute id="ProbabilityToAppear" value="40"/>
 							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
 							<Attribute id="TypeShooting" value="-2"/> 
-							<Attribute id="Speed" value="1"/>
+							<Attribute id="Speed" value="3"/>
 						</Attributes>
 					</Action>
 				</Actions>
@@ -63,10 +63,10 @@
 					<Action id="71510">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
-							<Attribute id="ProbabilityToAppear" value="40"/>
+							<Attribute id="ProbabilityToAppear" value="30"/>
 							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
-							<Attribute id="EnergyAdded" value="1000"/>
+							<Attribute id="EnergyAdded" value="20"/>
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
 					</Action>
@@ -75,11 +75,11 @@
 					<Action id="72510">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
-							<Attribute id="ProbabilityToAppear" value="50"/>
+							<Attribute id="ProbabilityToAppear" value="40"/>
 							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
 							<Attribute id="TypeShooting" value="-2"/> 
-							<Attribute id="Speed" value="1"/>
+							<Attribute id="Speed" value="3"/>
 						</Attributes>
 					</Action>
 				</Actions>
@@ -112,10 +112,10 @@
 					<Action id="71520">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
-							<Attribute id="ProbabilityToAppear" value="40"/>
+							<Attribute id="ProbabilityToAppear" value="30"/>
 							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
-							<Attribute id="EnergyAdded" value="1000"/>
+							<Attribute id="EnergyAdded" value="20"/>
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
 					</Action>
@@ -124,11 +124,11 @@
 					<Action id="72520">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
-							<Attribute id="ProbabilityToAppear" value="50"/>
+							<Attribute id="ProbabilityToAppear" value="40"/>
 							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
 							<Attribute id="TypeShooting" value="-2"/> 
-							<Attribute id="Speed" value="1"/>
+							<Attribute id="Speed" value="3"/>
 						</Attributes>
 					</Action>
 				</Actions>

@@ -135,8 +135,8 @@
 							<Attribute id="ProbabilityToAppear" value="40"/>
 							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
-							<Attribute id="EnergyAdded" value="1000"/>
-							<Attribute id="Speed" value="1"/>
+							<Attribute id="EnergyAdded" value="40"/>
+							<Attribute id="Speed" value="2"/>
 						</Attributes>
 					</Action>
 
@@ -144,7 +144,7 @@
 					<Action id="72200">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
-							<Attribute id="ProbabilityToAppear" value="50"/>
+							<Attribute id="ProbabilityToAppear" value="30"/>
 							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
 							<Attribute id="TypeShooting" value="-2"/> 
@@ -261,8 +261,8 @@
 							<Attribute id="ProbabilityToAppear" value="40"/>
 							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
-							<Attribute id="EnergyAdded" value="1000"/>
-							<Attribute id="Speed" value="1"/>
+							<Attribute id="EnergyAdded" value="40"/>
+							<Attribute id="Speed" value="2"/>
 						</Attributes>
 					</Action>
 
@@ -270,11 +270,11 @@
 					<Action id="72210">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
-							<Attribute id="ProbabilityToAppear" value="40"/> 
+							<Attribute id="ProbabilityToAppear" value="30"/> 
 							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
 							<Attribute id="TypeShooting" value="-2"/> 
-							<Attribute id="Speed" value="2"/> <!-- Quicker than usual -->
+							<Attribute id="Speed" value="1"/> <!-- Quicker than usual -->
 						</Attributes>
 					</Action>
 				</Actions>
@@ -301,10 +301,10 @@
 				
 			</Scene>
 			
-			<!-- Guauuu, ufos moving in a sinusoide -->
+			<!-- Guauuu, ufos moving in a sinusoide from different parts of the screen -->
 			<Scene id="70012">
 				<Actions>
-					<!-- A se of UFOS moving in circle from the left down corner -->
+					<!-- A set of UFOS moving in sinusoide from the left to the right corner -->
 					<Action id="74220">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
@@ -320,9 +320,37 @@
 							<Attribute id="TimeToShoot" value="2"/>
 							<Attribute id="ProbabilityToShoot" value="40"/> 
 							<Attribute id="Speed" value="2"/>
-							<Attribute id="CombatFormation" value="1000"/> <!-- multiple sinusoide from the left -->
+							<!-- A couple of new ways of movement have been added:
+								 1000 = sinusoide from the left to the right
+								 1001 = sinusoide from the right to the left. -->
+							<Attribute id="CombatFormation" value="1000"/> 
+							<!-- 1000 and 1001 the attributes are the separation among the elements shown -->
 							<Attribute id="CombatFormationAttrs" value="0.05"/>
-							<Attribute id="NumberUFOS" value="7"/>
+							<Attribute id="NumberUFOS" value="5"/>
+							<Attribute id="TimerEvery" value="0"/> <!-- every loop -->
+							<Attribute id="TimerForHowMany" value="-1"/> <!-- for all -->
+							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
+						</Attributes>
+					</Action>
+
+					<Action id="74221">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="YES"/>
+							<Attribute id="TimeToMove" value="1"/>
+							<Attribute id="Regenerate" value="NO"/>
+							<Attribute id="InitialPosition" value="0.75,0.3,0"/> <!-- The left down corner -->
+							<Attribute id="MaxTimeAction" value="60"/> 
+							<Attribute id="Type" value="2"/> <!-- Flies --> 
+							<Attribute id="MovType" value="0"/>
+							<Attribute id="TypeShooting" value="1"/>
+							<Attribute id="TimeToShoot" value="2"/>
+							<Attribute id="ProbabilityToShoot" value="40"/> 
+							<Attribute id="Speed" value="2"/>
+							<Attribute id="CombatFormation" value="1001"/> 
+							<Attribute id="CombatFormationAttrs" value="0.05"/>
+							<Attribute id="NumberUFOS" value="5"/>
 							<Attribute id="TimerEvery" value="0"/> <!-- every loop -->
 							<Attribute id="TimerForHowMany" value="-1"/> <!-- for all -->
 							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
@@ -336,8 +364,8 @@
 							<Attribute id="ProbabilityToAppear" value="40"/>
 							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
-							<Attribute id="EnergyAdded" value="1000"/>
-							<Attribute id="Speed" value="1"/>
+							<Attribute id="EnergyAdded" value="40"/>
+							<Attribute id="Speed" value="2"/>
 						</Attributes>
 					</Action>
 
@@ -345,7 +373,7 @@
 					<Action id="72220">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
-							<Attribute id="ProbabilityToAppear" value="40"/> 
+							<Attribute id="ProbabilityToAppear" value="30"/> 
 							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="0"/>
 							<Attribute id="TypeShooting" value="-2"/> 
@@ -357,7 +385,7 @@
 				<Attributes>
 					<Attribute id="NAME" value="Guauuu"/>
 					<!-- The blocks that are managed sequentially -->
-					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74220"/>
+					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74220,74221"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60000"/> 
 				</Attributes>

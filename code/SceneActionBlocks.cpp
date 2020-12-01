@@ -88,7 +88,7 @@ QGAMES::FollowingACurveMovement::CurveTemplate* BattleshipII::CurveAndInitialPos
 					result = bld -> curveBuilder () -> createCurve (__BATTLESHIPII_SINUSOIDEGOANDBACK__,
 						crvprms = std::map <int, double> 
 							{ { 0, 70.0f },
-							  { 1, 70.0f },
+							  { 1, 55.0f },
 							  { 2, (double) f },
 							  { 3, 0.0 }, { 4, 0.0 }, { 5, 1.0 }, // XY Plane...
 							  { 6, 0.0 },
@@ -108,7 +108,7 @@ QGAMES::FollowingACurveMovement::CurveTemplate* BattleshipII::CurveAndInitialPos
 					result = bld -> curveBuilder () -> createCurve (__BATTLESHIPII_SINUSOIDEGOANDBACK__,
 						crvprms = std::map <int, double> 
 							{ { 0, 70.0f },
-							  { 1, 70.0f },
+							  { 1, 55.0f },
 							  { 2, (double) f },
 							  { 3, 0.0 }, { 4, 0.0 }, { 5, 1.0 }, // XY Plane...
 							  { 6, (double) (__PI / __BD 2) },
@@ -128,11 +128,11 @@ QGAMES::FollowingACurveMovement::CurveTemplate* BattleshipII::CurveAndInitialPos
 					result = bld -> curveBuilder () -> createCurve (__BATTLESHIPII_SINUSOIDEGOANDBACK__,
 						crvprms = std::map <int, double> 
 							{ { 0, 70.0f },
-							  { 1, 70.0f },
+							  { 1, 55.0f },
 							  { 2, (double) f },
 							  { 3, 0.0 }, { 4, 0.0 }, { 5, 1.0 }, // XY Plane...
 							  { 6, 0.0 },
-							  { 7, (double) (__BD 2 * __PI) }
+							  { 7, (double) ((__BD 2 * __PI) + (__BD 2 * __PI)) }
 							});
 				}
 
@@ -150,11 +150,11 @@ QGAMES::FollowingACurveMovement::CurveTemplate* BattleshipII::CurveAndInitialPos
 					result = bld -> curveBuilder () -> createCurve (__BATTLESHIPII_SINUSOIDEGOANDBACK__,
 						crvprms = std::map <int, double> 
 							{ { 0, 70.0f },
-							  { 1, 70.0f },
+							  { 1, 55.0f },
 							  { 2, (double) f },
 							  { 3, 0.0 }, { 4, 0.0 }, { 5, 1.0 }, // XY Plane...
 							  { 6, (double) (__PI / __BD 2) },
-							  { 7, (double) (__BD 3 * __PI / __BD 2) }
+							  { 7, (double) ((__BD 5 * __PI / __BD 2) + (__BD 2 * __PI)) }
 							});
 				}
 

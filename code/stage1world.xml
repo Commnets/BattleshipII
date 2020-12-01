@@ -65,7 +65,7 @@
 							<!-- In this first definition all attributes are explained
 								 But not all are necessary. So, some of them are avoided in further definitions -->
 							<Attribute id="TimeToAppear" value="5"/> <!-- Every 5 seconds -->
-							<Attribute id="ProbabilityToAppear" value="50"/> <!-- 40% probable to appear -->
+							<Attribute id="ProbabilityToAppear" value="40"/> <!-- 40% probable to appear -->
 							<Attribute id="Emerge" value="NO"/> <!-- Default value, meaning not to appear little by little -->
 							<Attribute id="TimeToMove" value="0"/> <!-- Default value. Inmediate -->
 							<Attribute id="Regenerate" value="YES"/> <!-- Default value, After passed another one is generated -->
@@ -131,7 +131,7 @@
 					<!-- Related with asteroids -->
 					<Action id="70110">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="TimeToAppear" value="0"/>
 							<Attribute id="ProbabilityToAppear" value="100"/> 
 							<Attribute id="PointsGiven" value="100"/>
 							<Attribute id="Speed" value="-3"/>
