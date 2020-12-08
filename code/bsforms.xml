@@ -23,12 +23,18 @@
 	<!-- Lives (different forms for Armagedon and Docomo) -->
 	<Form id="50009" name="BattleshipLives" file="forms/battleshiplives.png" width="100" height="46" 
             fSpacing="0" fMargin="0" fWidth="50" fHeight="46" aColor="255" nFrames="2"/>
+			
+	<!-- A ball of energy (green) -->
+	<Form id="50010" name="GreenEnergyBall" file="forms/greenenergyball.png" width="256" height="64" 
+            fSpacing="0" fMargin="0" fWidth="64" fHeight="64" aColor="255" nFrames="4"/>
 
 	<!-- Explosions -->
 	<Form id="50100" name="Explosion" file="forms/explosion.png" width="1280" height="1280"
 			fSpacing="0" fMargin="0" fWidth="256" fHeight="256" aColor="255" nFrames="25"/>
 	<Form id="50101" name="LittleExplosion" file="forms/LittleExplosion.png" width="640" height="640"
 			fSpacing="0" fMargin="0" fWidth="128" fHeight="128" aColor="255" nFrames="25"/>
+	<Form id="50102" name="ShootingExplosion" file="forms/shootingball.png" width="800" height="40"
+			fSpacing="0" fMargin="0" fWidth="40" fHeight="40" aColor="255" nFrames="20"/>
 			
 	<!-- The battle spaceship modified (Docomo) -->
 	<Form id="50151" name="SpaceshipRightDocomo" file="forms/spaceshiprightdocomo.png" width="110" height="330" 

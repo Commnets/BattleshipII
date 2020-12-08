@@ -296,6 +296,8 @@
 			<Form id="50400"/>
 			<Form id="50401"/>
 			<Form id="50402"/>
+			<!-- The explosion of the shooting -->
+			<Form id="50102"/>
 		</Forms>
 		<MovementsBase>
 			<!-- Moving forward -->
@@ -392,8 +394,19 @@
 					<!-- Not linked with anyone -->
 				</Attributes>
 			</Animation>
+			<!-- Shooting exploding (when contact) -->
+			<Animation id="8" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50102"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="20"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="0"/> <!-- No loop -->
+					<!-- Not linked with anyone -->
+				</Attributes>
+			</Animation>
 			<!-- No animation, when it has been destroyed or it is not still visible -->
-			<Animation id="8" type="-1"/>
+			<Animation id="9" type="-1"/>
 		</Animations>
 		<States>
 			<!-- Moving shooting type 0 (short yellow) -->
@@ -444,8 +457,10 @@
 					<Attribute id="DIRECTION" value="0,-1,0"/>
 				</Attributes>
 			</State>
-			<!-- Disappearing from the screen -->
+			<!-- Shooting exploding -->
 			<State id="8" animation="8" movementBase="570000"/>
+			<!-- Disappearing from the screen -->
+			<State id="9" animation="9" movementBase="570000"/>
 		</States>
 	</SetOfEntities>
 	
@@ -612,14 +627,18 @@
 	</SetOfEntities>
 
 	<!-- The battleship things to catch.
-		 By default, they are all type of missiles, that will increment the fire power. -->
-	<SetOfEntities fromId="54000" number="1">
+		 Missiles and the life 
+		 It is supossed there could be up to 5 simultaneously in the game -->
+	<SetOfEntities fromId="54000" number="5">
 		<Forms>
 			<!-- The different forms -->
+			<!-- The different forms of the shooting pills -->
 			<Form id="50300"/>
 			<Form id="50301"/>
 			<Form id="50302"/>
 			<Form id="50303"/>
+			<!-- The form used to define the live -->
+			<Form id="50009"/>
 			<!-- Exploding -->
 			<Form id="50100"/>
 		</Forms>
@@ -630,7 +649,7 @@
 			<Movement id="54100"/>
 		</MovementsBase>
 		<Animations>
-			<!-- Moving in the space form 0 -->
+			<!-- Moving in the space missile form 0 -->
 			<Animation id="0" type="0">
 				<Attributes>
 					<Attribute id="FORM" value="50300"/>
@@ -641,7 +660,7 @@
 					<!-- Not linked with anyone -->
 				</Attributes>
 			</Animation>
-			<!-- Moving in the space form 1 -->
+			<!-- Moving in the space missile form 1 -->
 			<Animation id="1" type="0">
 				<Attributes>
 					<Attribute id="FORM" value="50301"/>
@@ -652,7 +671,7 @@
 					<!-- Not linked with anyone -->
 				</Attributes>
 			</Animation>
-			<!-- Moving in the space form 2 -->
+			<!-- Moving in the space missile form 2 -->
 			<Animation id="2" type="0">
 				<Attributes>
 					<Attribute id="FORM" value="50302"/>
@@ -663,7 +682,7 @@
 					<!-- Not linked with anyone -->
 				</Attributes>
 			</Animation>
-			<!-- Moving in the space form 3 -->
+			<!-- Moving in the space missile form 3 -->
 			<Animation id="3" type="0">
 				<Attributes>
 					<Attribute id="FORM" value="50303"/>
@@ -674,8 +693,19 @@
 					<!-- Not linked with anyone -->
 				</Attributes>
 			</Animation>
-			<!-- When the asteroid is exploding -->
+			<!-- Moving in the space live -->
 			<Animation id="4" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="50009"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="6"/>
+					<Attribute id="FRACTIONTOCHANGE" value="3"/>
+					<Attribute id="LOOP" value="1"/>
+					<!-- Not linked with anyone -->
+				</Attributes>
+			</Animation>
+			<!-- When the asteroid is exploding -->
+			<Animation id="5" type="0">
 				<Attributes>
 					<Attribute id="FORM" value="50100"/>
 					<Attribute id="INITIALASPECT" value="0"/>
@@ -686,7 +716,7 @@
 				</Attributes>
 			</Animation>
 			<!-- No animation when it has been destroyed -->
-			<Animation id="5" type="-1"/>
+			<Animation id="6" type="-1"/>
 		</Animations>
 		<States>
 			<!-- Frozen shooting to catch type 1 -->
@@ -721,15 +751,24 @@
 					<Attribute id="DIRECTION" value="0,1,0"/>
 				</Attributes>
 			</State>
-			<!-- Exploding -->
+			<!-- Frozeen life to catch -->
 			<State id="8" animation="4" movementBase="54100"/>
+			<!-- Moving life to catch -->
+			<State id="9" animation="4" movementBase="54000">
+				<Attributes>
+					<Attribute id="DIRECTION" value="0,1,0"/>
+				</Attributes>
+			</State>
+			<!-- Exploding -->
+			<State id="10" animation="5" movementBase="54100"/>
 			<!-- Die (null state) -->
-			<State id="9" animation="5" movementBase="54100"/>
+			<State id="11" animation="6" movementBase="54100"/>
 		</States>
 	</SetOfEntities>
 
-	<!-- The tanks of fuel to load the energy of the battleship (energy elements) -->
-	<SetOfEntities fromId="55000" number="1">
+	<!-- The tanks of fuel to load the energy of the battleship (energy elements) 
+		 It is supossed there could be up to 5 simultaneously in the game -->
+	<SetOfEntities fromId="55000" number="5">
 		<Forms>
 			<!-- The usual form -->
 			<Form id="50450"/>

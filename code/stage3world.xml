@@ -28,7 +28,7 @@
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
 							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
+							<Attribute id="Type" value="2"/>
 							<Attribute id="TypeShooting" value="-2"/> 
 							<Attribute id="Speed" value="2"/>
 						</Attributes>
@@ -36,7 +36,7 @@
 				</Actions>
 				
 				<Attributes>
-					<Attribute id="NAME" value="Remember"/>
+					<Attribute id="NAME" value="Asteorids everywhere"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60001"/> 
 					<Attribute id="SCENETIME" value="60"/> 
@@ -77,7 +77,7 @@
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
 							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
+							<Attribute id="Type" value="2"/>
 							<Attribute id="TypeShooting" value="-2"/> 
 							<Attribute id="Speed" value="2"/>
 						</Attributes>
@@ -85,7 +85,7 @@
 				</Actions>
 				
 				<Attributes>
-					<Attribute id="NAME" value="Remember"/>
+					<Attribute id="NAME" value="UFOs everywhere"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60001"/> 
 					<Attribute id="SCENETIME" value="60"/> 
@@ -126,7 +126,7 @@
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
 							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
+							<Attribute id="Type" value="2"/>
 							<Attribute id="TypeShooting" value="-2"/> 
 							<Attribute id="Speed" value="2"/>
 						</Attributes>
@@ -134,7 +134,7 @@
 				</Actions>
 				
 				<Attributes>
-					<Attribute id="NAME" value="Remember"/>
+					<Attribute id="NAME" value="Flies for you"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60001"/> 
 					<Attribute id="SCENETIME" value="60"/> 
@@ -156,7 +156,7 @@
 			
 		</Scenes>
 		<Attributes>
-			<Attribute id="NAME" value="UFOs"/>
+			<Attribute id="NAME" value="Challenge World"/>
 		</Attributes>
 		
 	</World>

@@ -4,4 +4,10 @@
 	<!-- Includes -->
 	<Include file="bsforms.xml"/>
 	
+	<!-- The big spaceships of this game -->
+	<Form id="60000" name="BigSpaceShip1" file="forms/BigSpaceShip1.png" width="3600" height="1800" 
+            fSpacing="0" fMargin="0" fWidth="600" fHeight="600" aColor="255" nFrames="18"/>
+	<Form id="60001" name="BigSpaceShip2" file="forms/BigSpaceShip2.png" width="3600" height="1800" 
+            fSpacing="0" fMargin="0" fWidth="600" fHeight="600" aColor="255" nFrames="18"/>
+	
 </Forms>
