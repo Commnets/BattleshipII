@@ -31,7 +31,7 @@ namespace BattleshipII
 							{ }
 
 		/** @see parent. */
-		virtual void initialize ();
+		virtual void initialize () override final;
 	};
 
 	/** Stage 3 Scene 1 */

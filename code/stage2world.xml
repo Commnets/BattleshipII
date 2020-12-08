@@ -29,7 +29,9 @@
 							<Attribute id="MaxTimeAction" value="-1"/> <!-- Default value. Meaning no end. -->
 							<!-- Type of UFO 0 = Orange
 											 1 = Green
-											 2 = Bees -->
+											 2 = Bees 
+											 3 = Round UFO 1
+											 4 = Round UFO 2 -->
 							<Attribute id="Type" value="0"/>
 							<!-- MovType 0 	= No movement
 										 1 	= Horizontal movement

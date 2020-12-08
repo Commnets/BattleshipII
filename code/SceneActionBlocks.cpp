@@ -173,8 +173,11 @@ QGAMES::FollowingACurveMovement::CurveTemplate* BattleshipII::CurveAndInitialPos
 
 // ---
 BattleshipII::SinusoideFromLeftBlockCombatFormationFactory::SinusoideFromLeftBlockCombatFormationFactory  
-		(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE)
-	: BATTLESHIP::StdSetUFOsSceneActionBlock::StayAndAttackOneByOneCombatFormationFactory (cF),
+		(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE,
+		 const std::function <BATTLESHIP::StdUFOSceneActionBlock* 
+			(int, BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory*)>& eABlock)
+	: BATTLESHIP::StdSetUFOsSceneActionBlock::StayAndAttackOneByOneCombatFormationFactory 
+		(cF, _SAMEPOSITION, _SAMETIME, eABlock, _NOMOVEMENTCURVE),
 	  _separationBetweenElements (sBE)
 {
 	// The UFOS are located one beneath the other...
@@ -198,8 +201,11 @@ BattleshipII::SinusoideFromLeftBlockCombatFormationFactory::SinusoideFromLeftBlo
 
 // ---
 BattleshipII::SinusoideFromRightBlockCombatFormationFactory::SinusoideFromRightBlockCombatFormationFactory 
-		(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE)
-	: BATTLESHIP::StdSetUFOsSceneActionBlock::StayAndAttackOneByOneCombatFormationFactory (cF),
+		(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE,
+		 const std::function <BATTLESHIP::StdUFOSceneActionBlock* 
+			(int, BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory*)>& eABlock)
+	: BATTLESHIP::StdSetUFOsSceneActionBlock::StayAndAttackOneByOneCombatFormationFactory 
+		(cF, _SAMEPOSITION, _SAMETIME, eABlock, _NOMOVEMENTCURVE),
 	  _separationBetweenElements (sBE)
 {
 	// The UFOS are located one beneath the other...

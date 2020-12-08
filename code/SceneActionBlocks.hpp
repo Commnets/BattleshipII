@@ -15,6 +15,7 @@
 #define __BATTLESHIPII_SCENEACTIONBLOCKS__
 
 #include "Defs.hpp"
+#include "Artists.hpp"
 #include <BattleshipLike/bsinclude.hpp>
 #include <BattleshipLike/bsactionblocks.hpp>
 
@@ -37,6 +38,40 @@ namespace BattleshipII
 			 std::map <int, double>& crvprms) override final;
 	};
 
+	/** An action block to control the new type of UFOs. */
+	class UFOSceneActionBlock : public BATTLESHIP::SingleStdUFOSceneActionBlock
+	{
+		public:
+		UFOSceneActionBlock (int id, BATTLESHIP::StdUFOSceneActionBlock::Properties* prps = 
+					new BATTLESHIP::StdUFOSceneActionBlock::Properties (), 
+				BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF = 
+					new BattleshipII::CurveAndInitialPositionFactory) // By default the new curve factory
+			: BATTLESHIP::SingleStdUFOSceneActionBlock (id, prps, cF)
+							{ }
+
+		protected:
+		/** @see parent. */
+		virtual bool isUFOValid (const BATTLESHIP::UFO* u) const override final
+							{ return (dynamic_cast <const UFO*> (u) != NULL); }
+	};
+
+	/** An action block to control the Mothership UFOs. */
+	class MothershipUFOSceneActionBlock : public BATTLESHIP::SingleStdUFOSceneActionBlock
+	{
+		public:
+		MothershipUFOSceneActionBlock (int id, BATTLESHIP::StdUFOSceneActionBlock::Properties* prps = 
+					new BATTLESHIP::StdUFOSceneActionBlock::Properties (), 
+				BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF = 
+					new BattleshipII::CurveAndInitialPositionFactory) // By default the new curve factory
+			: BATTLESHIP::SingleStdUFOSceneActionBlock (id, prps, cF)
+							{ }
+
+		protected:
+		/** @see parent. */
+		virtual bool isUFOValid (const BATTLESHIP::UFO* u) const override final
+							{ return (dynamic_cast <const MothershipUFO*> (u) != NULL); }
+	};
+
 	/** A new type of combat block. 
 		The ufos appear in the left side of the screen, and then move from the left to the right
 		each of them with PI/2 radians of delay. 
@@ -51,10 +86,12 @@ namespace BattleshipII
 			* @param t:	The time between the UFOS when starting to move. 
 			*/
 		SinusoideFromLeftBlockCombatFormationFactory 
-			(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE = 0.05);
+			(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE = 0.05,
+			 const std::function <BATTLESHIP::StdUFOSceneActionBlock* 
+				(int, BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory*)>& eABlock = __SINGLESTDUFOSCTIONBLOCK);
 
 		/** @see parent. */
-		virtual bool forCombatType (int t) const
+		virtual bool forCombatType (int t) const override final
 						{ return (t == __BATTLESHIPII_STAYANDMOVESINFROMLEFTTORIGHT__); }
 
 		private:
@@ -73,10 +110,12 @@ namespace BattleshipII
 			* @param t:	The time between the UFOS when starting to move. 
 			*/
 		SinusoideFromRightBlockCombatFormationFactory 
-			(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE = 0.05);
+			(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE = 0.05,
+			 const std::function <BATTLESHIP::StdUFOSceneActionBlock* 
+				(int, BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory*)>& eABlock = __SINGLESTDUFOSCTIONBLOCK);
 
 		/** @see parent. */
-		virtual bool forCombatType (int t) const
+		virtual bool forCombatType (int t) const override final
 						{ return (t == __BATTLESHIPII_STAYANDMOVESINFROMRIGHTTOLEFT__); }
 
 		private:

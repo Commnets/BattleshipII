@@ -29,8 +29,8 @@ namespace BattleshipII
 							{ }
 
 		/** @see parent. */
-		virtual void initialize ();
-		virtual void finalize ();
+		virtual void initialize () override final;
+		virtual void finalize () override final;
 
 		protected:
 	};

@@ -99,6 +99,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Artists.cpp" />
     <ClCompile Include="Builders.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneActionBlocks.cpp" />
@@ -118,6 +119,7 @@
     <ClCompile Include="Worlds.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Artists.hpp" />
     <ClInclude Include="Builders.hpp" />
     <ClInclude Include="Defs.hpp" />
     <ClInclude Include="doxy.hpp" />

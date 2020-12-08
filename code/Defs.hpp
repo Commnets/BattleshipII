@@ -23,6 +23,17 @@
 #define __BATTLESHIPII_SHOWFPSPARAMETER__					"FPS"
 #define __BATTLESHIPII_DEFAULTSHOWFPSPARAMETER__			"NO"
 
+// The number and type of enemies now have been redefined...
+#define __BATTLESHIPII_UFOBASEID__							__BATTLESHIP_ENEMYBASEID__
+#define __BATTLESHIPII_MAXNUMBERUFOS__						(__BATTLESHIP_MAXNUMBERENEMIES__ - 2)
+#define __BATTLESHIPII_MOTHERSHIPBASEID__					(__BATTLESHIP_ENEMYBASEID__ + __BATTLESHIP_MAXNUMBERENEMIES__ - 2)
+#define __BATTLESHIPII_MAXNUMBERMOTHERSHIPS__				2
+// all less 2 for UFO and 2 for MothershipUFOS
+
+// The new types of enemy...
+#define __BATTLESHIPII_ENEMTYTYPE4__						4
+#define __BATTLESHIPII_ENEMTYTYPE5__						5
+
 // The new types of curves defined for the BattleshipII::CurveFactory 
 // used in the BattleshipII::MovementBuilder, defined at BattleshipII::Game level 
 #define __BATTLESHIPII_SINUSOIDEGOANDBACK__					1000
@@ -40,6 +51,13 @@
 // The different types of combat blocks
 #define __BATTLESHIPII_STAYANDMOVESINFROMLEFTTORIGHT__		1000
 #define __BATTLESHIPII_STAYANDMOVESINFROMRIGHTTOLEFT__		1001
+
+// The number and type of action blocks now have been redefined either
+#define __BATTLESHIPII_ACTIONBLOCKUFOBASEID__				__BATTLESHIP_ACTIONBLOCKUFOBASEID__
+#define __BATTLESHIPII_ACTIONBLOCKUFONUMBER__				(__BATTLESHIP_ACTIONBLOCKUFONUMBER__ - 100)
+#define __BATTLESHIPII_ACTIONBLOCKMOTHERSHIPUFOBASEID__		(__BATTLESHIP_ACTIONBLOCKUFOBASEID__ - 100)
+#define __BATTLESHIPII_ACTIONBLOCKMOTHERSHIPUFONUMBER__		100
+// all less 100 for action blocks for UFOs and the last 100 for Mothership UFO action blocks...
 
 // The worlds of the game (stages)
 #define __BATTLESHIPII_STAGE1WORLDID__						50001 // Asteroids

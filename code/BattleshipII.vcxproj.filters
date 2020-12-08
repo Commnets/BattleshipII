@@ -81,6 +81,9 @@
     <ClCompile Include="Stage5Scenes.cpp">
       <Filter>Archivos de código fuente\Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="Artists.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Defs.hpp">
@@ -142,6 +145,9 @@
     </ClInclude>
     <ClInclude Include="Stage5Worlds.hpp">
       <Filter>Archivos de encabezado\Worlds</Filter>
+    </ClInclude>
+    <ClInclude Include="Artists.hpp">
+      <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

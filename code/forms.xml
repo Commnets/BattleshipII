@@ -9,5 +9,11 @@
             fSpacing="0" fMargin="0" fWidth="600" fHeight="600" aColor="255" nFrames="18"/>
 	<Form id="60001" name="BigSpaceShip2" file="forms/BigSpaceShip2.png" width="3600" height="1800" 
             fSpacing="0" fMargin="0" fWidth="600" fHeight="600" aColor="255" nFrames="18"/>
+
+	<!-- The new UFOs -->
+	<Form id="60100" name="UFO4" file="forms/UFO4.png" width="480" height="80" 
+            fSpacing="0" fMargin="0" fWidth="80" fHeight="80" aColor="255" nFrames="6"/>
+	<Form id="60101" name="UFO5" file="forms/UFO5.png" width="480" height="80" 
+            fSpacing="0" fMargin="0" fWidth="80" fHeight="80" aColor="255" nFrames="6"/>
 	
 </Forms>

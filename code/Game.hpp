@@ -20,6 +20,16 @@
 
 namespace BattleshipII
 {
+	/**
+	  * Just to change a couple of default parameters:
+	  * _numberOfUFOTypes.
+	  */
+	struct DataGame : public BATTLESHIP::DataGame
+	{
+		public:
+		DataGame ();
+	};
+
 	class Game : public BATTLESHIP::Game
 	{
 		public:
@@ -32,53 +42,53 @@ namespace BattleshipII
 							{ adjustToPlayers (nP); }
 
 			/** @see parent. */
-			virtual Configuration* clone () const
+			virtual Configuration* clone () const override final
 							{ Conf* result = new Conf (*this); 
 							  result -> cloneImplementation (this); 
 							  return (result); }
 
 			protected:
 			/** @see parent. */
-			virtual void adjustToPlayers (int nP);
+			virtual void adjustToPlayers (int nP) override final;
 
 			private:
 			/** The max number of lives defined in configuration. */
 			int _maxLives;
 		};
 
-		Game ()
-			: BATTLESHIP::Game (),
-			  _showFPS (false) // Not to show by default...
-							{ }
+		Game ();
 
 		/** To switch the visualization of the fPS. */
 		void setShowFPS (bool s);
 
 		/** @see parent. */
-		virtual void processEvent (const QGAMES::Event& evnt);
+		virtual void processEvent (const QGAMES::Event& evnt) override final;
 
 		private:
 		/** see parent. */
-		virtual QGAMES::InputHandler* createInputHandler ()
+		virtual QGAMES::InputHandler* createInputHandler () override final
 							{ return (implementation () -> createInputHandler (new BATTLESHIP::InputHandlerBehaviour ())); }
-		virtual QGAMES::MovementBuilder* createMovementBuilder () 
+		virtual QGAMES::EntityBuilder* createEntityBuilder () override final
+							{ return (new EntityBuilder (parameter (__GAME_PROPERTYENTITIESFILE__), 
+									formBuilder (), movementBuilder ())); }
+		virtual QGAMES::MovementBuilder* createMovementBuilder () override final
 							{ return (new MovementBuilder (parameter (__GAME_PROPERTYMOVEMENTSFILE__))); }
-		virtual QGAMES::WorldBuilder* createWorldBuilder ()
+		virtual QGAMES::WorldBuilder* createWorldBuilder () override final
 							{ return (new WorldBuilder (parameter (__GAME_PROPERTYWORLDSFILE__), 
 								mapBuilder ())); }
-		virtual QGAMES::CharacterControlStepsMonitorBuilder* createCharacterMonitorBuilder ()
+		virtual QGAMES::CharacterControlStepsMonitorBuilder* createCharacterMonitorBuilder () override final
 							{ return (new QGAMES::CharacterControlStepsMonitorBuilder 
 								(parameter (__GAME_PROPERTUCHARACTERMONITORFILE__))); }
 
 		/** @see parent. */
-		virtual Configuration* createConfiguration ();
+		virtual Configuration* createConfiguration () override final;
 
 		/** @see parent. */
-		virtual std::string defaultParameter (const std::string& p) const;
+		virtual std::string defaultParameter (const std::string& p) const override final;
 
 		/** @see parent. */
-		virtual void initialize ();
-		virtual void finalize ();
+		virtual void initialize () override final;
+		virtual void finalize () override final;
 
 		private:
 		/** To show or not the FPS in the right bottom corner. */

@@ -38,6 +38,22 @@ namespace BattleshipII
 								{ }
 
 		// But no special movements have been added...
+		// Just only the curve builder...
+	};
+
+	/** To create specific entities of the game. 
+		Different types of little UFOS and also the big ones. */
+	class EntityBuilder : public BATTLESHIP::EntityBuilder
+	{
+		public:
+		EntityBuilder (const std::string& eDef, QGAMES::FormBuilder* fB, QGAMES::MovementBuilder* mB)
+			: BATTLESHIP::EntityBuilder (eDef, fB, mB)
+								{ }
+
+		protected:
+		/** @see parent. 
+			The 75% is for UFOS,a nd las 25% for MothershipUFOS. */
+		virtual BATTLESHIP::Spaceship* createSpaceship (const QGAMES::EntityBuilder::EntityDefinition& def) override final;
 	};
 
 	/** The extension to create worlds. */

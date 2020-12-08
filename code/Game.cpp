@@ -1,6 +1,23 @@
 #include "Game.hpp"
 
 // ---
+BattleshipII::DataGame::DataGame ()
+	: BATTLESHIP::DataGame ()
+{
+	_numberOfUFOTypes									= 5; // Plus UFO4 y UFO5 defined here...
+}
+
+// ---
+BattleshipII::Game::Game ()
+	: BATTLESHIP::Game (),
+	  _showFPS (false) // Not to show by default...
+{ 
+	delete (_theDataGame);
+
+	_theDataGame = new BattleshipII::DataGame;
+}
+
+// ---
 void BattleshipII::Game::Conf::adjustToPlayers (int nP)
 {
 	BATTLESHIP::Game::Conf::adjustToPlayers (nP);

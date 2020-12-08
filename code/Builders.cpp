@@ -1,5 +1,6 @@
 #include "Builders.hpp"
 #include "Worlds.hpp"
+#include "Artists.hpp"
 #include "Scenes.hpp"
 #include "SceneActionBlocks.hpp"
 
@@ -35,6 +36,21 @@ QGAMES::FollowingACurveMovement::CurveTemplate* BattleshipII::CurveBuilder::crea
 	}
 	else
 		result = QGAMES::CurveTemplateBuilder::createCurve (t, prms);
+
+	return (result);
+}
+
+// ---
+BATTLESHIP::Spaceship* BattleshipII::EntityBuilder::createSpaceship (const QGAMES::EntityBuilder::EntityDefinition& def)
+{
+	BATTLESHIP::Spaceship* result = NULL;
+	if (def._id >= __BATTLESHIPII_UFOBASEID__ && 
+		def._id < (__BATTLESHIPII_UFOBASEID__ + __BATTLESHIPII_MAXNUMBERUFOS__))
+		result = new BattleshipII::UFO (def._id); 
+	else
+	if (def._id >= __BATTLESHIPII_MOTHERSHIPBASEID__ &&
+		def._id < (__BATTLESHIPII_MOTHERSHIPBASEID__ + __BATTLESHIPII_MAXNUMBERMOTHERSHIPS__))
+		result = new BattleshipII::MothershipUFO (def._id); 
 
 	return (result);
 }
@@ -140,23 +156,48 @@ QGAMES::SceneActionBlock* BattleshipII::WorldBuilder::createSceneActionBlockObje
 {
 	QGAMES::SceneActionBlock* result = NULL;
 
-	// If what is required is a set of UFOs action block, then the combat factories list needed is
-	// a little bit fferent that the default one, because the new curve and position factory is needed...
+	// The ation blocks used for any type of enemies, now are splitted into two
+	// one set for controlling UFOs, and the other one for controlling MothershipUFOs...
+	if (nAB >= __BATTLESHIPII_ACTIONBLOCKUFOBASEID__ && 
+			nAB < (__BATTLESHIPII_ACTIONBLOCKUFOBASEID__ + __BATTLESHIPII_ACTIONBLOCKUFONUMBER__))
+		result = new BattleshipII::UFOSceneActionBlock 
+			(nAB, new BATTLESHIP::StdUFOSceneActionBlock::Properties (prps),
+				new BattleshipII::CurveAndInitialPositionFactory); // Considering the new curve factory 
+	else 
+	if (nAB >= __BATTLESHIPII_ACTIONBLOCKMOTHERSHIPUFOBASEID__ && 
+			nAB < (__BATTLESHIPII_ACTIONBLOCKMOTHERSHIPUFOBASEID__ + __BATTLESHIPII_ACTIONBLOCKMOTHERSHIPUFONUMBER__))
+		result = new BattleshipII::MothershipUFOSceneActionBlock 
+			(nAB, new BATTLESHIP::StdUFOSceneActionBlock::Properties (prps),
+				new BattleshipII::CurveAndInitialPositionFactory); // A new action block only for motherships, and 
+																   // considering the new curving factory!
+	else
+	// The action blocks used for set of UFOS are still valid, but with a different curve factory...
 	if (nAB >= __BATTLESHIP_ACTIONBLOCKSETUFOSBASEID__ && 
 		nAB < (__BATTLESHIP_ACTIONBLOCKSETUFOSBASEID__ + __BATTLESHIP_ACTIONBLOCKSETUFOSNUMBER__))
+	{
+		std::function <BATTLESHIP::StdUFOSceneActionBlock* 
+			(int, BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory*)> eABlock = 
+				[](int i, BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF) -> BATTLESHIP::StdUFOSceneActionBlock* 
+					{ return (new BattleshipII::UFOSceneActionBlock // Including the new action block...
+						(i, new BATTLESHIP::StdUFOSceneActionBlock::Properties (), cF -> clone ())); };
+
 		result = new BATTLESHIP::StdSetUFOsSceneActionBlock 
 			(nAB, new BATTLESHIP::StdSetUFOsSceneActionBlock::Properties (prps),
 				new BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactories 
 					({ new BATTLESHIP::StdSetUFOsSceneActionBlock::BlockCombatFormationFactory 
-							(new BattleshipII::CurveAndInitialPositionFactory), // Old combat formation with the new factory...
+							(new BattleshipII::CurveAndInitialPositionFactory, 7, __BD 0.08, eABlock), 
+							// Old combat formation with the new factory, and the new function to create basic UFO action blocks
 						new BATTLESHIP::StdSetUFOsSceneActionBlock::QueueCombatFormationFactory 
-							(new BattleshipII::CurveAndInitialPositionFactory), // Old combat formation with the new factory...
+							(new BattleshipII::CurveAndInitialPositionFactory, __BD 0.3, eABlock), 
+							// Old combat formation with the new factory, and the new function to create basic UFO action blocks
 						new BATTLESHIP::StdSetUFOsSceneActionBlock::SolidLinearBlockCombatFormationFactory 
-							(new BattleshipII::CurveAndInitialPositionFactory), // Old combat formation with the new factory...
+							(new BattleshipII::CurveAndInitialPositionFactory, 10, eABlock), 
+							// Old combat formation with the new factory, and the new function to create basic UFO action blocks
 						new BattleshipII::SinusoideFromLeftBlockCombatFormationFactory
-							(new BattleshipII::CurveAndInitialPositionFactory),
+							(new BattleshipII::CurveAndInitialPositionFactory, __BD 0.5, eABlock),
 						new BattleshipII::SinusoideFromRightBlockCombatFormationFactory
-							(new BattleshipII::CurveAndInitialPositionFactory) })); 
+							(new BattleshipII::CurveAndInitialPositionFactory, __BD 0.5, eABlock) })); 
+	}
 	else
 		result = BATTLESHIP::WorldBuilder::createSceneActionBlockObject (nAB, prps);
 
