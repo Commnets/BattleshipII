@@ -114,12 +114,6 @@ QGAMES::Scene* BattleshipII::WorldBuilder::createSceneObject (int ns, const QGAM
 	if (ns == __BATTLESHIPII_STAGE3SCENE1__)
 		result = new BattleshipII::Stage3Scene1 (m, cn, p, ePL);
 	else
-	if (ns == __BATTLESHIPII_STAGE3SCENE2__)
-		result = new BattleshipII::Stage3Scene2 (m, cn, p, ePL);
-	else
-	if (ns == __BATTLESHIPII_STAGE3SCENE3__)
-		result = new BattleshipII::Stage3Scene3 (m, cn, p, ePL);
-	else
 
 	// World Stage 4...
 	if (ns == __BATTLESHIPII_STAGE4SCENE1__)

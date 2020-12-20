@@ -41,10 +41,52 @@
 										 5 	= Vertical dancing movement
 										 6 	= Right side attacking movement
 										 7 	= Left side attacking movement
-										 8 	= A line, then a circle, then a line again
-										 9 	= A line, then an arc, then a line again
+										 8 	= A line, then an arc then a line again
+										 9 	= A line, then an arc , then a line again
 										 10 = A sinusoidal line -->
 							<Attribute id="MovType" value="4"/>
+							<!-- This is an optional attribute.
+								 If not defined deffault values will be taken.
+								 The values to add will depend on the type of movement:
+								 MovType 0 = No movement: 
+											 No additional data needed
+										 1 = Horizontal movement: 
+											 Length to move (width), Speed factor (regarding the difficulty level), X,Y,Z of the direction to move (horizontal)
+										 2 = Vertical movement: 
+											 Length to move (height), Speed factor (regarding the difficulty level), X,Y,Z of the direction to move (vertical)
+										 3 = Circular movement: 
+											 Radix (Random between 50 and 100), Speed factor (regarding the difficulty level), X,Y,Z of Plane (XY), 
+											 Initial angle in radians (0), Final Angle (2PI)
+										 4 = Horizontal dancing: 
+											 Length (20), Speed factor (regarding the difficulty level), X,Y,Z initial orientation (rigth horizontal)
+										 5 = Vertical dancing: 
+											 Length (20), Speed factor (regarding the difficulty level), X,Y,Z initial orientation (rigth horizontal)
+										 6 = Right side attacking:
+											 Radix (Random between 50 and 100), Speed factor (regarding the difficulty level), Final angle (Random from -PI/4 to 0), Length (1000)
+										 7 = Left side attacking:
+											 Radix (Random between 50 and 100), Speed factor (regarding the difficulty level), Final angle (Random from PI to 5PI/4), Length (1000)
+										 8,9 = A line, then an arc, the a line again:
+											 Regarding the initial position the line will cross the visible zone using a random way
+											 except when the initial position is exactly the middle of iether the horizontal or the vertical length.
+											 In that case the movement will be plain (totally vertical or horizontal)
+											 Distance, radix (Random between 50 and 150), Initial angle, Final angle (random right or left 30 degrees minimum), 
+											 Speed factor (regardin the difficulty)
+										 10 = Sinusoidal movement
+											 Similar explanation regarding the initial position
+											 Range (between 50 and 100), Amplitud (between 25 and), speed factor (regardin the difficult level), X,Y,X movement plane (XY), 
+											 Initial Angle (0), Final Angle (2PI)
+										 These other ones are defined for BATTLESHIPII
+										 1000 = Horizontal sinusoidal movement
+											 Range (70), Amplitud (55), Speed factor (regarding the difficult level), X,Y,X movement plane (XY), 
+											 Initial Angle (0), Final Angle (4PI)
+										 1001 = Horizontal sinusoidal movement
+											 Range (70), Amplitud (55), Speed factor (regarding the difficult level), X,Y,X movement plane (XY), 
+											 Initial Angle (PI/2), Final Angle (9PI/2)
+										 1002 = 1000 but from the right to the left
+										 1003 = 1001 but from the right to the left -->
+							<!--
+							<Attribute id="MovTypeParameters" value=""/>
+							-->
 							<!-- TypeShooting from 0 to 10 -->
 							<Attribute id="TypeShooting" value="0"/> <!-- The simpliest one -->
 							<Attribute id="TimeToShoot" value="3"/>
@@ -59,10 +101,17 @@
 							<!-- The attributes is a list of bdata.
 								 The right interpretation is on combat formation type's hands 
 								 0 = Combat block in formation 
-								 elements per row, separation of the elements in the row.
+									 elements per row, separation of the elements in the row.
 								 1 = Queue of element (one after other)
-								 time between elements. -->
+									 time between elements. -->
 							<Attribute id="CombatFormationAttrs" value="7,0.08"/>
+							<!-- This is also an optional parameter.
+								 They define, if any, the parameters of the attacking curve,
+								 If nothing is defined, the default parameters of the attacking curves will be taken.
+								 So, take a look to the parameters defined form MovTypeParameters -->
+							<!--
+							<Attribute id="CombatFormationAttackParameters" value=""/>
+							-->
 							<!-- In a block the on't be more than 7 per row -->
 							<Attribute id="NumberUFOS" value="21"/> <!-- 3 rows in a block -->
 							<!-- In the type of formation = 0 (Block)
@@ -120,7 +169,7 @@
 							<Attribute id="Regenerate" value="NO"/>
 							<Attribute id="InitialPosition" value="0.225,0.3,0"/>
 							<Attribute id="Type" value="2"/>
-							<Attribute id="MovType" value="4"/> <!-- Dancinf from the left to the right -->
+							<Attribute id="MovType" value="4"/> <!-- Dancing from the left to the right -->
 							<Attribute id="TypeShooting" value="0"/>
 							<Attribute id="TimeToShoot" value="2"/>
 							<Attribute id="ProbabilityToShoot" value="40"/>

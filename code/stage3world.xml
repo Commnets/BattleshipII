@@ -6,138 +6,121 @@
 	<World id="50003">
 	
 		<Scenes>
-		
+
 			<Scene id="70020">
 				<Actions>
 
-					<!-- A pill of fuel -->
-					<Action id="71300">
+					<!-- A set of ufos comming following a queue from the left -->
+					<Action id="74310">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="5"/>
-							<Attribute id="ProbabilityToAppear" value="40"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
-							<Attribute id="EnergyAdded" value="30"/>
-							<Attribute id="Speed" value="3"/>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="TimeToMove" value="1"/>
+							<Attribute id="Regenerate" value="NO"/>
+							<Attribute id="Roll" value="YES"/>
+							<Attribute id="InitialPosition" value="0.1,0.5,0"/> <!-- The left center -->
+							<Attribute id="MaxTimeAction" value="30"/> <!-- One minute maximum -->
+							<Attribute id="Type" value="3"/> <!-- BATTLESHIPII type -->
+							<Attribute id="MovType" value="0"/> <!-- None -->
+							<Attribute id="TypeShooting" value="2"/>
+							<Attribute id="TimeToShoot" value="1"/>
+							<Attribute id="ProbabilityToShoot" value="60"/> <!-- Low probability to shoot -->
+							<Attribute id="ShootingForce" value="2"/>
+							<Attribute id="Speed" value="7"/>
+							<Attribute id="CombatFormation" value="1"/> <!-- Queue, one after other -->
+							<Attribute id="CombatFormationAttrs" value="0.4"/>
+							<Attribute id="NumberUFOS" value="15"/>
+							<Attribute id="TimerEvery" value="0"/> <!-- in every loop -->
+							<Attribute id="TimerForHowMany" value="-1"/> <!-- all -->
+							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
 						</Attributes>
 					</Action>
 
-					<!-- A shooting pill -->
-					<Action id="72300">
+					<!-- Same from the right to the left -->
+					<Action id="74311">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="6"/>
-							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="2"/>
-							<Attribute id="TypeShooting" value="-2"/> 
-							<Attribute id="Speed" value="2"/>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="TimeToMove" value="1"/>
+							<Attribute id="Regenerate" value="NO"/>
+							<Attribute id="Roll" value="YES"/>
+							<Attribute id="InitialPosition" value="0.9,0.5,0"/> <!-- The left center -->
+							<Attribute id="MaxTimeAction" value="30"/> <!-- One minute maximum -->
+							<Attribute id="Type" value="3"/> <!-- BATTLESHIPII Type -->
+							<Attribute id="MovType" value="0"/> <!-- None -->
+							<Attribute id="TypeShooting" value="2"/>
+							<Attribute id="TimeToShoot" value="1"/>
+							<Attribute id="ProbabilityToShoot" value="60"/> <!-- Low probability to shoot -->
+							<Attribute id="ShootingForce" value="2"/>
+							<Attribute id="Speed" value="7"/>
+							<Attribute id="CombatFormation" value="1"/> <!-- Queue, one after other -->
+							<Attribute id="CombatFormationAttrs" value="0.4"/>
+							<Attribute id="NumberUFOS" value="15"/>
+							<Attribute id="TimerEvery" value="0"/> <!-- in every loop -->
+							<Attribute id="TimerForHowMany" value="-1"/> <!-- all -->
+							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
+						</Attributes>
+					</Action>
+
+					<!-- Again from the left, but others -->
+					<Action id="74312">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="TimeToMove" value="1"/>
+							<Attribute id="Regenerate" value="NO"/>
+							<Attribute id="Roll" value="YES"/>
+							<Attribute id="InitialPosition" value="0.1,0.5,0"/> <!-- The left center -->
+							<Attribute id="MaxTimeAction" value="30"/> <!-- One minute maximum -->
+							<Attribute id="Type" value="4"/> <!-- BATTLESHIPII Type -->
+							<Attribute id="MovType" value="0"/> <!-- None -->
+							<Attribute id="TypeShooting" value="2"/>
+							<Attribute id="TimeToShoot" value="1"/>
+							<Attribute id="ProbabilityToShoot" value="60"/> <!-- Low probability to shoot -->
+							<Attribute id="ShootingForce" value="2"/>
+							<Attribute id="Speed" value="7"/>
+							<Attribute id="CombatFormation" value="1"/> <!-- Queue, one after other -->
+							<Attribute id="CombatFormationAttrs" value="0.4"/>
+							<Attribute id="NumberUFOS" value="15"/>
+							<Attribute id="TimerEvery" value="0"/> <!-- in every loop -->
+							<Attribute id="TimerForHowMany" value="-1"/> <!-- all -->
+							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
+						</Attributes>
+					</Action>
+
+					<!-- Again from the right, but others -->
+					<Action id="74313">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="TimeToMove" value="1"/>
+							<Attribute id="Regenerate" value="NO"/>
+							<Attribute id="Roll" value="YES"/>
+							<Attribute id="InitialPosition" value="0.9,0.5,0"/> <!-- The left center -->
+							<Attribute id="MaxTimeAction" value="30"/> <!-- One minute maximum -->
+							<Attribute id="Type" value="4"/> <!-- BATTLESHIPII Type -->
+							<Attribute id="MovType" value="0"/> <!-- None -->
+							<Attribute id="TypeShooting" value="2"/>
+							<Attribute id="TimeToShoot" value="1"/>
+							<Attribute id="ProbabilityToShoot" value="60"/> <!-- Low probability to shoot -->
+							<Attribute id="ShootingForce" value="2"/>
+							<Attribute id="Speed" value="7"/>
+							<Attribute id="CombatFormation" value="1"/> <!-- Queue, one after other -->
+							<Attribute id="CombatFormationAttrs" value="0.4"/>
+							<Attribute id="NumberUFOS" value="15"/>
+							<Attribute id="TimerEvery" value="0"/> <!-- in every loop -->
+							<Attribute id="TimerForHowMany" value="-1"/> <!-- all -->
+							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
 						</Attributes>
 					</Action>
 				</Actions>
-				
+			
 				<Attributes>
-					<Attribute id="NAME" value="Asteorids everywhere"/>
+					<Attribute id="NAME" value="Challenge Zone"/>
+					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74310,74311,74312,74313"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60001"/> 
-					<Attribute id="SCENETIME" value="60"/> 
-				</Attributes>
-				
-				<Conexions>
-					<Conexion id="0" with="70021" at="0"/>
-				</Conexions>
-				
-				<Maps>
-					<Map id="50102" file="maps/BKSpace3.xml"/>
-					<Map id="70000" file="maps/nomap.xml"/>
-				</Maps>
-				
-				<Entities>
-				</Entities>
-				
-			</Scene>
-		
-			<Scene id="70021">
-				<Actions>
-
-					<!-- A pill of fuel -->
-					<Action id="71310">
-						<Attributes>
-							<Attribute id="TimeToAppear" value="5"/>
-							<Attribute id="ProbabilityToAppear" value="40"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
-							<Attribute id="EnergyAdded" value="30"/>
-							<Attribute id="Speed" value="3"/>
-						</Attributes>
-					</Action>
-
-					<!-- A shooting pill -->
-					<Action id="72310">
-						<Attributes>
-							<Attribute id="TimeToAppear" value="6"/>
-							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="2"/>
-							<Attribute id="TypeShooting" value="-2"/> 
-							<Attribute id="Speed" value="2"/>
-						</Attributes>
-					</Action>
-				</Actions>
-				
-				<Attributes>
-					<Attribute id="NAME" value="UFOs everywhere"/>
-					<Attribute id="MOVEMENT" value="1,1,0"/> 
-					<Attribute id="BACKGROUNDMUSIC" value="60001"/> 
-					<Attribute id="SCENETIME" value="60"/> 
-				</Attributes>
-				
-				<Conexions>
-					<Conexion id="0" with="70022" at="0"/>
-				</Conexions>
-				
-				<Maps>
-					<Map id="50102" file="maps/BKSpace3.xml"/>
-					<Map id="70000" file="maps/nomap.xml"/>
-				</Maps>
-				
-				<Entities>
-				</Entities>
-				
-			</Scene>
-		
-			<Scene id="70022">
-				<Actions>
-
-					<!-- A pill of fuel -->
-					<Action id="71320">
-						<Attributes>
-							<Attribute id="TimeToAppear" value="5"/>
-							<Attribute id="ProbabilityToAppear" value="40"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
-							<Attribute id="EnergyAdded" value="30"/>
-							<Attribute id="Speed" value="3"/>
-						</Attributes>
-					</Action>
-
-					<!-- A shooting pill -->
-					<Action id="72320">
-						<Attributes>
-							<Attribute id="TimeToAppear" value="6"/>
-							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="2"/>
-							<Attribute id="TypeShooting" value="-2"/> 
-							<Attribute id="Speed" value="2"/>
-						</Attributes>
-					</Action>
-				</Actions>
-				
-				<Attributes>
-					<Attribute id="NAME" value="Flies for you"/>
-					<Attribute id="MOVEMENT" value="1,1,0"/> 
-					<Attribute id="BACKGROUNDMUSIC" value="60001"/> 
-					<Attribute id="SCENETIME" value="60"/> 
+					<Attribute id="SCENETIME" value="30"/> <!-- Time just for one! -->
 				</Attributes>
 				
 				<Conexions>
@@ -156,7 +139,7 @@
 			
 		</Scenes>
 		<Attributes>
-			<Attribute id="NAME" value="Challenge World"/>
+			<Attribute id="NAME" value="Challenge World 1"/>
 		</Attributes>
 		
 	</World>

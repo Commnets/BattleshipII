@@ -20,11 +20,11 @@ BATTLESHIP::UFO::StatesId BattleshipII::UFO::statesIdForType (int t)
 
 	 switch (t)
 	 {
-		case __BATTLESHIPII_ENEMTYTYPE4__:
+		case __BATTLESHIPII_ENEMTYTYPE3__:
 			result = __BATTLESHIPII_UFO4STATESID;
 			break;
 		
-		case __BATTLESHIPII_ENEMTYTYPE5__:
+		case __BATTLESHIPII_ENEMTYTYPE4__:
 			result = __BATTLESHIPII_UFO5STATESID;
 			break;
 		

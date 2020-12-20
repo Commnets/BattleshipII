@@ -31,8 +31,8 @@
 // all less 2 for UFO and 2 for MothershipUFOS
 
 // The new types of enemy...
+#define __BATTLESHIPII_ENEMTYTYPE3__						3
 #define __BATTLESHIPII_ENEMTYTYPE4__						4
-#define __BATTLESHIPII_ENEMTYTYPE5__						5
 
 // The new types of curves defined for the BattleshipII::CurveFactory 
 // used in the BattleshipII::MovementBuilder, defined at BattleshipII::Game level 
@@ -75,10 +75,8 @@
 #define __BATTLESHIPII_STAGE2SCENE1__						70010
 #define __BATTLESHIPII_STAGE2SCENE2__						70011
 #define __BATTLESHIPII_STAGE2SCENE3__						70012
-// Scenes for the stage 3
+// Scenes for the stage 3 (only one, challenge)
 #define __BATTLESHIPII_STAGE3SCENE1__						70020
-#define __BATTLESHIPII_STAGE3SCENE2__						70021
-#define __BATTLESHIPII_STAGE3SCENE3__						70022
 // Scenes for the stage 4
 #define __BATTLESHIPII_STAGE4SCENE1__						70030
 #define __BATTLESHIPII_STAGE4SCENE2__						70031

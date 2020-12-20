@@ -4,7 +4,7 @@
 BattleshipII::DataGame::DataGame ()
 	: BATTLESHIP::DataGame ()
 {
-	_numberOfUFOTypes									= 5; // Plus UFO4 y UFO5 defined here...
+	_numberOfUFOTypes									= 5; // Plus UFO3 y UFO4 defined here...
 }
 
 // ---

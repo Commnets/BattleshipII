@@ -87,8 +87,7 @@ namespace BattleshipII
 			*/
 		SinusoideFromLeftBlockCombatFormationFactory 
 			(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE = 0.05,
-			 const std::function <BATTLESHIP::StdUFOSceneActionBlock* 
-				(int, BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory*)>& eABlock = __SINGLESTDUFOSCTIONBLOCK);
+			 const BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactory::SingleActionBlockFunction& eABlock = __SINGLESTDUFOSCTIONBLOCK);
 
 		/** @see parent. */
 		virtual bool forCombatType (int t) const override final
@@ -111,8 +110,7 @@ namespace BattleshipII
 			*/
 		SinusoideFromRightBlockCombatFormationFactory 
 			(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE = 0.05,
-			 const std::function <BATTLESHIP::StdUFOSceneActionBlock* 
-				(int, BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory*)>& eABlock = __SINGLESTDUFOSCTIONBLOCK);
+			 const BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactory::SingleActionBlockFunction& eABlock = __SINGLESTDUFOSCTIONBLOCK);
 
 		/** @see parent. */
 		virtual bool forCombatType (int t) const override final
