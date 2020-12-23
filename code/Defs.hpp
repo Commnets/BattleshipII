@@ -31,8 +31,8 @@
 // all less 2 for UFO and 2 for MothershipUFOS
 
 // The new types of enemy...
-#define __BATTLESHIPII_ENEMTYTYPE3__						3
-#define __BATTLESHIPII_ENEMTYTYPE4__						4
+#define __BATTLESHIPII_ENEMTYTYPE1000__						1000
+#define __BATTLESHIPII_ENEMTYTYPE1001__						1001
 
 // The new types of curves defined for the BattleshipII::CurveFactory 
 // used in the BattleshipII::MovementBuilder, defined at BattleshipII::Game level 

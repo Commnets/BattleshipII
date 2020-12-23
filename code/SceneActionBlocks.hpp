@@ -21,49 +21,12 @@
 
 namespace BattleshipII
 {
-	/** A factory for the curves used (and also defined) in the blocks of this game. */
-	class CurveAndInitialPositionFactory : 
-		public BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory
-	{
-		public:
-		/** @see parant. */
-		virtual BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* clone () override final
-				{ return (new CurveAndInitialPositionFactory); }
-
-		/** @see parent. */
-		virtual QGAMES::Position initialPositionFor (int i , BATTLESHIP::UFO* ufo, 
-			BATTLESHIP::StdUFOSceneActionBlock::Properties* prps) override final;
-		virtual QGAMES::FollowingACurveMovement::CurveTemplate* curveFor 
-			(int i, BATTLESHIP::UFO* ufo, BATTLESHIP::StdUFOSceneActionBlock::Properties* prps, 
-			 std::map <int, double>& crvprms) override final;
-	};
-
-	/** An action block to control the new type of UFOs. */
-	class UFOSceneActionBlock : public BATTLESHIP::SingleStdUFOSceneActionBlock
-	{
-		public:
-		UFOSceneActionBlock (int id, BATTLESHIP::StdUFOSceneActionBlock::Properties* prps = 
-					new BATTLESHIP::StdUFOSceneActionBlock::Properties (), 
-				BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF = 
-					new BattleshipII::CurveAndInitialPositionFactory) // By default the new curve factory
-			: BATTLESHIP::SingleStdUFOSceneActionBlock (id, prps, cF)
-							{ }
-
-		protected:
-		/** @see parent. */
-		virtual bool isUFOValid (const BATTLESHIP::UFO* u) const override final
-							{ return (dynamic_cast <const UFO*> (u) != NULL); }
-	};
-
 	/** An action block to control the Mothership UFOs. */
 	class MothershipUFOSceneActionBlock : public BATTLESHIP::SingleStdUFOSceneActionBlock
 	{
 		public:
-		MothershipUFOSceneActionBlock (int id, BATTLESHIP::StdUFOSceneActionBlock::Properties* prps = 
-					new BATTLESHIP::StdUFOSceneActionBlock::Properties (), 
-				BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF = 
-					new BattleshipII::CurveAndInitialPositionFactory) // By default the new curve factory
-			: BATTLESHIP::SingleStdUFOSceneActionBlock (id, prps, cF)
+		MothershipUFOSceneActionBlock (int id)
+			: BATTLESHIP::SingleStdUFOSceneActionBlock (id)
 							{ }
 
 		protected:

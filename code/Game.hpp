@@ -28,6 +28,18 @@ namespace BattleshipII
 	{
 		public:
 		DataGame ();
+
+		/** @see parent. */
+		virtual std::vector <int> defaultStatesForUFOType (int uT) const override final;
+		virtual inline const std::vector <int>& ufoTypesList () const override final;
+	
+		/** @see parent. */
+		virtual QGAMES::Position defaultInitialPointForMovementType (int nC, 
+			const QGAMES::Rectangle& vZ, const QGAMES::Rectangle& mZ, int uW, int uH, int uD) override final;
+		virtual std::map <int, double> defaultParametersForMovementType (int nC, 
+			QGAMES::bdata sF, const QGAMES::Rectangle& vZ, const QGAMES::Rectangle& mZ, const QGAMES::Position& iP, 
+			QGAMES::bdata& tR) override final;
+		virtual inline const std::map <int, int>& curveforMovementTypeMap () const override final;
 	};
 
 	class Game : public BATTLESHIP::Game

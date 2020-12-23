@@ -3,9 +3,145 @@
 // ---
 BattleshipII::DataGame::DataGame ()
 	: BATTLESHIP::DataGame ()
-{
-	_numberOfUFOTypes									= 5; // Plus UFO3 y UFO4 defined here...
+{ 
+	_numberOfUFOTypes									= 5; // To be aligned, with the size of the list...(_ufoTypesList.size ())
 }
+
+// ---
+std::vector <int> BattleshipII::DataGame::defaultStatesForUFOType (int uT) const
+{
+	std::vector <int> result;
+
+	switch (uT)
+	{
+		case __BATTLESHIPII_ENEMTYTYPE1000__:
+			result = std::vector <int> 
+				{ 6, __BATTLESHIP_ENEMYBLANKSTATE__, 7, __BATTLESHIP_ENEMYEXPLODINGSTATE__, __BATTLESHIP_ENEMYBLANKSTATE__ } ;
+			break;
+
+		case __BATTLESHIPII_ENEMTYTYPE1001__:
+			result = std::vector <int> 
+				{ 8, __BATTLESHIP_ENEMYBLANKSTATE__, 9, __BATTLESHIP_ENEMYEXPLODINGSTATE__, __BATTLESHIP_ENEMYBLANKSTATE__ } ;
+			break;
+
+		default:
+			result = BATTLESHIP::DataGame::defaultStatesForUFOType (uT);
+	}
+
+	return (result);
+}
+
+// ---
+const std::vector <int>& BattleshipII::DataGame::ufoTypesList () const
+{
+	if (_ufoTypesList.empty ())
+	{
+		_ufoTypesList = BATTLESHIP::DataGame::ufoTypesList ();
+
+		// Add two additional types of UFOs...
+		_ufoTypesList.push_back (__BATTLESHIPII_ENEMTYTYPE1000__);
+		_ufoTypesList.push_back (__BATTLESHIPII_ENEMTYTYPE1001__);
+	}
+
+	return (_ufoTypesList);
+}
+
+// ---
+QGAMES::Position BattleshipII::DataGame::DataGame::defaultInitialPointForMovementType (int nC, 
+	const QGAMES::Rectangle& vZ, const QGAMES::Rectangle& mZ, int uW, int uH, int uD)
+{
+	QGAMES::Position result = QGAMES::Position::_cero;
+
+	switch (nC)
+	{
+		case __BATTLESHIPII_SINUSOIDE1UFOSMOVEMENT__:
+		case __BATTLESHIPII_SINUSOIDE2UFOSMOVEMENT__:
+			result =
+				QGAMES::Position (__BD (((rand () % 80) + 10) / __BD 100), // Between 10% and 90%
+								  __BD (((rand () % 80) + 10) / __BD 100), __BD 0);
+			break;
+
+		default:
+			result = BATTLESHIP::DataGame::defaultInitialPointForMovementType (nC, vZ, mZ, uW, uH, uD);
+	}
+
+	return (result);
+}
+
+// ---
+std::map <int, double> BattleshipII::DataGame::defaultParametersForMovementType (int nC, 
+	QGAMES::bdata sF, const QGAMES::Rectangle& vZ, const QGAMES::Rectangle& mZ, const QGAMES::Position& iP,
+	QGAMES::bdata& tR)
+{
+	std::map <int, double> result { };
+	tR = __BD 0; // Nothing...
+
+	switch (nC)
+	{
+		// Range 70
+		// Amplitud 55
+		// From 0 to 4PI
+		case __BATTLESHIPII_SINUSOIDE1UFOSMOVEMENT__ :
+		case __BATTLESHIPII_SINUSOIDE3UFOSMOVEMENT__ :
+			{
+				result = std::map <int, double> 
+					{ { 0, 70.0f },
+					  { 1, 55.0f },
+					  { 2, (double) sF },
+					  { 3, 0.0 }, { 4, 0.0 }, { 5, 1.0 }, // XY Plane...
+					  { 6, 0.0 },
+					  { 7, (double) ((__BD 2 * __PI) + (__BD 2 * __PI)) }
+					};
+
+				if (nC == __BATTLESHIPII_SINUSOIDE3UFOSMOVEMENT__) tR = -__PI;
+			}
+
+			break;
+
+		// Range 70
+		// Amplitud 55
+		// From 0 to 4PI
+		case __BATTLESHIPII_SINUSOIDE2UFOSMOVEMENT__ :
+		case __BATTLESHIPII_SINUSOIDE4UFOSMOVEMENT__ :
+			{
+				result = std::map <int, double> 
+					{ { 0, 70.0f },
+					  { 1, 55.0f },
+					  { 2, (double) sF },
+					  { 3, 0.0 }, { 4, 0.0 }, { 5, 1.0 }, // XY Plane...
+					  { 6, (double) (__PI / __BD 2) },
+					  { 7, (double) ((__BD 5 * __PI / __BD 2) + (__BD 2 * __PI)) }
+					};
+
+				if (nC == __BATTLESHIPII_SINUSOIDE4UFOSMOVEMENT__) tR = -__PI;
+			}
+
+			break;
+
+		default:
+			result = BATTLESHIP::DataGame::defaultParametersForMovementType (nC, sF, vZ, mZ, iP, tR);
+	}
+
+	return (result);
+}
+
+// ---
+const std::map <int, int>& BattleshipII::DataGame::curveforMovementTypeMap () const
+{
+	if (_curveForMovementTypeMap.empty ())
+	{
+		_curveForMovementTypeMap = BATTLESHIP::DataGame::curveforMovementTypeMap ();
+	
+		// Add 4 additional movements and their associated curve!
+		_curveForMovementTypeMap [__BATTLESHIPII_SINUSOIDE1UFOSMOVEMENT__] = __BATTLESHIPII_SINUSOIDEGOANDBACK__;
+		_curveForMovementTypeMap [__BATTLESHIPII_SINUSOIDE2UFOSMOVEMENT__] = __BATTLESHIPII_SINUSOIDEGOANDBACK__;
+		_curveForMovementTypeMap [__BATTLESHIPII_SINUSOIDE3UFOSMOVEMENT__] = __BATTLESHIPII_SINUSOIDEGOANDBACK__;
+		_curveForMovementTypeMap [__BATTLESHIPII_SINUSOIDE4UFOSMOVEMENT__] = __BATTLESHIPII_SINUSOIDEGOANDBACK__;
+	}
+
+	return (_curveForMovementTypeMap);
+}
+
 
 // ---
 BattleshipII::Game::Game ()

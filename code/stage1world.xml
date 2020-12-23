@@ -10,6 +10,7 @@
 			
 			<!-- Starting the travel -->
 			<Scene id="70000">
+			
 				<Actions>
 				
 					<!-- Blocks related with asteroids -->
@@ -102,6 +103,7 @@
 							<Attribute id="Speed" value="1"/> <!-- Again slow -->
 						</Attributes>
 					</Action>
+					
 				</Actions>
 				
 				<Attributes>
@@ -127,7 +129,9 @@
 			
 			<!-- The travel gets harder! -->
 			<Scene id="70001">
+			
 				<Actions>
+				
 					<!-- Related with asteroids -->
 					<Action id="70110">
 						<Attributes>
@@ -179,6 +183,7 @@
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
 					</Action>
+					
 				</Actions>
 				
 				<Attributes>
@@ -204,7 +209,9 @@
 			
 			<!-- An even harder! -->
 			<Scene id="70002">
+			
 				<Actions>
+				
 					<!-- Asteroids -->
 					<Action id="70120">
 						<Attributes>
@@ -265,6 +272,7 @@
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
 					</Action>
+					
 				</Actions>
 				
 				<Attributes>
@@ -289,6 +297,7 @@
 			</Scene>
 			
 		</Scenes>
+		
 		<Attributes>
 			<Attribute id="NAME" value="Asteroids"/>
 		</Attributes>

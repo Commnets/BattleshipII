@@ -8,7 +8,78 @@
 		<Scenes>
 		
 			<Scene id="70030">
+			
 				<Actions>
+
+					<!-- Asteroid 1 -->
+					<Action id="70400">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="0"/>
+							<Attribute id="ProbabilityToAppear" value="100"/> 
+							<Attribute id="Emerge" value="NO"/> 
+							<Attribute id="TimeToMove" value="0"/> 
+							<Attribute id="Regenerate" value="YES"/> 
+							<Attribute id="Roll" value="NO"/> 
+							<Attribute id="MaxTimeAction" value="-1"/> 
+							<Attribute id="Type" value="-1"/> 
+							<Attribute id="MovType" value="0"/> 
+							<Attribute id="PointsGiven" value="200"/> 
+							<Attribute id="Speed" value="-3"/> 
+						</Attributes>
+					</Action>
+
+					<!-- Asteroid 2 -->
+					<Action id="70401">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="0"/>
+							<Attribute id="ProbabilityToAppear" value="100"/> 
+							<Attribute id="Emerge" value="NO"/> 
+							<Attribute id="TimeToMove" value="0"/> 
+							<Attribute id="Regenerate" value="YES"/> 
+							<Attribute id="Roll" value="NO"/> 
+							<Attribute id="MaxTimeAction" value="-1"/> 
+							<Attribute id="Type" value="-1"/> 
+							<Attribute id="MovType" value="0"/> 
+							<Attribute id="PointsGiven" value="200"/> 
+							<Attribute id="Speed" value="-4"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 3 -->
+					<Action id="70400">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="0"/>
+							<Attribute id="ProbabilityToAppear" value="100"/> 
+							<Attribute id="Emerge" value="NO"/> 
+							<Attribute id="TimeToMove" value="0"/> 
+							<Attribute id="Regenerate" value="YES"/> 
+							<Attribute id="Roll" value="NO"/> 
+							<Attribute id="MaxTimeAction" value="-1"/> 
+							<Attribute id="Type" value="-1"/> 
+							<Attribute id="MovType" value="0"/> 
+							<Attribute id="PointsGiven" value="200"/> 
+							<Attribute id="Speed" value="-4"/> 
+						</Attributes>
+					</Action>
+
+					<!-- An UFO -->
+					<Action id="73400">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="YES"/>
+							<Attribute id="TimeToMove" value="1"/>
+							<Attribute id="Regenerate" value="YES"/>
+							<Attribute id="InitialPosition" value="0.225,0.3,0"/>
+							<Attribute id="Type" value="1000"/> <!-- BATTLESHIPIIO Type -->
+							<Attribute id="MovType" value="8"/> 
+							<Attribute id="TypeShooting" value="1"/>
+							<Attribute id="TimeToShoot" value="3"/>
+							<Attribute id="ProbabilityToShoot" value="50"/>
+							<Attribute id="ShootingForce" value="1"/>
+							<Attribute id="Speed" value="2"/>
+						</Attributes>
+					</Action>
 
 					<!-- A pill of fuel -->
 					<Action id="71400">
@@ -33,6 +104,7 @@
 							<Attribute id="Speed" value="3"/>
 						</Attributes>
 					</Action>
+					
 				</Actions>
 				
 				<Attributes>
@@ -57,6 +129,7 @@
 			</Scene>
 		
 			<Scene id="70031">
+			
 				<Actions>
 
 					<!-- A pill of fuel -->
@@ -82,6 +155,7 @@
 							<Attribute id="Speed" value="3"/>
 						</Attributes>
 					</Action>
+					
 				</Actions>
 				
 				<Attributes>
@@ -106,6 +180,7 @@
 			</Scene>
 		
 			<Scene id="70032">
+			
 				<Actions>
 
 					<!-- A pill of fuel -->
@@ -131,6 +206,7 @@
 							<Attribute id="Speed" value="3"/>
 						</Attributes>
 					</Action>
+					
 				</Actions>
 				
 				<Attributes>
@@ -155,6 +231,7 @@
 			</Scene>
 			
 		</Scenes>
+		
 		<Attributes>
 			<Attribute id="NAME" value="All together"/>
 		</Attributes>

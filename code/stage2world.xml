@@ -9,7 +9,9 @@
 		
 			<!-- The UFOS appears in different formations to fight against the player -->
 			<Scene id="70010">
+			
 				<Actions>
+				
 					<!-- Related with a set of UFO's moving left to right and then attacking-->
 					<Action id="74200">
 						<Attributes>
@@ -207,6 +209,7 @@
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
 					</Action>
+					
 				</Actions>
 				
 				<Attributes>
@@ -234,7 +237,9 @@
 			<!-- UFOS comes to the user from many different places 
 				 They have to be killed before moving to another block, or wait 60 seconds maximum per block -->
 			<Scene id="70011">
+			
 				<Actions>
+				
 					<!-- A se of UFOS moving in circle from the left down corner -->
 					<Action id="74210">
 						<Attributes>
@@ -336,6 +341,7 @@
 							<Attribute id="Speed" value="1"/> <!-- Quicker than usual -->
 						</Attributes>
 					</Action>
+					
 				</Actions>
 				
 				<Attributes>
@@ -362,7 +368,9 @@
 			
 			<!-- Guauuu, ufos moving in a sinusoide from different parts of the screen -->
 			<Scene id="70012">
+			
 				<Actions>
+				
 					<!-- A set of UFOS moving in sinusoide from the left to the right corner -->
 					<Action id="74220">
 						<Attributes>
@@ -441,6 +449,7 @@
 							<Attribute id="Speed" value="2"/> <!-- Quicker than usual -->
 						</Attributes>
 					</Action>
+					
 				</Actions>
 				
 				<Attributes>
@@ -466,6 +475,7 @@
 			</Scene>
 			
 		</Scenes>
+		
 		<Attributes>
 			<Attribute id="NAME" value="UFOs"/>
 		</Attributes>

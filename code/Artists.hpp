@@ -19,30 +19,6 @@
 
 namespace BattleshipII
 {
-	/** Just to add more types. */
-	class UFO : public BATTLESHIP::UFO
-	{
-		public:
-		#define __BATTLESHIPII_UFO4STATESID BATTLESHIP::UFO::StatesId \
-			(6, __BATTLESHIP_ENEMYBLANKSTATE__, 7, __BATTLESHIP_ENEMYEXPLODINGSTATE__, __BATTLESHIP_ENEMYBLANKSTATE__)
-		#define __BATTLESHIPII_UFO5STATESID BATTLESHIP::UFO::StatesId \
-			(8, __BATTLESHIP_ENEMYBLANKSTATE__, 9, __BATTLESHIP_ENEMYEXPLODINGSTATE__, __BATTLESHIP_ENEMYBLANKSTATE__)
-
-		UFO (int cId, 
-				BATTLESHIP::UFO::Behaviour* bhv = new BATTLESHIP::UFO::Behaviour (true, false, __BD 0, __BD 50, 100, __BD 3, 0), 
-				const QGAMES::Forms& f = QGAMES::Forms (), 
-				const QGAMES::Entity::Data& d = QGAMES::Entity::Data ())
-			: BATTLESHIP::UFO (cId, bhv, f, d)
-							{ }
-
-		/** @see parent. */
-		virtual QGAMES::Entity* clone () const;
-
-		protected:
-		/** @see parent. */
-		virtual StatesId statesIdForType (int t);
-	};
-
 	/** This big UFO ahoots from many different places at the same time. \n
 		and can only be killed when all the power forces are also killed. \n
 		The power positions are defined taking into account the "basic" form of the mothership, 
@@ -59,10 +35,6 @@ namespace BattleshipII
 
 		/** @see parent. */
 		virtual QGAMES::Entity* clone () const override final;
-
-		protected:
-		/** @see parent. */
-		virtual StatesId statesIdForType (int t) override final;
 	};
 }
 

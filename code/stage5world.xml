@@ -8,6 +8,7 @@
 		<Scenes>
 		
 			<Scene id="70040">
+			
 				<Actions>
 
 					<!-- A pill of fuel -->
@@ -57,6 +58,7 @@
 			</Scene>
 		
 			<Scene id="70041">
+			
 				<Actions>
 
 					<!-- A pill of fuel -->
@@ -82,6 +84,7 @@
 							<Attribute id="Speed" value="3"/>
 						</Attributes>
 					</Action>
+					
 				</Actions>
 				
 				<Attributes>
@@ -106,6 +109,7 @@
 			</Scene>
 		
 			<Scene id="70042">
+			
 				<Actions>
 
 					<!-- A pill of fuel -->
@@ -131,6 +135,7 @@
 							<Attribute id="Speed" value="3"/>
 						</Attributes>
 					</Action>
+					
 				</Actions>
 				
 				<Attributes>
@@ -155,6 +160,7 @@
 			</Scene>
 			
 		</Scenes>
+		
 		<Attributes>
 			<Attribute id="NAME" value="Almost there"/>
 		</Attributes>
