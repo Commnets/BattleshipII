@@ -713,7 +713,7 @@
 			<Form id="50302"/>
 			<Form id="50303"/>
 			<!-- The form used to define the live -->
-			<Form id="50009"/>
+			<Form id="50460"/>
 			<!-- Exploding -->
 			<Form id="50100"/>
 		</Forms>
@@ -771,9 +771,9 @@
 			<!-- Moving in the space live -->
 			<Animation id="4" type="0">
 				<Attributes>
-					<Attribute id="FORM" value="50009"/>
+					<Attribute id="FORM" value="50460"/>
 					<Attribute id="INITIALASPECT" value="0"/>
-					<Attribute id="FINALASPECT" value="6"/>
+					<Attribute id="FINALASPECT" value="10"/>
 					<Attribute id="FRACTIONTOCHANGE" value="3"/>
 					<Attribute id="LOOP" value="1"/>
 					<!-- Not linked with anyone -->

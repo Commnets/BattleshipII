@@ -22,17 +22,22 @@
 namespace BattleshipII
 {
 	/** An action block to control the Mothership UFOs. */
-	class MothershipUFOSceneActionBlock : public BATTLESHIP::SingleStdUFOSceneActionBlock
+	class MothershipUFOSceneActionBlock : public BATTLESHIP::StdUFOSceneActionBlock
 	{
 		public:
-		MothershipUFOSceneActionBlock (int id)
-			: BATTLESHIP::SingleStdUFOSceneActionBlock (id)
+		MothershipUFOSceneActionBlock (int id, BATTLESHIP::StdUFOSceneActionBlock::Properties* prps,
+				BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF = 
+					new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory)
+			: BATTLESHIP::StdUFOSceneActionBlock (id, prps, 1 /** Always. */, cF)
 							{ }
 
 		protected:
 		/** @see parent. */
-		virtual bool isUFOValid (const BATTLESHIP::UFO* u) const override final
-							{ return (dynamic_cast <const MothershipUFO*> (u) != NULL); }
+		virtual std::function <bool (BATTLESHIP::SpaceElement*)> isElementValidForActionBlock () const override final
+							{ return ([](BATTLESHIP::SpaceElement* spc) -> bool 
+								{ return (spc != NULL && 
+										  dynamic_cast <MothershipUFO*> (spc) != NULL &&
+										  !spc -> isVisible ()); }); } 
 	};
 
 	/** A new type of combat block. 

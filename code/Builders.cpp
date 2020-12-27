@@ -151,7 +151,8 @@ QGAMES::SceneActionBlock* BattleshipII::WorldBuilder::createSceneActionBlockObje
 	// New type of action block to control the motherships...
 	if (nAB >= __BATTLESHIPII_ACTIONBLOCKMOTHERSHIPUFOBASEID__ && 
 			nAB < (__BATTLESHIPII_ACTIONBLOCKMOTHERSHIPUFOBASEID__ + __BATTLESHIPII_ACTIONBLOCKMOTHERSHIPUFONUMBER__))
-		result = new BattleshipII::MothershipUFOSceneActionBlock (nAB);
+		result = new BattleshipII::MothershipUFOSceneActionBlock (nAB, 
+			new BattleshipII::MothershipUFOSceneActionBlock::Properties (prps) /** Default factory curve. */);
 	else
 	// The action blocks used for set of UFOS are still valid, but with more combat factories...
 	if (nAB >= __BATTLESHIP_ACTIONBLOCKSETUFOSBASEID__ && 
@@ -161,16 +162,17 @@ QGAMES::SceneActionBlock* BattleshipII::WorldBuilder::createSceneActionBlockObje
 			(nAB, new BATTLESHIP::StdSetUFOsSceneActionBlock::Properties (prps),
 				new BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactories 
 					({ new BATTLESHIP::StdSetUFOsSceneActionBlock::BlockAndFlyCombatFormationFactory 
-							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory), 
+							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */), 
 						new BATTLESHIP::StdSetUFOsSceneActionBlock::QueueAndFlyCombatFormationFactory 
-							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory), 
+							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */), 
 						new BATTLESHIP::StdSetUFOsSceneActionBlock::DancingInLinesCombatFormationFactory 
-							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory), 
+							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */), 
+
 						// The condition is really needed because this two new combat formations are added!
 						new BattleshipII::SinusoideFromLeftBlockAndFlyCombatFormationFactory
-							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory),
+							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */),
 						new BattleshipII::SinusoideFromRightBlockAndFlyCombatFormationFactory
-							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory) })); 
+							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */) })); 
 	}
 	else
 		result = BATTLESHIP::WorldBuilder::createSceneActionBlockObject (nAB, prps);
