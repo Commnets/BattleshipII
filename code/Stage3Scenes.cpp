@@ -8,4 +8,6 @@ void BattleshipII::Stage3Scene::initialize ()
 	setMap (__BATTLESHIP_COMPLEXSTARTSMOVINGBACKGROUNDMAP3ID__);
 
 	BATTLESHIP::ChallengeScene::initialize ();
+
+	_enemiesDestroyed = 100;
 }

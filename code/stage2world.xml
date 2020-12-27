@@ -17,121 +17,24 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/>
-							<Attribute id="Emerge" value="YES"/> <!-- Meaning appearing little by little -->
-							<!-- The type of formation = 1 (Queue)
-								 consideres this time as an initial time adding 0.25 sec to any element -->
+							<Attribute id="Emerge" value="YES"/> 
 							<Attribute id="TimeToMove" value="1"/>
-							<Attribute id="Regenerate" value="NO"/> <!-- Meaning not to reappear when destroyed or exit the screen -->
-							<Attribute id="Roll" value="NO"/> <!-- Default value as well, meaning not appear in the other side of the screen when exit this -->
-							<!-- Remember that this position is relative (between 0 and 1)
-								 So 0.5, 0.5, 0 means the middle of the screen
-								 In type of formation = 0 (Block)
-								 the position of the elements are calculated from this one. -->
+							<Attribute id="Regenerate" value="NO"/> 
+							<Attribute id="Roll" value="NO"/> 
 							<Attribute id="InitialPosition" value="0.225,0.3,0"/>
-							<Attribute id="MaxTimeAction" value="-1"/> <!-- Default value. Meaning no end. -->
-							<!-- Type of UFO 0 = Orange
-											 1 = Green
-											 2 = Bees 
-											 3 = Round UFO 1
-											 4 = Round UFO 2 -->
+							<Attribute id="MaxTimeAction" value="-1"/> 
 							<Attribute id="Type" value="0"/>
-							<!-- MovType 0 	= No movement
-										 1 	= Horizontal movement
-										 2 	= Vertical movement
-										 3 	= Circular movement
-										 4 	= Horizontal dancing movement
-										 5 	= Vertical dancing movement
-										 6 	= Right side attacking movement
-										 7 	= Left side attacking movement
-										 8 	= A line, then an arc then a line again
-										 9 	= A line, then an arc , then a line again
-										 10 = A sinusoidal line -->
 							<Attribute id="MovType" value="4"/>
-							<!-- This is an optional attribute.
-								 If not defined deffault values will be taken.
-								 The values to add will depend on the type of movement:
-								 MovType 0 = No movement: 
-											 No additional data needed
-										 1 = Horizontal movement: 
-											 Length to move (width), Speed factor (regarding the difficulty level), X,Y,Z of the direction to move (horizontal)
-										 2 = Vertical movement: 
-											 Length to move (height), Speed factor (regarding the difficulty level), X,Y,Z of the direction to move (vertical)
-										 3 = Circular movement: 
-											 Radix (Random between 50 and 100), Speed factor (regarding the difficulty level), X,Y,Z of Plane (XY), 
-											 Initial angle in radians (0), Final Angle (2PI)
-										 4 = Horizontal dancing: 
-											 Length (20), Speed factor (regarding the difficulty level), X,Y,Z initial orientation (rigth horizontal)
-										 5 = Vertical dancing: 
-											 Length (20), Speed factor (regarding the difficulty level), X,Y,Z initial orientation (rigth horizontal)
-										 6 = Right side attacking:
-											 Radix (Random between 50 and 100), Speed factor (regarding the difficulty level), Final angle (Random from -PI/4 to 0), Length (1000)
-										 7 = Left side attacking:
-											 Radix (Random between 50 and 100), Speed factor (regarding the difficulty level), Final angle (Random from PI to 5PI/4), Length (1000)
-										 8,9 = A line, then an arc, the a line again:
-											 Regarding the initial position the line will cross the visible zone using a random way
-											 except when the initial position is exactly the middle of iether the horizontal or the vertical length.
-											 In that case the movement will be plain (totally vertical or horizontal)
-											 Distance, radix (Random between 50 and 150), Initial angle, Final angle (random right or left 30 degrees minimum), 
-											 Speed factor (regardin the difficulty)
-										 10 = Sinusoidal movement
-											 Similar explanation regarding the initial position
-											 Range (between 50 and 100), Amplitud (between 25 and), speed factor (regardin the difficult level), X,Y,X movement plane (XY), 
-											 Initial Angle (0), Final Angle (2PI)
-										 These other ones are defined for BATTLESHIPII
-										 1000 = Horizontal sinusoidal movement
-											 Range (70), Amplitud (55), Speed factor (regarding the difficult level), X,Y,X movement plane (XY), 
-											 Initial Angle (0), Final Angle (4PI)
-										 1001 = Horizontal sinusoidal movement
-											 Range (70), Amplitud (55), Speed factor (regarding the difficult level), X,Y,X movement plane (XY), 
-											 Initial Angle (PI/2), Final Angle (9PI/2)
-										 1002 = 1000 but from the right to the left
-										 1003 = 1001 but from the right to the left -->
-							<!--
-							<Attribute id="MovTypeParameters" value=""/>
-							-->
-							<!-- TypeShooting from 0 to 10 -->
-							<Attribute id="TypeShooting" value="0"/> <!-- The simpliest one -->
+							<Attribute id="TypeShooting" value="0"/> 
 							<Attribute id="TimeToShoot" value="3"/>
 							<Attribute id="ProbabilityToShoot" value="30"/>
-							<!-- 1 is the default value and also the value when not defined.
-								 If negative it'll be random upto that number -->
 							<Attribute id="ShootingForce" value="1"/>
-							<Attribute id="Speed" value="1"/> <!-- slow -->
-							<!-- Combat Formation 0 = Block
-												  1 = Queue of them -->
+							<Attribute id="Speed" value="1"/> 
 							<Attribute id="CombatFormation" value="0"/>
-							<!-- The attributes is a list of bdata.
-								 The right interpretation is on combat formation type's hands 
-								 0 = Combat block in formation 
-									 elements per row, separation of the elements in the row.
-								 1 = Queue of element (one after other)
-									 time between elements. -->
 							<Attribute id="CombatFormationAttrs" value="7,0.08"/>
-							<!-- This is also an optional parameter.
-								 They define, if any, the parameters of the attacking curve,
-								 If nothing is defined, the default parameters of the attacking curves will be taken.
-								 So, take a look to the parameters defined form MovTypeParameters -->
-							<!--
-							<Attribute id="CombatFormationAttackParameters" value=""/>
-							-->
-							<!-- In a block the on't be more than 7 per row -->
-							<Attribute id="NumberUFOS" value="21"/> <!-- 3 rows in a block -->
-							<!-- In the type of formation = 0 (Block)
-								 this value is greater than 0. After that time, and randomly,
-								 the UFO will start to do anything 
-								 Makes no sense this value to be lesser that time to move 
-								 Things could start to happen before they really move! -->
-							<!-- In the type of formation = 1 (Queue)
-								 this value should be 0 for the ufos to move one after other, because
-								 when happens the ufo start to move following a curve -->
+							<Attribute id="NumberUFOS" value="21"/> 
 							<Attribute id="TimerEvery" value="5"/>
-							<!-- In the type of formaton = 0 (Block)
-								 this value can be any -->
-							<!-- In the type of formation = 1 (Queue)
-								 this value should be -1 (all) -->
-							<Attribute id="TimerForHowMany" value="1"/> <!-- 1 at the same time -->
-							<!-- In the type of formation = 1 (Queue)
-								 this value should be 100 -->
+							<Attribute id="TimerForHowMany" value="1"/> 
 							<Attribute id="TimerProbability" value="60"/>
 						</Attributes>
 					</Action>
@@ -146,17 +49,17 @@
 							<Attribute id="Regenerate" value="NO"/>
 							<Attribute id="InitialPosition" value="0.225,0.3,0"/>
 							<Attribute id="Type" value="1"/>
-							<Attribute id="MovType" value="4"/> <!-- Dancing before attacking -->
+							<Attribute id="MovType" value="4"/> 
 							<Attribute id="TypeShooting" value="0"/>
 							<Attribute id="TimeToShoot" value="3"/>
 							<Attribute id="ProbabilityToShoot" value="30"/>
 							<Attribute id="ShootingForce" value="1"/>
 							<Attribute id="Speed" value="1"/>
-							<Attribute id="CombatFormation" value="0"/> <!-- Attacking from a block -->
+							<Attribute id="CombatFormation" value="0"/> 
 							<Attribute id="CombatFormationAttrs" value="7,0.08"/>
-							<Attribute id="NumberUFOS" value="21"/> <!-- 3 rows -->
+							<Attribute id="NumberUFOS" value="21"/> 
 							<Attribute id="TimerEvery" value="4"/>
-							<Attribute id="TimerForHowMany" value="2"/> <!-- 2 at the same time -->
+							<Attribute id="TimerForHowMany" value="2"/> 
 							<Attribute id="TimerProbability" value="60"/>
 						</Attributes>
 					</Action>
@@ -171,17 +74,17 @@
 							<Attribute id="Regenerate" value="NO"/>
 							<Attribute id="InitialPosition" value="0.225,0.3,0"/>
 							<Attribute id="Type" value="2"/>
-							<Attribute id="MovType" value="4"/> <!-- Dancing from the left to the right -->
+							<Attribute id="MovType" value="4"/> 
 							<Attribute id="TypeShooting" value="0"/>
 							<Attribute id="TimeToShoot" value="2"/>
 							<Attribute id="ProbabilityToShoot" value="40"/>
 							<Attribute id="ShootingForce" value="1"/>
 							<Attribute id="Speed" value="1"/>
-							<Attribute id="CombatFormation" value="0"/> <!-- Attacking from a block -->
+							<Attribute id="CombatFormation" value="0"/> 
 							<Attribute id="CombatFormationAttrs" value="7,0.08"/>
-							<Attribute id="NumberUFOS" value="14"/> <!-- 2 rows -->
+							<Attribute id="NumberUFOS" value="14"/> 
 							<Attribute id="TimerEvery" value="3"/>
-							<Attribute id="TimerForHowMany" value="3"/> <!-- 3 at the same time -->
+							<Attribute id="TimerForHowMany" value="3"/> 
 							<Attribute id="TimerProbability" value="60"/>
 						</Attributes>
 					</Action>
@@ -191,8 +94,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="40"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
 							<Attribute id="EnergyAdded" value="40"/>
 							<Attribute id="Speed" value="2"/>
 						</Attributes>
@@ -203,7 +104,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="1"/>
 							<Attribute id="TypeShooting" value="-2"/> 
 							<Attribute id="Speed" value="1"/>
@@ -248,21 +148,21 @@
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="NO"/>
 							<Attribute id="Roll" value="YES"/>
-							<Attribute id="InitialPosition" value="0.2,0.8,0"/> <!-- The left down corner -->
-							<Attribute id="MaxTimeAction" value="60"/> <!-- One minute maximum -->
-							<Attribute id="Type" value="0"/> <!-- The basic type of UFO -->
-							<Attribute id="MovType" value="0"/> <!-- None -->
+							<Attribute id="InitialPosition" value="0.2,0.8,0"/> 
+							<Attribute id="MaxTimeAction" value="60"/> 
+							<Attribute id="Type" value="0"/> 
+							<Attribute id="MovType" value="0"/> 
 							<Attribute id="TypeShooting" value="1"/>
 							<Attribute id="TimeToShoot" value="2"/>
-							<Attribute id="ProbabilityToShoot" value="40"/> <!-- Low probability to shoot -->
+							<Attribute id="ProbabilityToShoot" value="40"/> 
 							<Attribute id="ShootingForce" value="2"/>
 							<Attribute id="Speed" value="6"/>
-							<Attribute id="CombatFormation" value="1"/> <!-- Queue, one after other -->
+							<Attribute id="CombatFormation" value="1"/> 
 							<Attribute id="CombatFormationAttrs" value="0.3"/>
 							<Attribute id="NumberUFOS" value="10"/>
-							<Attribute id="TimerEvery" value="0"/> <!-- in every loop -->
-							<Attribute id="TimerForHowMany" value="-1"/> <!-- all -->
-							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
+							<Attribute id="TimerEvery" value="0"/> 
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="100"/> 
 						</Attributes>
 					</Action>
 					
@@ -274,21 +174,21 @@
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="NO"/>
 							<Attribute id="Roll" value="YES"/>
-							<Attribute id="InitialPosition" value="0.8,0.8,0"/> <!-- The right down corner -->
-							<Attribute id="MaxTimeAction" value="60"/> <!-- One minute maximum -->
+							<Attribute id="InitialPosition" value="0.8,0.8,0"/> 
+							<Attribute id="MaxTimeAction" value="60"/> 
 							<Attribute id="Type" value="0"/>
-							<Attribute id="MovType" value="0"/> <!-- Standing -->
+							<Attribute id="MovType" value="0"/> 
 							<Attribute id="TypeShooting" value="1"/>
 							<Attribute id="TimeToShoot" value="2"/>
 							<Attribute id="ShootingForce" value="2"/>
 							<Attribute id="ProbabilityToShoot" value="40"/>
 							<Attribute id="Speed" value="6"/>
-							<Attribute id="CombatFormation" value="1"/> <!-- All in a queue -->
+							<Attribute id="CombatFormation" value="1"/> 
 							<Attribute id="CombatFormationAttrs" value="0.3"/>
 							<Attribute id="NumberUFOS" value="10"/>
-							<Attribute id="TimerEvery" value="0"/> <!-- every loop -->
-							<Attribute id="TimerForHowMany" value="-1"/> <!-- for all -->
-							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
+							<Attribute id="TimerEvery" value="0"/> 
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="100"/> 
 						</Attributes>
 					</Action>
 					
@@ -300,21 +200,21 @@
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="NO"/>
 							<Attribute id="Roll" value="YES"/>
-							<Attribute id="InitialPosition" value="0.8,0.2,0"/> <!-- The right up corner -->
-							<Attribute id="MaxTimeAction" value="60"/> <!-- One minute maximum -->
+							<Attribute id="InitialPosition" value="0.8,0.2,0"/> 
+							<Attribute id="MaxTimeAction" value="60"/> 
 							<Attribute id="Type" value="0"/>
-							<Attribute id="MovType" value="0"/> <!-- Standing -->
+							<Attribute id="MovType" value="0"/> 
 							<Attribute id="TypeShooting" value="1"/>
 							<Attribute id="TimeToShoot" value="2"/>
 							<Attribute id="ProbabilityToShoot" value="40"/>
 							<Attribute id="ShootingForce" value="2"/>
 							<Attribute id="Speed" value="6"/>
-							<Attribute id="CombatFormation" value="1"/> <!-- in a queue -->
+							<Attribute id="CombatFormation" value="1"/> 
 							<Attribute id="CombatFormationAttrs" value="0.3"/>
 							<Attribute id="NumberUFOS" value="10"/>
-							<Attribute id="TimerEvery" value="0"/> <!-- in every loop -->
-							<Attribute id="TimerForHowMany" value="-1"/> <!-- for all -->
-							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
+							<Attribute id="TimerEvery" value="0"/> 
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="100"/> 
 						</Attributes>
 					</Action>
 
@@ -323,8 +223,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="40"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
 							<Attribute id="EnergyAdded" value="40"/>
 							<Attribute id="Speed" value="2"/>
 						</Attributes>
@@ -335,10 +233,9 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="30"/> 
-							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="1"/>
 							<Attribute id="TypeShooting" value="-2"/> 
-							<Attribute id="Speed" value="1"/> <!-- Quicker than usual -->
+							<Attribute id="Speed" value="1"/> 
 						</Attributes>
 					</Action>
 					
@@ -346,7 +243,6 @@
 				
 				<Attributes>
 					<Attribute id="NAME" value="UFOS moving"/>
-					<!-- The blocks that are managed sequential -->
 					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74210,74211,74212"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60000"/> 
@@ -379,25 +275,21 @@
 							<Attribute id="Emerge" value="YES"/>
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="NO"/>
-							<Attribute id="InitialPosition" value="0.2,0.3,0"/> <!-- The left down corner -->
+							<Attribute id="InitialPosition" value="0.2,0.3,0"/> 
 							<Attribute id="MaxTimeAction" value="60"/> 
-							<Attribute id="Type" value="2"/> <!-- Flies --> 
+							<Attribute id="Type" value="2"/> 
 							<Attribute id="MovType" value="0"/>
 							<Attribute id="TypeShooting" value="1"/>
 							<Attribute id="TimeToShoot" value="2"/>
 							<Attribute id="ProbabilityToShoot" value="60"/> 
 							<Attribute id="ShootingForce" value="-3"/>
 							<Attribute id="Speed" value="2"/>
-							<!-- A couple of new ways of movement have been added:
-								 1000 = sinusoide from the left to the right
-								 1001 = sinusoide from the right to the left. -->
-							<Attribute id="CombatFormation" value="1000"/> 
-							<!-- 1000 and 1001 the attributes are the separation among the elements shown -->
-							<Attribute id="CombatFormationAttrs" value="0.05"/>
+							<Attribute id="CombatFormation" value="1000"/> <!-- Sinusoide from left to right -->
+							<Attribute id="CombatFormationAttrs" value="0.05"/> <!-- Separantion between elements -->
 							<Attribute id="NumberUFOS" value="5"/>
-							<Attribute id="TimerEvery" value="0"/> <!-- every loop -->
-							<Attribute id="TimerForHowMany" value="-1"/> <!-- for all -->
-							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
+							<Attribute id="TimerEvery" value="0"/> 
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="100"/> 
 						</Attributes>
 					</Action>
 
@@ -408,21 +300,21 @@
 							<Attribute id="Emerge" value="YES"/>
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="NO"/>
-							<Attribute id="InitialPosition" value="0.75,0.3,0"/> <!-- The left down corner -->
+							<Attribute id="InitialPosition" value="0.75,0.3,0"/> 
 							<Attribute id="MaxTimeAction" value="60"/> 
-							<Attribute id="Type" value="2"/> <!-- Flies --> 
+							<Attribute id="Type" value="2"/> 
 							<Attribute id="MovType" value="0"/>
 							<Attribute id="TypeShooting" value="1"/>
 							<Attribute id="TimeToShoot" value="2"/>
 							<Attribute id="ProbabilityToShoot" value="60"/> 
 							<Attribute id="ShootingForce" value="-3"/>
 							<Attribute id="Speed" value="2"/>
-							<Attribute id="CombatFormation" value="1001"/> 
-							<Attribute id="CombatFormationAttrs" value="0.05"/>
+							<Attribute id="CombatFormation" value="1001"/> <!-- Sinusoide from right to the left -->
+							<Attribute id="CombatFormationAttrs" value="0.05"/> <!-- Separation between elements -->
 							<Attribute id="NumberUFOS" value="5"/>
-							<Attribute id="TimerEvery" value="0"/> <!-- every loop -->
-							<Attribute id="TimerForHowMany" value="-1"/> <!-- for all -->
-							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
+							<Attribute id="TimerEvery" value="0"/> 
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="100"/> 
 						</Attributes>
 					</Action>
 					
@@ -431,8 +323,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="40"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
 							<Attribute id="EnergyAdded" value="40"/>
 							<Attribute id="Speed" value="2"/>
 						</Attributes>
@@ -443,7 +333,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="30"/> 
-							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="1"/>
 							<Attribute id="TypeShooting" value="-2"/> 
 							<Attribute id="Speed" value="2"/> <!-- Quicker than usual -->
@@ -454,7 +343,6 @@
 				
 				<Attributes>
 					<Attribute id="NAME" value="Guauuu"/>
-					<!-- The blocks that are managed sequentially -->
 					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74220,74221"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60000"/> 

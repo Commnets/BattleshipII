@@ -19,22 +19,22 @@
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="NO"/>
 							<Attribute id="Roll" value="YES"/>
-							<Attribute id="InitialPosition" value="0.1,0.45,0"/> <!-- The left center -->
-							<Attribute id="MaxTimeAction" value="30"/> <!-- One minute maximum -->
+							<Attribute id="InitialPosition" value="0.1,0.45,0"/> 
+							<Attribute id="MaxTimeAction" value="30"/> 
 							<Attribute id="Type" value="0"/> 
-							<Attribute id="MovType" value="0"/> <!-- None -->
+							<Attribute id="MovType" value="0"/> 
 							<Attribute id="TypeShooting" value="2"/>
 							<Attribute id="TimeToShoot" value="1"/>
-							<Attribute id="ProbabilityToShoot" value="60"/> <!-- High probability to shoot -->
+							<Attribute id="ProbabilityToShoot" value="60"/> 
 							<Attribute id="ShootingForce" value="2"/>
 							<Attribute id="Speed" value="7"/>
-							<Attribute id="CombatFormation" value="1"/> <!-- Queue, one after other -->
+							<Attribute id="CombatFormation" value="1"/> 
 							<Attribute id="CombatFormationAttrs" value="0.3"/>
-							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,0.0,6.2831,6.0"/> <!-- An arc in the middle -->
+							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,0.0,6.2831,6.0"/> 
 							<Attribute id="NumberUFOS" value="15"/>
-							<Attribute id="TimerEvery" value="0"/> <!-- in every loop -->
-							<Attribute id="TimerForHowMany" value="-1"/> <!-- all -->
-							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
+							<Attribute id="TimerEvery" value="0"/> 
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="100"/> 
 						</Attributes>
 					</Action>
 
@@ -46,22 +46,22 @@
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="NO"/>
 							<Attribute id="Roll" value="YES"/>
-							<Attribute id="InitialPosition" value="0.9,0.5,0"/> <!-- The left center -->
-							<Attribute id="MaxTimeAction" value="30"/> <!-- One minute maximum -->
+							<Attribute id="InitialPosition" value="0.9,0.5,0"/> 
+							<Attribute id="MaxTimeAction" value="30"/> 
 							<Attribute id="Type" value="0"/> 
-							<Attribute id="MovType" value="0"/> <!-- None -->
+							<Attribute id="MovType" value="0"/> 
 							<Attribute id="TypeShooting" value="2"/>
 							<Attribute id="TimeToShoot" value="1"/>
-							<Attribute id="ProbabilityToShoot" value="60"/> <!-- High probability to shoot -->
+							<Attribute id="ProbabilityToShoot" value="60"/> 
 							<Attribute id="ShootingForce" value="2"/>
 							<Attribute id="Speed" value="7"/>
-							<Attribute id="CombatFormation" value="1"/> <!-- Queue, one after other -->
+							<Attribute id="CombatFormation" value="1"/> 
 							<Attribute id="CombatFormationAttrs" value="0.4"/>
-							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,0.0,6.2831,6.0"/> <!-- An arc in the middle -->
+							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,0.0,6.2831,6.0"/> 
 							<Attribute id="NumberUFOS" value="15"/>
-							<Attribute id="TimerEvery" value="0"/> <!-- in every loop -->
-							<Attribute id="TimerForHowMany" value="-1"/> <!-- all -->
-							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
+							<Attribute id="TimerEvery" value="0"/> 
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="100"/> 
 						</Attributes>
 					</Action>
 
@@ -73,22 +73,22 @@
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="NO"/>
 							<Attribute id="Roll" value="YES"/>
-							<Attribute id="InitialPosition" value="0.1,0.5,0"/> <!-- The left center -->
-							<Attribute id="MaxTimeAction" value="30"/> <!-- One minute maximum -->
+							<Attribute id="InitialPosition" value="0.1,0.5,0"/> 
+							<Attribute id="MaxTimeAction" value="30"/> 
 							<Attribute id="Type" value="1"/> 
-							<Attribute id="MovType" value="0"/> <!-- None -->
+							<Attribute id="MovType" value="0"/> 
 							<Attribute id="TypeShooting" value="2"/>
 							<Attribute id="TimeToShoot" value="1"/>
-							<Attribute id="ProbabilityToShoot" value="60"/> <!-- High probability to shoot -->
+							<Attribute id="ProbabilityToShoot" value="60"/> 
 							<Attribute id="ShootingForce" value="2"/>
 							<Attribute id="Speed" value="7"/>
-							<Attribute id="CombatFormation" value="1"/> <!-- Queue, one after other -->
+							<Attribute id="CombatFormation" value="1"/> 
 							<Attribute id="CombatFormationAttrs" value="0.4"/>
-							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,0.0,5.0,6.0"/> <!-- An arc in the middle -->
+							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,0.0,5.0,6.0"/> 
 							<Attribute id="NumberUFOS" value="15"/>
-							<Attribute id="TimerEvery" value="0"/> <!-- in every loop -->
-							<Attribute id="TimerForHowMany" value="-1"/> <!-- all -->
-							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
+							<Attribute id="TimerEvery" value="0"/> 
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="100"/> 
 						</Attributes>
 					</Action>
 
@@ -100,26 +100,26 @@
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="NO"/>
 							<Attribute id="Roll" value="YES"/>
-							<Attribute id="InitialPosition" value="0.9,0.5,0"/> <!-- The left center -->
-							<Attribute id="MaxTimeAction" value="30"/> <!-- One minute maximum -->
+							<Attribute id="InitialPosition" value="0.9,0.5,0"/> 
+							<Attribute id="MaxTimeAction" value="30"/> 
 							<Attribute id="Type" value="1"/>
-							<Attribute id="MovType" value="0"/> <!-- None -->
+							<Attribute id="MovType" value="0"/> 
 							<Attribute id="TypeShooting" value="2"/>
 							<Attribute id="TimeToShoot" value="1"/>
-							<Attribute id="ProbabilityToShoot" value="60"/> <!-- High probability to shoot -->
+							<Attribute id="ProbabilityToShoot" value="60"/> 
 							<Attribute id="ShootingForce" value="2"/>
 							<Attribute id="Speed" value="7"/>
-							<Attribute id="CombatFormation" value="1"/> <!-- Queue, one after other -->
+							<Attribute id="CombatFormation" value="1"/> 
 							<Attribute id="CombatFormationAttrs" value="0.4"/>
-							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,0.0,5.0,6.0"/> <!-- An arc in the middle -->
+							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,0.0,5.0,6.0"/> 
 							<Attribute id="NumberUFOS" value="15"/>
-							<Attribute id="TimerEvery" value="0"/> <!-- in every loop -->
-							<Attribute id="TimerForHowMany" value="-1"/> <!-- all -->
-							<Attribute id="TimerProbability" value="100"/> <!-- at the same time -->
+							<Attribute id="TimerEvery" value="0"/> 
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="100"/> 
 						</Attributes>
 					</Action>
 					
-					<!-- No pilss no energy -->
+					<!-- No pills no energy -->
 					
 				</Actions>
 			
@@ -128,7 +128,7 @@
 					<Attribute id="SEQUENTIALACTIONBLOCKS" value="74310,74311,74312,74313"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60001"/> 
-					<Attribute id="SCENETIME" value="30"/> <!-- Time just for one! -->
+					<Attribute id="SCENETIME" value="6"/> <!-- Time just for one! -->
 				</Attributes>
 				
 				<Conexions>

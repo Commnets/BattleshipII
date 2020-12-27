@@ -15,14 +15,6 @@
 					<Action id="70400">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="0"/>
-							<Attribute id="ProbabilityToAppear" value="100"/> 
-							<Attribute id="Emerge" value="NO"/> 
-							<Attribute id="TimeToMove" value="0"/> 
-							<Attribute id="Regenerate" value="YES"/> 
-							<Attribute id="Roll" value="NO"/> 
-							<Attribute id="MaxTimeAction" value="-1"/> 
-							<Attribute id="Type" value="-1"/> 
-							<Attribute id="MovType" value="0"/> 
 							<Attribute id="PointsGiven" value="200"/> 
 							<Attribute id="Speed" value="-3"/> 
 						</Attributes>
@@ -32,14 +24,6 @@
 					<Action id="70401">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="0"/>
-							<Attribute id="ProbabilityToAppear" value="100"/> 
-							<Attribute id="Emerge" value="NO"/> 
-							<Attribute id="TimeToMove" value="0"/> 
-							<Attribute id="Regenerate" value="YES"/> 
-							<Attribute id="Roll" value="NO"/> 
-							<Attribute id="MaxTimeAction" value="-1"/> 
-							<Attribute id="Type" value="-1"/> 
-							<Attribute id="MovType" value="0"/> 
 							<Attribute id="PointsGiven" value="200"/> 
 							<Attribute id="Speed" value="-4"/> 
 						</Attributes>
@@ -49,14 +33,6 @@
 					<Action id="70400">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="0"/>
-							<Attribute id="ProbabilityToAppear" value="100"/> 
-							<Attribute id="Emerge" value="NO"/> 
-							<Attribute id="TimeToMove" value="0"/> 
-							<Attribute id="Regenerate" value="YES"/> 
-							<Attribute id="Roll" value="NO"/> 
-							<Attribute id="MaxTimeAction" value="-1"/> 
-							<Attribute id="Type" value="-1"/> 
-							<Attribute id="MovType" value="0"/> 
 							<Attribute id="PointsGiven" value="200"/> 
 							<Attribute id="Speed" value="-4"/> 
 						</Attributes>
@@ -71,7 +47,7 @@
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="YES"/>
 							<Attribute id="InitialPosition" value="0.225,0.3,0"/>
-							<Attribute id="Type" value="1000"/> <!-- BATTLESHIPIIO Type -->
+							<Attribute id="Type" value="1000"/> 
 							<Attribute id="MovType" value="8"/> 
 							<Attribute id="TypeShooting" value="1"/>
 							<Attribute id="TimeToShoot" value="3"/>
@@ -86,8 +62,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
 							<Attribute id="EnergyAdded" value="30"/>
 							<Attribute id="Speed" value="3"/>
 						</Attributes>
@@ -98,7 +72,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="3"/>
 							<Attribute id="TypeShooting" value="-2"/> 
 							<Attribute id="Speed" value="3"/>
@@ -137,8 +110,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
 							<Attribute id="EnergyAdded" value="30"/>
 							<Attribute id="Speed" value="3"/>
 						</Attributes>
@@ -149,7 +120,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="3"/>
 							<Attribute id="TypeShooting" value="-2"/> 
 							<Attribute id="Speed" value="3"/>
@@ -188,8 +158,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
 							<Attribute id="EnergyAdded" value="30"/>
 							<Attribute id="Speed" value="3"/>
 						</Attributes>
@@ -200,7 +168,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="3"/>
 							<Attribute id="TypeShooting" value="-2"/> 
 							<Attribute id="Speed" value="3"/>

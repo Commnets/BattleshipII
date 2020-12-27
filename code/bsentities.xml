@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <Entities>
 
+	<!-- REMEBER:
+		 Redefine any of these elements before including this file,
+		 if the default behaviour must be completed of modified -->
+
 	<!-- Includes -->
 	<Include file="adentities.xml"/>
 
@@ -285,11 +289,32 @@
 	</Entity>
 	
 	<!-- The shootings -->
-	<!-- The number of max shootings will depend on the max number of enemies possible simultaneously in the scene (0)
-		 and the max number of simultaneously shootings per enemy in the scene (10), 
-		 max the max number of them used in the battleship (100). So total = 100 
-		 All these variables are defined at bsdatagame.hpp / cpp. If those are changed, these ones should do too. 
-		 The hole for shootings is prepared up to a maximum of 1100 (10 enemies). -->
+	<!-- 
+		The number of max shootings will depend on the max number of enemies possible simultaneously in the scene (50 by default)
+		and the max number of simultaneously shootings per enemy in the scene (50 by default), 
+		max the max number of them used in the battleship (100 by default). So total = (50 + 1) * 50 = 2550 (by default) 
+		All these variables are defined at bsdatagame.hpp / cpp. If those are changed, these ones should do too. 
+		The hole for shootings is prepared up to a maximum of 1100 (10 enemies). 
+		
+		--------------
+		CONFIGURATION:
+		--------------
+		
+		To consider more number of shootings:
+		1.-	Change the variable _maxNumberOfShootingsPerEnemyInScene defined in the DataGame structure. 
+		2.-	Change the number below using the formula (1 + _maxNumberOfEnemiesInScene) * _maxNumberOfShootingsPerEnemyInScene
+		3.-	Go to the file bsmovements.xml and change (with the same formula) the number of movements for shootings.
+			
+		To considerer new types of shooting:
+		1.-	Add a new form.
+		2.-	Add a new animation for the new form just before the one representing the explosion of the shooting,
+			and with the next id to the previous.
+		3.-	Change the id of the animation for the explosion.
+		4.-	Add a new state for the new type of shooting considering the new animation created and just 
+			before the state for the explosion that is common for all types of shooting.
+		5.-	Change the id of the state defined for the explosion.
+		6.-	Last not least, change the variable _numberOfShootingTypes defined in the structure DataGame.
+	-->
 	<SetOfEntities fromId="550000" number="2550">
 		<Forms>
 			<!-- Different forms of the shooting -->
@@ -465,6 +490,32 @@
 	</SetOfEntities>
 	
 	<!-- The asteroids -->
+	<!-- 
+		The asteorids are one of the key pieces of the game.
+		In the default implementation, the only type of class created is BATTLESHIP::Asteroid,
+		whatever the number of the entity is.
+
+		--------------
+		CONFIGURATION:
+		--------------
+		
+		To considerer more number of asteroids simultaneously in a scene.
+		50 should be enough but, if it is needed:
+		1.- Modify the variable _maxNumberOfAsteroidsInScene defined in the structure DataGame.
+		2.- Change the attribute number defined below.
+		3.- Go to the file bsmovements.xml and change the number of movements associaded to the asteroids.
+	
+		If new types of asteroids wanted to be added, considerer the following:
+		1.- Add the form representing the new asteroid.
+		2.- Add the animation (typically rolling), just before the one representing the explosion, 
+			and with the next id of the previous one. 
+		3.- Then change the id initially assigned to the explosion the the next one.
+		4.- Sure you have noticed, but there are 2 states per asteroid: 
+			Frozing and Moving, and 2 common for all: Exploding and not moving
+			Add two new states for the new asteroid (considering the animation added) before the ones that are common.
+		5.- Adjust the id of those.
+		6.- Change the variable _numberOfAsteroidTypes defined in the structure DataGame.
+	-->
 	<SetOfEntities fromId="53000" number="50">
 		<Forms>
 			<!-- Different forms of the asteroids -->
@@ -626,9 +677,33 @@
 		</States>
 	</SetOfEntities>
 
-	<!-- The battleship things to catch.
-		 Missiles and the life 
-		 It is supossed there could be up to 5 simultaneously in the game -->
+	<!-- The things to catch -->
+	<!-- 
+		The battleship things to catch.
+		In the default implementation there can be Missle (to reload shootings) and lives.
+		The first 4 up to 5 are Missles, and the last one is live.
+
+		--------------
+		CONFIGURATION:
+		--------------
+		
+		To considerer more number of things to catch simultaneously in a scene.
+		5 should be enough but, if it is needed:
+		1.- Modify the variable _numberOfThingsToCatchTypes defined in the structure DataGame.
+		2.- Change the attribute number defined below.
+		3.- Go to the file bsmovements.xml and change the number of movements associaded to the things to catch.
+	
+		If new types of things to catch wanted to be added, considerer the following:
+		1.- Add the form representing the new thing to catch.
+		2.- Add the animation (typically rolling), just before the one representing the explosion, 
+			and with the next id of the previous one. 
+		3.- Then change the id initially assigned to the explosion the the next one.
+		4.- Sure you have noticed, but there are 2 states per thing to catch: 
+			Frozing and Moving, and 2 common for all: Exploding and not moving
+			Add two new states for the new thing to catch (considering the animation added) before the ones that are common.
+		5.- Adjust the id of those.
+		6.- Change the variable _numberOfThingsToCatchTypes defined in the structure DataGame.
+	-->
 	<SetOfEntities fromId="54000" number="5">
 		<Forms>
 			<!-- The different forms -->
@@ -704,7 +779,7 @@
 					<!-- Not linked with anyone -->
 				</Attributes>
 			</Animation>
-			<!-- When the asteroid is exploding -->
+			<!-- When the thing to catch is exploding -->
 			<Animation id="5" type="0">
 				<Attributes>
 					<Attribute id="FORM" value="50100"/>
@@ -766,8 +841,32 @@
 		</States>
 	</SetOfEntities>
 
-	<!-- The tanks of fuel to load the energy of the battleship (energy elements) 
-		 It is supossed there could be up to 5 simultaneously in the game -->
+	<!-- 
+		The tanks of fuel to load the energy of the battleship (energy elements).
+		It is consider just one single type of energy element in the default configuration.
+			The asteorids are one of the key pieces of the game.
+
+		--------------
+		CONFIGURATION:
+		--------------
+		
+		To considerer more number of energy element simultaneously in a scene.
+		5 should be enough but, if it is needed:
+		1.- Modify the variable _maxNumberOfEnergyElementsInScene defined in the structure DataGame.
+		2.- Change the attribute number defined below.
+		3.- Go to the file bsmovements.xml and change the number of movements associaded to the energy elements.
+	
+		If new types of energy elements wanted to be added, considerer the following:
+		1.- Add the form representing the new energy element.
+		2.- Add the animation (typically rolling), just before the one representing the explosion, 
+			and with the next id of the previous one. 
+		3.- Then change the id initially assigned to the explosion the the next one.
+		4.- Same than in the case of the asteroids, there are 2 states per type of energy element: 
+			Frozing and Moving, and 2 common for all: Exploding and not moving
+			Add two new states for the new energy element (considering the animation added) before the ones that are common.
+		5.- Adjust the id of those.
+		6.- Change the variable _numberOfEnergyElementsTypes defined in the structure DataGame.
+	-->
 	<SetOfEntities fromId="55000" number="5">
 		<Forms>
 			<!-- The usual form -->
@@ -823,7 +922,33 @@
 		</States>
 	</SetOfEntities>
 
-	<!-- The UFOs -->
+	<!--
+		The UFOs 
+
+		--------------
+		CONFIGURATION:
+		--------------
+		
+		To considerer more number of ufos simultaneously in a scene.
+		1.- Modify the variable _maxNumberOfEnemiesInScene defined in the structure DataGame.
+		2.- Change the attribute number defined below.
+		3.- Go to the file bsmovements.xml and change the number of movements associaded to the ufos.
+	
+		If new types of energy elements wanted to be added, considerer the following:
+		1.- Add the form representing the new type of ufo.
+		2.- Add the animation just before the one representing the explosion, 
+			and with the next id of the previous one. 
+		3.- Then change the id initially assigned to the explosion the the next one.
+		4.- Same than in the case of the asteroids, there are 2 states per type of ufo: 
+			Frozing and Moving, and 2 common for all: Exploding and not moving
+			Add two new states for the new type of ufo (considering the animation added) before the ones that are common.
+		5.- Adjust the id of those.
+		6.- Change the variable _numberOfUFOTypes defined in the structure DataGame.
+		
+		In the case of the Ufos more things should be also changed in the code for the ufo to be really considerer.
+		The methods ufoTypesList y defaultStatedForUFOType should be redefined to considerer the new types.
+		Read the code documentacion for further info and details.
+	-->
 	<SetOfEntities fromId="56000" number="50">
 		<Forms>
 			<!-- Different UFO forms -->

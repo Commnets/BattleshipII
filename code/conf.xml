@@ -19,9 +19,9 @@
 	<Property id="SCREENYPOSITION" value="10"/>
 	
 	<!-- The initial world -->
-	<Property id="INITIALWORLD" value="50002"/>
+	<Property id="INITIALWORLD" value="50003"/>
 	<!-- The initial scene -->
-	<Property id="INITIALSCENE" value="70010"/>
+	<Property id="INITIALSCENE" value="70020"/>
 	<!-- The number of lives -->
 	<Property id="LIVES" value="3"/>
 	<!-- Whether to show the FPS -->

@@ -160,16 +160,16 @@ QGAMES::SceneActionBlock* BattleshipII::WorldBuilder::createSceneActionBlockObje
 		result = new BATTLESHIP::StdSetUFOsSceneActionBlock 
 			(nAB, new BATTLESHIP::StdSetUFOsSceneActionBlock::Properties (prps),
 				new BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactories 
-					({ new BATTLESHIP::StdSetUFOsSceneActionBlock::BlockCombatFormationFactory 
+					({ new BATTLESHIP::StdSetUFOsSceneActionBlock::BlockAndFlyCombatFormationFactory 
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory), 
-						new BATTLESHIP::StdSetUFOsSceneActionBlock::QueueCombatFormationFactory 
+						new BATTLESHIP::StdSetUFOsSceneActionBlock::QueueAndFlyCombatFormationFactory 
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory), 
-						new BATTLESHIP::StdSetUFOsSceneActionBlock::SolidLinearBlockCombatFormationFactory 
+						new BATTLESHIP::StdSetUFOsSceneActionBlock::DancingInLinesCombatFormationFactory 
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory), 
 						// The condition is really needed because this two new combat formations are added!
-						new BattleshipII::SinusoideFromLeftBlockCombatFormationFactory
+						new BattleshipII::SinusoideFromLeftBlockAndFlyCombatFormationFactory
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory),
-						new BattleshipII::SinusoideFromRightBlockCombatFormationFactory
+						new BattleshipII::SinusoideFromRightBlockAndFlyCombatFormationFactory
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory) })); 
 	}
 	else

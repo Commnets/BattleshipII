@@ -2,7 +2,7 @@
 #include "Game.hpp"
 
 // ---
-BattleshipII::SinusoideFromLeftBlockCombatFormationFactory::SinusoideFromLeftBlockCombatFormationFactory  
+BattleshipII::SinusoideFromLeftBlockAndFlyCombatFormationFactory::SinusoideFromLeftBlockAndFlyCombatFormationFactory  
 		(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE,
 		 const BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactory::SingleActionBlockFunction& eABlock)
 	: BATTLESHIP::StdSetUFOsSceneActionBlock::StayAndAttackOneByOneCombatFormationFactory 
@@ -29,7 +29,7 @@ BattleshipII::SinusoideFromLeftBlockCombatFormationFactory::SinusoideFromLeftBlo
 }
 
 // ---
-BattleshipII::SinusoideFromRightBlockCombatFormationFactory::SinusoideFromRightBlockCombatFormationFactory 
+BattleshipII::SinusoideFromRightBlockAndFlyCombatFormationFactory::SinusoideFromRightBlockAndFlyCombatFormationFactory 
 		(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE,
 		 const BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactory::SingleActionBlockFunction& eABlock)
 	: BATTLESHIP::StdSetUFOsSceneActionBlock::StayAndAttackOneByOneCombatFormationFactory 

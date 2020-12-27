@@ -39,7 +39,7 @@ namespace BattleshipII
 		The ufos appear in the left side of the screen, and then move from the left to the right
 		each of them with PI/2 radians of delay. 
 		The closest pattern to follow is "all followinf the leader". */
-	class SinusoideFromLeftBlockCombatFormationFactory : 
+	class SinusoideFromLeftBlockAndFlyCombatFormationFactory : 
 		public BATTLESHIP::StdSetUFOsSceneActionBlock::StayAndAttackOneByOneCombatFormationFactory
 	{
 		public:
@@ -48,7 +48,7 @@ namespace BattleshipII
 			* @param cF:	The curve and position factory used to create individual action blocks.
 			* @param t:	The time between the UFOS when starting to move. 
 			*/
-		SinusoideFromLeftBlockCombatFormationFactory 
+		SinusoideFromLeftBlockAndFlyCombatFormationFactory 
 			(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE = 0.05,
 			 const BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactory::SingleActionBlockFunction& eABlock = __SINGLESTDUFOSCTIONBLOCK);
 
@@ -62,7 +62,7 @@ namespace BattleshipII
 	};
 
 	/** Similar to the previous one but starting from the right. */
-	class SinusoideFromRightBlockCombatFormationFactory : 
+	class SinusoideFromRightBlockAndFlyCombatFormationFactory : 
 		public BATTLESHIP::StdSetUFOsSceneActionBlock::StayAndAttackOneByOneCombatFormationFactory
 	{
 		public:
@@ -71,7 +71,7 @@ namespace BattleshipII
 			* @param cF:	The curve and position factory used to create individual action blocks.
 			* @param t:	The time between the UFOS when starting to move. 
 			*/
-		SinusoideFromRightBlockCombatFormationFactory 
+		SinusoideFromRightBlockAndFlyCombatFormationFactory 
 			(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE = 0.05,
 			 const BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactory::SingleActionBlockFunction& eABlock = __SINGLESTDUFOSCTIONBLOCK);
 

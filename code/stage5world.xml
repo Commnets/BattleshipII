@@ -16,8 +16,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
 							<Attribute id="EnergyAdded" value="20"/>
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
@@ -28,7 +26,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="40"/>
-							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="-1"/>
 							<Attribute id="TypeShooting" value="-2"/> 
 							<Attribute id="Speed" value="3"/>
@@ -66,8 +63,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
 							<Attribute id="EnergyAdded" value="20"/>
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
@@ -78,7 +73,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="40"/>
-							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="-1"/>
 							<Attribute id="TypeShooting" value="-2"/> 
 							<Attribute id="Speed" value="3"/>
@@ -117,8 +111,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="TimeToMove" value="0"/>
-							<Attribute id="Type" value="0"/>
 							<Attribute id="EnergyAdded" value="20"/>
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
@@ -129,7 +121,6 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
 							<Attribute id="ProbabilityToAppear" value="40"/>
-							<Attribute id="TimeToMove" value="0"/>
 							<Attribute id="Type" value="-1"/>
 							<Attribute id="TypeShooting" value="-2"/> 
 							<Attribute id="Speed" value="3"/>
