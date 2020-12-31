@@ -33,6 +33,8 @@
 // The new types of enemy...
 #define __BATTLESHIPII_ENEMTYTYPE1000__						1000
 #define __BATTLESHIPII_ENEMTYTYPE1001__						1001
+#define __BATTLESHIPII_ENEMTYTYPE1010__						1010
+#define __BATTLESHIPII_ENEMTYTYPE1011__						1011
 
 // The new types of curves defined for the BattleshipII::CurveFactory 
 // used in the BattleshipII::MovementBuilder, defined at BattleshipII::Game level 
@@ -51,6 +53,7 @@
 // The different types of combat blocks
 #define __BATTLESHIPII_STAYANDMOVESINFROMLEFTTORIGHT__		1000
 #define __BATTLESHIPII_STAYANDMOVESINFROMRIGHTTOLEFT__		1001
+#define __BATTLESHIPII_BIGUFODANCINGINLINES__				1002
 
 // The number and type of action blocks now have been redefined either
 #define __BATTLESHIPII_ACTIONBLOCKUFOBASEID__				__BATTLESHIP_ACTIONBLOCKUFOBASEID__

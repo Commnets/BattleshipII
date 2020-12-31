@@ -172,6 +172,8 @@ QGAMES::SceneActionBlock* BattleshipII::WorldBuilder::createSceneActionBlockObje
 						new BattleshipII::SinusoideFromLeftBlockAndFlyCombatFormationFactory
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */),
 						new BattleshipII::SinusoideFromRightBlockAndFlyCombatFormationFactory
+							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */),
+						new BattleshipII::DancingInLinesForBigUFOSCombatFormationFactory
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */) })); 
 	}
 	else

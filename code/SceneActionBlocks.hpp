@@ -87,6 +87,25 @@ namespace BattleshipII
 		private:
 		QGAMES::bdata _separationBetweenElements;
 	};
+
+	/** Dancing but for motherships. */
+	class DancingInLinesForBigUFOSCombatFormationFactory : 
+		public BATTLESHIP::StdSetUFOsSceneActionBlock::DancingInLinesCombatFormationFactory
+	{
+		public:
+		DancingInLinesForBigUFOSCombatFormationFactory (
+			BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, int t = 10,
+			const BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactory::SingleActionBlockFunction& eABlock =
+				[](int i, BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF) -> BATTLESHIP::StdUFOSceneActionBlock* 
+					{ return (new MothershipUFOSceneActionBlock (i, 
+						new BATTLESHIP::StdUFOSceneActionBlock::Properties (), cF -> clone ())); })
+			: BATTLESHIP::StdSetUFOsSceneActionBlock::DancingInLinesCombatFormationFactory (cF, t, eABlock)
+							{ }
+
+		/** @see parent. */
+		virtual bool forCombatType (int t) const
+						{ return (t == __BATTLESHIPII_BIGUFODANCINGINLINES__); }
+	};
 }
 
 #endif

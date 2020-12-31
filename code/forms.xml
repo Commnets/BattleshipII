@@ -15,5 +15,9 @@
             fSpacing="0" fMargin="0" fWidth="80" fHeight="80" aColor="255" nFrames="6"/>
 	<Form id="60101" name="UFO5" file="forms/UFO5.png" width="480" height="80" 
             fSpacing="0" fMargin="0" fWidth="80" fHeight="80" aColor="255" nFrames="6"/>
+			
+	<!-- New shootings -->
+	<Form id="60200" name="LittleRedBallShooting" file="forms/littleredshooting.png" width="20" height="16"
+			fSpacing="0" fMargin="0" fWidth="20" fHeight="16" aColor="255" nFrames="1"/>
 	
 </Forms>

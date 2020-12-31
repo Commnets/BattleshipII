@@ -35,7 +35,7 @@ namespace BattleshipII
 	
 		/** @see parent. */
 		virtual QGAMES::Position defaultInitialPointForMovementType (int nC, 
-			const QGAMES::Rectangle& vZ, const QGAMES::Rectangle& mZ, int uW, int uH, int uD) override final;
+			const QGAMES::Rectangle& vZ, const QGAMES::Rectangle& mZ) override final;
 		virtual std::map <int, double> defaultParametersForMovementType (int nC, 
 			QGAMES::bdata sF, const QGAMES::Rectangle& vZ, const QGAMES::Rectangle& mZ, const QGAMES::Position& iP, 
 			QGAMES::bdata& tR) override final;

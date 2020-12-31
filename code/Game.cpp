@@ -4,7 +4,8 @@
 BattleshipII::DataGame::DataGame ()
 	: BATTLESHIP::DataGame ()
 { 
-	_numberOfUFOTypes									= 5; // To be aligned, with the size of the list...(_ufoTypesList.size ())
+	_numberOfShootingTypes								= 9;
+	_numberOfUFOTypes									= 7; // To be aligned, with the size of the list...(_ufoTypesList.size ())
 }
 
 // ---
@@ -24,6 +25,16 @@ std::vector <int> BattleshipII::DataGame::defaultStatesForUFOType (int uT) const
 				{ 8, __BATTLESHIP_ENEMYBLANKSTATE__, 9, __BATTLESHIP_ENEMYEXPLODINGSTATE__, __BATTLESHIP_ENEMYBLANKSTATE__ } ;
 			break;
 
+		case __BATTLESHIPII_ENEMTYTYPE1010__:
+			result = std::vector <int> 
+				{ 10, __BATTLESHIP_ENEMYBLANKSTATE__, 11, __BATTLESHIP_ENEMYEXPLODINGSTATE__, __BATTLESHIP_ENEMYBLANKSTATE__ } ;
+			break;
+
+		case __BATTLESHIPII_ENEMTYTYPE1011__:
+			result = std::vector <int> 
+				{ 12, __BATTLESHIP_ENEMYBLANKSTATE__, 13, __BATTLESHIP_ENEMYEXPLODINGSTATE__, __BATTLESHIP_ENEMYBLANKSTATE__ } ;
+			break;
+
 		default:
 			result = BATTLESHIP::DataGame::defaultStatesForUFOType (uT);
 	}
@@ -41,6 +52,8 @@ const std::vector <int>& BattleshipII::DataGame::ufoTypesList () const
 		// Add two additional types of UFOs...
 		_ufoTypesList.push_back (__BATTLESHIPII_ENEMTYTYPE1000__);
 		_ufoTypesList.push_back (__BATTLESHIPII_ENEMTYTYPE1001__);
+		_ufoTypesList.push_back (__BATTLESHIPII_ENEMTYTYPE1010__);
+		_ufoTypesList.push_back (__BATTLESHIPII_ENEMTYTYPE1011__);
 	}
 
 	return (_ufoTypesList);
@@ -48,7 +61,7 @@ const std::vector <int>& BattleshipII::DataGame::ufoTypesList () const
 
 // ---
 QGAMES::Position BattleshipII::DataGame::DataGame::defaultInitialPointForMovementType (int nC, 
-	const QGAMES::Rectangle& vZ, const QGAMES::Rectangle& mZ, int uW, int uH, int uD)
+	const QGAMES::Rectangle& vZ, const QGAMES::Rectangle& mZ)
 {
 	QGAMES::Position result = QGAMES::Position::_cero;
 
@@ -62,7 +75,7 @@ QGAMES::Position BattleshipII::DataGame::DataGame::defaultInitialPointForMovemen
 			break;
 
 		default:
-			result = BATTLESHIP::DataGame::defaultInitialPointForMovementType (nC, vZ, mZ, uW, uH, uD);
+			result = BATTLESHIP::DataGame::defaultInitialPointForMovementType (nC, vZ, mZ);
 	}
 
 	return (result);
