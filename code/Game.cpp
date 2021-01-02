@@ -6,6 +6,34 @@ BattleshipII::DataGame::DataGame ()
 { 
 	_numberOfShootingTypes								= 9;
 	_numberOfUFOTypes									= 7; // To be aligned, with the size of the list...(_ufoTypesList.size ())
+
+	const int LEVELDATADEFAULTVALUES [11][5] = 
+		
+	{ 
+	  // These are the ones defined in the basic type!
+	  { 0, 2  , 200, 1, 40 },
+	  { 1, 5  , 200, 2, 40 }, 
+	  { 1, 10 , 200, 2, 40 }, 
+	  { 2, 15 , 200, 3, 40 }, 
+	  { 2, 20 , 200, 3, 40 }, 
+	  { 3, 30 , 400, 3, 40 }, 
+	  { 4, 50 , 400, 4, 40 }, 
+	  { 5, 60 , 400, 5, 40 }, 
+	  { 6, 60 , 600, 5, 40 }, 
+	  { 7, 100, 600, 5, 40 }, 
+	  // This one has been added for battleshipII...
+	  { 8, 100, 600, 2, 50 } 
+	};
+
+	for (int i = 0; i < _numberOfPowerLevels; delete [] _LEVELDATA [i++]); delete _LEVELDATA;
+	_numberOfPowerLevels = 11; // One more than before
+	_LEVELDATA = new int* [_numberOfPowerLevels];
+	for (int i = 0; i < _numberOfPowerLevels; i++)
+	{
+		_LEVELDATA [i] = new int [5];
+		for (int j = 0; j < 5; j++)
+			_LEVELDATA [i][j] = LEVELDATADEFAULTVALUES [(i >= 11) ? 10 : i][j];
+	}
 }
 
 // ---

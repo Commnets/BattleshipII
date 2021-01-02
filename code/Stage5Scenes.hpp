@@ -31,19 +31,27 @@ namespace BattleshipII
 							{ }
 
 		/** @see parent. */
-		virtual void initialize () override final;
+		virtual void initialize () override;
 	};
 
-	/** Stage 5 Scene 1 */
-	class Stage5Scene1 : public Stage5Scene
+	/** Stage 5 Scene 1 
+		Thios belongs to a different type. */
+	class Stage5Scene1 : public BATTLESHIP::FocusingInOneElementScene
 	{
 		public:
 		Stage5Scene1 (const QGAMES::Maps& m, 
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: Stage5Scene (__BATTLESHIPII_STAGE5SCENE1__, m, cn, p, ePL)
+			: BATTLESHIP::FocusingInOneElementScene (__BATTLESHIPII_STAGE5SCENE1__, m, 
+					std::string ("Big MothershipUFO killed"), cn, p, ePL) // When the element is killed...
 							{ }
+
+		/** @see parent. */
+		virtual void initialize () override final;
+
+		/** @see parent. */
+		virtual void processEvent (const QGAMES::Event& evnt) override;
 	};
 
 	/** Stage 5 Scene 2 */

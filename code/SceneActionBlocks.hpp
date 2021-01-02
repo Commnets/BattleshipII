@@ -98,13 +98,14 @@ namespace BattleshipII
 			const BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactory::SingleActionBlockFunction& eABlock =
 				[](int i, BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF) -> BATTLESHIP::StdUFOSceneActionBlock* 
 					{ return (new MothershipUFOSceneActionBlock (i, 
-						new BATTLESHIP::StdUFOSceneActionBlock::Properties (), cF -> clone ())); })
-			: BATTLESHIP::StdSetUFOsSceneActionBlock::DancingInLinesCombatFormationFactory (cF, t, eABlock)
-							{ }
+						new BATTLESHIP::StdUFOSceneActionBlock::Properties (), cF -> clone ())); });
 
 		/** @see parent. */
-		virtual bool forCombatType (int t) const
+		virtual bool forCombatType (int t) const override final
 						{ return (t == __BATTLESHIPII_BIGUFODANCINGINLINES__); }
+
+		protected:
+		bool _firstMovement;
 	};
 }
 
