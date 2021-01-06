@@ -59,15 +59,22 @@ namespace BattleshipII
 	};
 
 	/** Stage 4 Scene 3 */
-	class Stage4Scene3 : public Stage4Scene
+	class Stage4Scene3 : public BATTLESHIP::FocusingInOneElementScene
 	{
 		public:
 		Stage4Scene3 (const QGAMES::Maps& m, 
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: Stage4Scene (__BATTLESHIPII_STAGE4SCENE3__, m, cn, p, ePL)
+			: BATTLESHIP::FocusingInOneElementScene (__BATTLESHIPII_STAGE4SCENE3__, m, 
+					std::string ("Big Mothership UFO killed"), cn, p, ePL)
 							{ }
+
+		/** @see parent. */
+		virtual void initialize () override final;
+
+		/** @see parent. */
+		virtual void processEvent (const QGAMES::Event& evnt) override;
 	};
 }
 

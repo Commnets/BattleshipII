@@ -31,10 +31,11 @@ namespace BattleshipII
 							{ }
 
 		/** @see parent. */
-		virtual void initialize () override final;
+		virtual void initialize () override;
 	};
 
-	/** Stage 2 Scene 1 */
+	/** Stage 2 Scene 1. \n
+		UFOS moving in a block and then attacking like in GALAGA. */
 	class Stage2Scene1 : public Stage2Scene
 	{
 		public:
@@ -46,7 +47,8 @@ namespace BattleshipII
 							{ }
 	};
 
-	/** Stage 2 Scene 2 */
+	/** Stage 2 Scene 2. \n
+		Same than in the previous but with more intensity. */
 	class Stage2Scene2 : public Stage2Scene
 	{
 		public:
@@ -58,7 +60,10 @@ namespace BattleshipII
 							{ }
 	};
 
-	/** Stage 2 Scene 3 */
+	/** Stage 2 Scene 3. \n
+		Even more, but when the critical fly is killed,	a life is provided, 
+		but just one that does not regenerate. Take it quick!.
+		It appears always once in this stage, even if it has been got and you died!. */
 	class Stage2Scene3 : public Stage2Scene
 	{
 		public:
@@ -66,8 +71,23 @@ namespace BattleshipII
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: Stage2Scene (__BATTLESHIPII_STAGE2SCENE3__, m, cn, p, ePL)
+			: Stage2Scene (__BATTLESHIPII_STAGE2SCENE3__, m, cn, p, ePL),
+			  _flyWithLife (NULL)
 							{ }
+
+		/** @see parent. */
+		virtual void initialize () override final;
+		virtual void finalize () override final;
+
+		/** @see parent. */
+		virtual void processEvent (const QGAMES::Event& evnt) override final;
+
+		private:
+		/** The fly selected to provide the life. */
+		BATTLESHIP::UFO* _flyWithLife;
+
+		/** The number of the inernal action block for the life object to move... */
+		static const int _LIFEBLOCKNUMBER = 100000;
 	};
 }
 

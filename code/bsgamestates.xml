@@ -499,12 +499,12 @@
 	<!-- To show the name of the world and the name of the scene -->
 	<GameState id="50102" type="10002" name="111World and Scene Name" main="YES"> <!-- Until TIME or KEY PRESSED -->
 		<Attributes>
-			<Attribute id="TIME" value="1.0"/> <!-- Seconds to wait if no key is pressed -->
+			<Attribute id="TIME" value="2.0"/> <!-- Seconds to wait if no key is pressed -->
 		</Attributes>
 		<Nested>
 			<GameState id="50103" type="50010" name="World Name" main="NO"> <!-- Type WORLD NAME -->
 				<Attributes>
-					<Attribute id="TEXT" value="World"/> <!-- This text is completed with the name of the word after -->
+					<Attribute id="TEXT" value=""/> <!-- This text is completed with the name of the word after -->
 					<Attribute id="FONT" value="20031"/>
 					<Attribute id="FADE" value="255"/>
 					<Attribute id="POSITION" value="0.5,0.45,0"/>
@@ -514,7 +514,7 @@
 				<Nested>
 					<GameState id="50104" type="50011" name="Scene Name" main="NO"> <!-- Type SCENE NAME -->
 						<Attributes>
-							<Attribute id="TEXT" value="Scene"/> <!-- This text is completed with the name of the word after -->
+							<Attribute id="TEXT" value=""/> <!-- This text is completed with the name of the word after -->
 							<Attribute id="FONT" value="20031"/>
 							<Attribute id="FADE" value="255"/>
 							<Attribute id="POSITION" value="0.5,0.55,0"/>

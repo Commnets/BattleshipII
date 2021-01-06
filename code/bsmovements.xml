@@ -45,9 +45,7 @@
 	<!-- When disappearing, there is no movement -->
 	<SetOfMovements fromId="53100" number="50"/>
 	
-	<!-- Things to catch movements.
-		 In the default implementation, the only valid thing to catch is a "pill" to increment the shooting power.
-		 In the default implementation, only one at the same time in the scene is allowed. -->
+	<!-- Things to catch movements. -->
 	<!-- Linear movement in the space of any of these -->
 	<SetOfMovements fromId="54000" number="5">
 		<!-- Speed -->
@@ -55,16 +53,6 @@
 	</SetOfMovements>
 	<!-- Staying movement -->
 	<SetOfMovements fromId="54100" number="5"/>
-	
-	<!-- Energy Elements movements 
-		 In the default implementation, only one at the same timne is allowed. -->
-	<!-- Linear movement in the space of any of these. -->
-	<SetOfMovements fromId="55000" number="5">
-		<!-- Speed -->
-		<Variable id="0" value="2"/>
-	</SetOfMovements>
-	<!-- Staying movement -->
-	<SetOfMovements fromId="55100" number="5"/>
 	
 	<!-- UFO movements -->
 	<!-- Linear movement in the space of any UFO (following a Curve) -->

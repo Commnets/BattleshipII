@@ -7,6 +7,7 @@
 	
 		<Scenes>
 		
+			<!-- Again Asteroids...but more and more aggresive even! -->
 			<Scene id="70030">
 			
 				<Actions>
@@ -16,7 +17,7 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="0"/>
 							<Attribute id="PointsGiven" value="200"/> 
-							<Attribute id="Speed" value="-3"/> 
+							<Attribute id="Speed" value="-2"/> 
 						</Attributes>
 					</Action>
 
@@ -25,16 +26,34 @@
 						<Attributes>
 							<Attribute id="TimeToAppear" value="0"/>
 							<Attribute id="PointsGiven" value="200"/> 
-							<Attribute id="Speed" value="-4"/> 
+							<Attribute id="Speed" value="-2"/> 
 						</Attributes>
 					</Action>
 					
 					<!-- Asteroid 3 -->
-					<Action id="70400">
+					<Action id="70402">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="0"/>
 							<Attribute id="PointsGiven" value="200"/> 
-							<Attribute id="Speed" value="-4"/> 
+							<Attribute id="Speed" value="-2"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 4 -->
+					<Action id="70403">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="0"/>
+							<Attribute id="PointsGiven" value="200"/> 
+							<Attribute id="Speed" value="-3"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 5 -->
+					<Action id="70404">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="0"/>
+							<Attribute id="PointsGiven" value="200"/> 
+							<Attribute id="Speed" value="-3"/> 
 						</Attributes>
 					</Action>
 
@@ -60,7 +79,7 @@
 					<!-- A pill of fuel -->
 					<Action id="71400">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="5"/>
+							<Attribute id="TimeToAppear" value="15"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
 							<Attribute id="EnergyAdded" value="30"/>
 							<Attribute id="Speed" value="3"/>
@@ -70,7 +89,7 @@
 					<!-- A shooting pill -->
 					<Action id="72400">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="6"/>
+							<Attribute id="TimeToAppear" value="15"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
 							<Attribute id="Type" value="3"/>
 							<Attribute id="TypeShooting" value="-2"/> 
@@ -81,7 +100,7 @@
 				</Actions>
 				
 				<Attributes>
-					<Attribute id="NAME" value="More asteroids"/>
+					<Attribute id="NAME" value="Asteroids again..."/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60002"/> 
 					<Attribute id="SCENETIME" value="60"/> 
@@ -101,14 +120,43 @@
 				
 			</Scene>
 		
+			<!-- A strong attack formation of UFOs -->
 			<Scene id="70031">
 			
 				<Actions>
+				
+					<!-- A set of UFOs moving in circles and then attacking -->
+					<Action id="74410">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="YES"/> 
+							<Attribute id="TimeToMove" value="1"/>
+							<Attribute id="Regenerate" value="NO"/> 
+							<Attribute id="Roll" value="YES"/> 
+							<Attribute id="InitialPosition" value="0.475,0.55,0"/>
+							<Attribute id="MaxTimeAction" value="-1"/> 
+							<Attribute id="Type" value="1000"/>
+							<Attribute id="MovType" value="3"/>
+							<Attribute id="MovTypeParameters" value="20,6.0,0.0,0.0,1.0,0.0,6.2831"/>
+							<Attribute id="TypeShooting" value="1"/> 
+							<Attribute id="TimeToShoot" value="2"/>
+							<Attribute id="ProbabilityToShoot" value="40"/>
+							<Attribute id="ShootingForce" value="-2"/>
+							<Attribute id="Speed" value="2"/> 
+							<Attribute id="CombatFormation" value="0"/>
+							<Attribute id="CombatFormationAttrs" value="7,0.075"/>
+							<Attribute id="NumberUFOS" value="21"/> 
+							<Attribute id="TimerEvery" value="3"/>
+							<Attribute id="TimerForHowMany" value="3"/> 
+							<Attribute id="TimerProbability" value="80"/>
+						</Attributes>
+					</Action>
 
 					<!-- A pill of fuel -->
 					<Action id="71410">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="5"/>
+							<Attribute id="TimeToAppear" value="15"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
 							<Attribute id="EnergyAdded" value="30"/>
 							<Attribute id="Speed" value="3"/>
@@ -118,7 +166,7 @@
 					<!-- A shooting pill -->
 					<Action id="72410">
 						<Attributes>
-							<Attribute id="TimeToAppear" value="6"/>
+							<Attribute id="TimeToAppear" value="15"/>
 							<Attribute id="ProbabilityToAppear" value="30"/>
 							<Attribute id="Type" value="3"/>
 							<Attribute id="TypeShooting" value="-2"/> 
@@ -129,7 +177,7 @@
 				</Actions>
 				
 				<Attributes>
-					<Attribute id="NAME" value="More UFOs"/>
+					<Attribute id="NAME" value="Oh no! more UFOs"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60002"/> 
 					<Attribute id="SCENETIME" value="60"/> 
@@ -149,9 +197,37 @@
 				
 			</Scene>
 		
+			<!-- The first mothership to kill -->
 			<Scene id="70032">
 			
 				<Actions>
+
+					<!-- The mothership -->
+					<Action id="74510">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="YES"/> 
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Regenerate" value="NO"/>
+							<Attribute id="Roll" value="YES"/>
+							<Attribute id="InitialPosition" value="0.5,0.05,0"/> 
+							<Attribute id="MaxTimeAction" value="-1"/> 
+							<Attribute id="Type" value="1010"/> 
+							<Attribute id="MovType" value="0"/> 
+							<Attribute id="TypeShooting" value="10"/>
+							<Attribute id="TimeToShoot" value="2"/>
+							<Attribute id="ProbabilityToShoot" value="100"/> 
+							<Attribute id="ShootingForce" value="3"/>
+							<Attribute id="Speed" value="3"/>
+							<Attribute id="CombatFormation" value="1002"/> 
+							<Attribute id="CombatFormationAttrs" value="0"/>
+							<Attribute id="NumberUFOS" value="1"/>
+							<Attribute id="TimerEvery" value="2"/> 
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="100"/> 
+						</Attributes>
+					</Action>
 
 					<!-- A pill of fuel -->
 					<Action id="71420">
@@ -177,7 +253,7 @@
 				</Actions>
 				
 				<Attributes>
-					<Attribute id="NAME" value="What, where"/>
+					<Attribute id="NAME" value="First mothership"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60002"/> 
 					<Attribute id="SCENETIME" value="60"/> 
@@ -200,7 +276,7 @@
 		</Scenes>
 		
 		<Attributes>
-			<Attribute id="NAME" value="All together"/>
+			<Attribute id="NAME" value="Getting closer!"/>
 		</Attributes>
 		
 	</World>

@@ -198,6 +198,10 @@
 	<!-- The heart to get a new live -->
 	<Form id="50460" name="HeartBeating" file="forms/heart.png" width="500" height="50" 
             fSpacing="0" fMargin="0" fWidth="50" fHeight="50" aColor="255" nFrames="10"/>
+			
+	<!-- The power indicating a shield -->
+	<Form id="50470" name="Shield" file="forms/power.png" width="490" height="50" 
+            fSpacing="0" fMargin="0" fWidth="49" fHeight="50" aColor="255" nFrames="10"/>
 	
 	<!-- The  space backgrounds for the game -->
 	<Form id="50500" name="SpaceBackground0" file="forms/spacebackground.png" width="816" height="844" 
