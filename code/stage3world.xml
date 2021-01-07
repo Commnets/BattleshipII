@@ -76,7 +76,7 @@
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="NO"/>
 							<Attribute id="Roll" value="YES"/>
-							<Attribute id="InitialPosition" value="1.0,0.65,0"/> 
+							<Attribute id="InitialPosition" value="1.0,0.55,0"/> 
 							<Attribute id="MaxTimeAction" value="30"/> 
 							<Attribute id="Type" value="0"/> 
 							<Attribute id="MovType" value="0"/> 
@@ -86,8 +86,8 @@
 							<Attribute id="ShootingForce" value="2"/>
 							<Attribute id="Speed" value="7"/>
 							<Attribute id="CombatFormation" value="1"/> 
-							<Attribute id="CombatFormationAttrs" value="0.4"/>
-							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,0.0,6.2831,6.0"/> 
+							<Attribute id="CombatFormationAttrs" value="0.25"/>
+							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,-3.1415,6.2831,6.0"/> 
 							<Attribute id="NumberUFOS" value="7"/>
 							<Attribute id="TimerEvery" value="0"/> 
 							<Attribute id="TimerForHowMany" value="-1"/> 
@@ -103,7 +103,7 @@
 							<Attribute id="TimeToMove" value="1"/>
 							<Attribute id="Regenerate" value="NO"/>
 							<Attribute id="Roll" value="YES"/>
-							<Attribute id="InitialPosition" value="0.2,0.65,0"/> 
+							<Attribute id="InitialPosition" value="0.2,0.55,0"/> 
 							<Attribute id="MaxTimeAction" value="30"/> 
 							<Attribute id="Type" value="1"/> 
 							<Attribute id="MovType" value="0"/> 
@@ -113,7 +113,7 @@
 							<Attribute id="ShootingForce" value="2"/>
 							<Attribute id="Speed" value="7"/>
 							<Attribute id="CombatFormation" value="1"/> 
-							<Attribute id="CombatFormationAttrs" value="0.4"/>
+							<Attribute id="CombatFormationAttrs" value="0.25"/>
 							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,0.0,5.0,6.0"/> 
 							<Attribute id="NumberUFOS" value="7"/>
 							<Attribute id="TimerEvery" value="0"/> 
@@ -140,8 +140,8 @@
 							<Attribute id="ShootingForce" value="2"/>
 							<Attribute id="Speed" value="7"/>
 							<Attribute id="CombatFormation" value="1"/> 
-							<Attribute id="CombatFormationAttrs" value="0.4"/>
-							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,0.0,5.0,6.0"/> 
+							<Attribute id="CombatFormationAttrs" value="0.25"/>
+							<Attribute id="CombatFormationAttackParameters" value="500.0,100.0,3.1415,5.0,6.0"/> 
 							<Attribute id="NumberUFOS" value="7"/>
 							<Attribute id="TimerEvery" value="0"/> 
 							<Attribute id="TimerForHowMany" value="-1"/> 

@@ -12,7 +12,7 @@
 				<Actions>
 
 					<!-- The mothership -->
-					<Action id="74510">
+					<Action id="75500">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/>
@@ -32,7 +32,7 @@
 							<Attribute id="CombatFormation" value="1002"/> 
 							<Attribute id="CombatFormationAttrs" value="0"/>
 							<Attribute id="NumberUFOS" value="1"/>
-							<Attribute id="TimerEvery" value="2"/> 
+							<Attribute id="TimerEvery" value="5"/> 
 							<Attribute id="TimerForHowMany" value="-1"/> 
 							<Attribute id="TimerProbability" value="100"/> 
 						</Attributes>

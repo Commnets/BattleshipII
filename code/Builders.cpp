@@ -153,8 +153,9 @@ QGAMES::SceneActionBlock* BattleshipII::WorldBuilder::createSceneActionBlockObje
 			nAB < (__BATTLESHIPII_ACTIONBLOCKMOTHERSHIPUFOBASEID__ + __BATTLESHIPII_ACTIONBLOCKMOTHERSHIPUFONUMBER__))
 		result = new BattleshipII::MothershipUFOSceneActionBlock (nAB, 
 			new BattleshipII::MothershipUFOSceneActionBlock::Properties (prps) /** Default factory curve. */);
-	else
+
 	// The action blocks used for set of UFOS are still valid, but with more combat factories...
+	else
 	if (nAB >= __BATTLESHIP_ACTIONBLOCKSETUFOSBASEID__ && 
 		nAB < (__BATTLESHIP_ACTIONBLOCKSETUFOSBASEID__ + __BATTLESHIP_ACTIONBLOCKSETUFOSNUMBER__))
 	{
@@ -176,6 +177,15 @@ QGAMES::SceneActionBlock* BattleshipII::WorldBuilder::createSceneActionBlockObje
 						new BattleshipII::DancingInLinesForBigUFOSCombatFormationFactory
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */) })); 
 	}
+
+	// This new type of action block is for controlling the motherships better!
+	else
+	if (nAB >= __BATTLESHIPII_ACTIONBLOCKSETMOTHERSHIPBASEID__ && 
+		nAB < (__BATTLESHIPII_ACTIONBLOCKSETMOTHERSHIPBASEID__ + __BATTLESHIPII_ACTIONBLOCKSETMOTHERSHIPNUMBER__))
+		result = new BattleshipII::MothershipUFOSetSceneActionBlock 
+			(nAB, new BATTLESHIP::StdSetUFOsSceneActionBlock::Properties (prps));
+
+	// And then the rest...
 	else
 		result = BATTLESHIP::WorldBuilder::createSceneActionBlockObject (nAB, prps);
 

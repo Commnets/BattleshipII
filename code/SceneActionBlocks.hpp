@@ -40,6 +40,28 @@ namespace BattleshipII
 										  !spc -> isVisible ()); }); } 
 	};
 
+	/** A simple modification to the action block for set of UFOs, especially for the scenes with a mothership. \n
+		In these scenes the scenes mves following the lines described by DancingInLinesForBigUFOSCombatFormationFactory,
+		but the first movement has to be done inmediatly because it consists on moving the UFO to the middle of the screen. */
+	class MothershipUFOSetSceneActionBlock : public BATTLESHIP::StdSetUFOsSceneActionBlock
+	{
+		public:
+		MothershipUFOSetSceneActionBlock (int id, Properties* prps = new Properties ());
+
+		/** @see parent.
+			To save the state of the _firstTime variable. */
+		virtual QGAMES::SetOfOpenValues runtimeValues () const;
+		virtual void initializeRuntimeValuesFrom (const QGAMES::SetOfOpenValues& cfg);
+
+		/** @see parent. */
+		virtual void initialize ();
+		virtual void updatePositions ();
+
+		protected:
+		// Implementation
+		bool _firstTime;
+	};
+
 	/** A new type of combat block. 
 		The ufos appear in the left side of the screen, and then move from the left to the right
 		each of them with PI/2 radians of delay. 

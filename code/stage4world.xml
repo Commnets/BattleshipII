@@ -203,7 +203,7 @@
 				<Actions>
 
 					<!-- The mothership -->
-					<Action id="74510">
+					<Action id="75420">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="1"/>
 							<Attribute id="ProbabilityToAppear" value="100"/>
@@ -221,9 +221,9 @@
 							<Attribute id="ShootingForce" value="3"/>
 							<Attribute id="Speed" value="3"/>
 							<Attribute id="CombatFormation" value="1002"/> 
-							<Attribute id="CombatFormationAttrs" value="0"/>
+							<Attribute id="CombatFormationAttrs" value="0"/> <!-- When it is the time 0 times to decide it -->
 							<Attribute id="NumberUFOS" value="1"/>
-							<Attribute id="TimerEvery" value="2"/> 
+							<Attribute id="TimerEvery" value="5"/> <!-- But the first movement will be executed just entering -->
 							<Attribute id="TimerForHowMany" value="-1"/> 
 							<Attribute id="TimerProbability" value="100"/> 
 						</Attributes>

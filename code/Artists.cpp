@@ -1,6 +1,17 @@
 #include "Artists.hpp"
 
 // ---
+BattleshipII::MothershipUFO::MothershipUFO (int cId, 
+		BATTLESHIP::UFO::Behaviour* bhv, const QGAMES::Forms& f, const QGAMES::Entity::Data& d)
+	: BATTLESHIP::BigUFO (cId, bhv, f, d),
+	  _explosionFormId (50100), _explosionInitialFrame (0), _explosionFinalFrame (24),
+	  _explosionStatus (NULL)
+{
+	counters () -> addCounter (new QGAMES::Counter (_COUNTEREXPLODING, game () -> framesPerSecond () * 6, 0, true, false));
+	counters () -> addCounter (new QGAMES::Counter (_COUNTERTOCHANGEANIMATION, 6, 0, true, true));
+}
+
+// ---
 QGAMES::Entity* BattleshipII::MothershipUFO::clone () const
 {
 	QGAMES::Entity* result = new BattleshipII::MothershipUFO 
@@ -42,6 +53,96 @@ QGAMES::Position BattleshipII::MothershipUFO::shootingPosition (int nS, int tS, 
 			iPos.crossProduct (QGAMES::Vector::_zNormal).normalize ();
 	
 	return (iPos);
+}
+
+// ---
+void BattleshipII::MothershipUFO::updatePositions ()
+{
+	BATTLESHIP::BigUFO::updatePositions ();
+
+	if (isExploding ())
+	{
+		if (counter (_COUNTERTOCHANGEANIMATION) -> isEnd ())
+		{
+			for (auto i : _explosionStatus)
+			{
+				if (i -> _beingUsed)
+				{
+					if ((++i -> _numberAspect) > _explosionFinalFrame)
+					{
+						i -> _beingUsed = false;
+						i -> _numberAspect = _explosionInitialFrame;
+					}
+				}
+				else
+				{
+					if ((rand () % 100) > 90 && (i -> _numberTimesUsed < 3))
+					{
+						i -> _beingUsed = true;
+						i -> _numberTimesUsed++;
+
+						game () -> sound (__QGAMES_EXPLOSIONWAVSOUND__) -> play (-1); // To allow multiple...
+					}
+				}
+			}
+		}
+
+		if (counter (_COUNTEREXPLODING) -> isEnd ())
+		{
+			setStateFor (_spaceElementState = _DESTROYED, orientation ());
+
+			notify (QGAMES::Event (__BATTLESHIP_SPACEELMNTHASDESTROYED__, this));
+
+			deleteExplosionStatus ();
+		}
+	}
+}
+
+// ---
+void BattleshipII::MothershipUFO::drawOn (QGAMES::Screen* scr, const QGAMES::Position& pos)
+{
+	BATTLESHIP::BigUFO::drawOn (scr, pos);
+
+	if (isExploding ())
+	{
+		for (auto i : _explosionStatus)
+		{
+			if (i -> _beingUsed)
+			{
+				QGAMES::Form* frm = game () -> form (_explosionFormId);
+				QGAMES::Vector ctr =  frm -> centerPosition (i -> _numberAspect);
+				frm -> drawOn (scr, i -> _numberAspect,
+					((pos == QGAMES::Position::_noPoint) ? position () : pos) + (i -> _position - ctr) /** relative to the center */);
+			}
+		}
+	}
+}
+
+// ---
+void BattleshipII::MothershipUFO::setStateFor (int st, const QGAMES::Vector& o)
+{
+	BATTLESHIP::BigUFO::setStateFor (st, o);
+
+	// A special state has been defined for big ufos when exploding
+	// In that state (@see entities.xml) the animation is the same than when it stands still!
+	// On top of it several explosions have to take place!
+	// Now it is time to create the structure to control them...
+	if (spaceElementState () == _EXPLODING)
+	{
+		int xDim = 5; int yDim = 5;
+		_explosionStatus = std::vector <BattleshipII::MothershipUFO::ExplosionStatus*> (xDim * yDim);
+		QGAMES::bdata w = __BD visualLength () / __BD xDim;
+		QGAMES::bdata h = __BD visualHeight () / __BD yDim;
+
+		for (int i = 0; i < yDim; i++)
+		{
+			for (int j = 0; j < xDim; j++)
+				_explosionStatus [(i * xDim) + j] = new BattleshipII::MothershipUFO::ExplosionStatus 
+					(false, 0, QGAMES::Position ((w * __BD j) + (w / __BD 2), (h * i) + (h / __BD 2), __BD 0), 
+						// The centre of the square where to paint!
+						_explosionInitialFrame);
+		}
+	}
 }
 
 // ---

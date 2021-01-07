@@ -400,6 +400,18 @@
 			<State id="15" animation="8" movementBase="56100"/>
 
 <!-- CORRECTED FOR BATTLESHIPII -->
+<!-- ADDED FOR BATTHESHIP
+	 This new state is used only by  mothership ufos.
+	 The "Exploding" state is based not in the animation 7 (a explosion) but the 5 or 6 (depending on the mothership)
+	 These two states are added AFTER the last offical one, because the calculation of those if based on
+	 the number total types of ufos and considering there are only two states possible por ufo (freeze or moving) -->
+	 
+			<!-- Exploding Mothership UFO 1 -->
+			<State id="16" animation="5" movementBase="56100"/>
+			<!-- Exploding -->
+			<State id="17" animation="6" movementBase="56100"/>
+
+<!-- ADDED FOR BATTLESHIPII -->
 
 		</States>
 	</SetOfEntities>

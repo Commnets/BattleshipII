@@ -2,6 +2,64 @@
 #include "Game.hpp"
 
 // ---
+BattleshipII::MothershipUFOSetSceneActionBlock::MothershipUFOSetSceneActionBlock 
+	(int id, BATTLESHIP::StdSetUFOsSceneActionBlock::Properties* prps)
+		: BATTLESHIP::StdSetUFOsSceneActionBlock (id,prps, new CombatFormationFactories 
+			({ new BattleshipII::DancingInLinesForBigUFOSCombatFormationFactory
+				(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */) })),
+		  _firstTime (true)
+{ 
+	assert (prps -> _combatFormation == __BATTLESHIPII_BIGUFODANCINGINLINES__); // The only one allowed...
+}
+
+// ---
+QGAMES::SetOfOpenValues BattleshipII::MothershipUFOSetSceneActionBlock::runtimeValues () const
+{
+	QGAMES::SetOfOpenValues result = BATTLESHIP::StdSetUFOsSceneActionBlock::runtimeValues ();
+
+	int lE = result.lastOpenValueId ();
+
+	result.addOpenValue (lE + 1, QGAMES::OpenValue (_firstTime));
+
+	return (result);
+}
+
+// ---
+void BattleshipII::MothershipUFOSetSceneActionBlock::initializeRuntimeValuesFrom (const QGAMES::SetOfOpenValues& cfg)
+{
+	int lE = cfg.lastOpenValueId ();
+
+	assert (cfg.existOpenValue (lE));
+
+	QGAMES::SetOfOpenValues cCfg = cfg;
+	_firstTime = cCfg.openValue (lE).boolValue ();
+	cCfg.removeOpenValue (lE);
+
+	BATTLESHIP::StdSetUFOsSceneActionBlock::initializeRuntimeValuesFrom (cCfg);
+}
+
+// ---
+void BattleshipII::MothershipUFOSetSceneActionBlock::initialize ()
+{
+	BATTLESHIP::StdSetUFOsSceneActionBlock::initialize ();
+
+	_firstTime = true;
+}
+
+// ---
+void BattleshipII::MothershipUFOSetSceneActionBlock::updatePositions ()
+{
+	BATTLESHIP::StdSetUFOsSceneActionBlock::updatePositions ();
+
+	if (!spaceElementsControlled ().empty () && spaceElementsControlled ()[0] -> isMoving () && _firstTime)
+	{
+		whenTimerIsSparked (); // Everything really for just this simple instruction!
+
+		_firstTime = false;
+	}
+}
+
+// ---
 BattleshipII::SinusoideFromLeftBlockAndFlyCombatFormationFactory::SinusoideFromLeftBlockAndFlyCombatFormationFactory  
 		(BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory* cF, QGAMES::bdata sBE,
 		 const BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactory::SingleActionBlockFunction& eABlock)
