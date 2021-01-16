@@ -58,6 +58,7 @@ void BattleshipII::Stage2Scene3::processEvent (const QGAMES::Event& evnt)
 				 false,									// Never regenerate 
 				 false,									// Never rolls
 				 ufo -> relativeCenterPositionInMovingZone (), // from the position of the killed ufo
+				 ufo -> getMovingZone (),				// In that specific moving zone
 				 __BD -1,								// Never finishes 
 				 BATTLESHIP::LiveToCatch::_LIVETOCATCH, // It is a life 
 				 0,										// Moves normaly. Not used! 

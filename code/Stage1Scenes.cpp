@@ -49,6 +49,7 @@ void BattleshipII::Stage1Scene3::updatePositions ()
 					 false,								// Never regenerate 
 					 false,								// Never rolls
 					 QGAMES::Position::_noPoint,		// Random at the top
+					 QGAMES::Rectangle::_noRectangle,   // The moving zone got will be th one of the heart
 					 __BD -1,							// Never finishes 
 					 BATTLESHIP::LiveToCatch::_LIVETOCATCH, // It is a life 
 					 0,									// Moves normaly. Not used! 

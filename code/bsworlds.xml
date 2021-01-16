@@ -50,6 +50,9 @@
 								 The coordinates of the initial position (3D) must be relative to the size of the
 								 movement area of the elements. Their values should be then between 0 and 1.
 								 Attribute id="InitialPosition" value="x,y,z" -->
+							<!-- Movement zone not defined meaning the movement zone of the space element managed.
+								 Depending on the type of the space element, the size of that movement zone could vary.
+								 Attribute id="MovZone" value="x1,y1,z1,x2,y2,z2,v1,v2,v3"/>
 							<!-- Time in seconds that the element must be moving across the scene (and then disappear)
 								 unless it is not killed before or exit the scene
 								 Default value = -1, meaning never. 
