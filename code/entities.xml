@@ -241,6 +241,8 @@
 			<Form id="60000"/>
 			<!-- Mothership UFO 2 -->
 			<Form id="60001"/>
+			<!-- Mothership UFO 3 -->
+			<Form id="60002"/>
 			
 <!-- ADDED FOR BATTLESHIPII -->
 
@@ -335,12 +337,23 @@
 					<!-- Not linked with anyone -->
 				</Attributes>
 			</Animation>
+			<!-- Type of Mothership UFO 3 -->
+			<Animation id="7" type="0">
+				<Attributes>
+					<Attribute id="FORM" value="60002"/>
+					<Attribute id="INITIALASPECT" value="0"/>
+					<Attribute id="FINALASPECT" value="10"/>
+					<Attribute id="FRACTIONTOCHANGE" value="2"/>
+					<Attribute id="LOOP" value="1"/>
+					<!-- Not linked with anyone -->
+				</Attributes>
+			</Animation>
 
 <!-- ADDED FOR BATTLESHIPII -->
 <!-- CORRECTED FOR BATTLESHIPII -->
 
 			<!-- When the UFO is exploding -->
-			<Animation id="7" type="0">
+			<Animation id="8" type="0">
 				<Attributes>
 					<Attribute id="FORM" value="50101"/>
 					<Attribute id="INITIALASPECT" value="0"/>
@@ -351,13 +364,13 @@
 				</Attributes>
 			</Animation>
 			<!-- No animation when it has been destroyed -->
-			<Animation id="8" type="-1"/>
+			<Animation id="9" type="-1"/>
 
 <!-- CORRECTED FOR BATTLESHIPII -->
 
 		</Animations>
 		<States>
-			<!-- Note tha none of the movements define the direction.
+			<!-- Note that none of the movements define the direction.
 				 It is defined by the block the UFO is contained in, through the parameter "TypeMovement" -->
 			<!-- Freeze UFO 1 -->
 			<State id="0" animation="0" movementBase="56100"/>
@@ -390,14 +403,18 @@
 			<State id="12" animation="6" movementBase="56100"/>
 			<!-- Moving Mothership UFO 2 -->
 			<State id="13" animation="6" movementBase="56000"/>
+			<!-- Freeze Mothership UFO 3 -->
+			<State id="14" animation="7" movementBase="56100"/>
+			<!-- Moving Mothership UFO 3 -->
+			<State id="15" animation="7" movementBase="56000"/>
 
 <!-- ADDED FOR BATTLESHIPII -->
 <!-- CORRECTED FOR BATTLESHIPII -->
 
 			<!-- Exploding -->
-			<State id="14" animation="7" movementBase="56100"/>
+			<State id="16" animation="8" movementBase="56100"/>
 			<!-- Disappearing from the screen -->
-			<State id="15" animation="8" movementBase="56100"/>
+			<State id="17" animation="9" movementBase="56100"/>
 
 <!-- CORRECTED FOR BATTLESHIPII -->
 <!-- ADDED FOR BATTHESHIP
@@ -406,10 +423,12 @@
 	 These two states are added AFTER the last offical one, because the calculation of those if based on
 	 the number total types of ufos and considering there are only two states possible por ufo (freeze or moving) -->
 	 
-			<!-- Exploding Mothership UFO 1 -->
-			<State id="16" animation="5" movementBase="56100"/>
+			<!-- Exploding Mothership UFO 1/2/3 -->
+			<State id="18" animation="5" movementBase="56100"/>
 			<!-- Exploding -->
-			<State id="17" animation="6" movementBase="56100"/>
+			<State id="19" animation="6" movementBase="56100"/>
+			<!-- Exploding -->
+			<State id="20" animation="7" movementBase="56100"/>
 
 <!-- ADDED FOR BATTLESHIPII -->
 

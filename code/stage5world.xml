@@ -7,9 +7,65 @@
 	
 		<Scenes>
 		
+			<!-- Two UFO formations moving and then attacking -->
 			<Scene id="70040">
 			
 				<Actions>
+			
+					<!-- A set of UFOs moving horizontally and then attacking -->
+					<Action id="74500">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="YES"/> 
+							<Attribute id="TimeToMove" value="1"/>
+							<Attribute id="Regenerate" value="NO"/> 
+							<Attribute id="Roll" value="YES"/> 
+							<Attribute id="InitialPosition" value="0.457,0.55,0"/>
+							<Attribute id="MaxTimeAction" value="-1"/> 
+							<Attribute id="Type" value="1"/>
+							<Attribute id="MovType" value="4"/>
+							<Attribute id="TypeShooting" value="0"/> 
+							<Attribute id="TimeToShoot" value="3"/>
+							<Attribute id="ProbabilityToShoot" value="50"/>
+							<Attribute id="ShootingForce" value="2"/>
+							<Attribute id="Speed" value="1"/> 
+							<Attribute id="CombatFormation" value="0"/>
+							<Attribute id="CombatFormationAttrs" value="7,0.075,0.14"/>
+							<Attribute id="NumberUFOS" value="14"/> 
+							<Attribute id="TimerEvery" value="4"/>
+							<Attribute id="TimerForHowMany" value="2"/> 
+							<Attribute id="TimerProbability" value="50"/>
+						</Attributes>
+					</Action>
+
+					<!-- A set of UFOs moving horizontally and then attacking -->
+					<Action id="74501">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="YES"/>
+							<Attribute id="TimeToMove" value="1.5"/> <!-- The doesn't move with the previous line -->
+							<Attribute id="Regenerate" value="NO"/>
+							<Attribute id="Roll" value="YES"/> 
+							<Attribute id="InitialPosition" value="0.457,0.620,0"/>
+							<Attribute id="MaxTimeAction" value="-1"/> 
+							<Attribute id="Type" value="1000"/>
+							<Attribute id="MovType" value="4"/> 
+							<Attribute id="TypeShooting" value="10"/>
+							<Attribute id="TimeToShoot" value="3"/>
+							<Attribute id="ProbabilityToShoot" value="80"/>
+							<Attribute id="ShootingForce" value="1"/>
+							<Attribute id="Speed" value="1"/>
+							<Attribute id="CombatFormation" value="0"/> 
+							<Attribute id="CombatFormationAttrs" value="7,0.075,0.14"/>
+							<Attribute id="NumberUFOS" value="14"/> 
+							<Attribute id="TimerEvery" value="3"/>
+							<Attribute id="TimerForHowMany" value="4"/> 
+							<Attribute id="TimerProbability" value="50"/>
+						</Attributes>
+					</Action>
+
 					<!-- A pill of fuel -->
 					<Action id="71500">
 						<Attributes>
@@ -33,7 +89,7 @@
 				</Actions>
 				
 				<Attributes>
-					<Attribute id="NAME" value="First mothership"/>
+					<Attribute id="NAME" value="Defending heavy"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60003"/> 
 					<Attribute id="SCENETIME" value="600"/> 
@@ -53,16 +109,71 @@
 				
 			</Scene>
 		
+			<!-- Two motherships trying to destroy the spaceship -->
 			<Scene id="70041">
 			
 				<Actions>
 
+					<!-- The mothership 1 -->
+					<Action id="75510">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="YES"/> 
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Regenerate" value="NO"/>
+							<Attribute id="Roll" value="YES"/>
+							<Attribute id="InitialPosition" value="0.5,0.05,0"/> 
+							<Attribute id="MaxTimeAction" value="-1"/> 
+							<Attribute id="Type" value="1010"/> 
+							<Attribute id="MovType" value="0"/> 
+							<Attribute id="TypeShooting" value="10"/>
+							<Attribute id="TimeToShoot" value="2"/>
+							<Attribute id="ProbabilityToShoot" value="100"/> 
+							<Attribute id="ShootingForce" value="3"/>
+							<Attribute id="Speed" value="3"/>
+							<Attribute id="CombatFormation" value="1002"/> <!-- Dancing -->
+							<Attribute id="CombatFormationAttrs" value="0"/> 
+							<Attribute id="NumberUFOS" value="1"/>
+							<Attribute id="TimerEvery" value="5"/> 
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="100"/> 
+						</Attributes>
+					</Action>
+
+					<!-- The mothership 2 -->
+					<Action id="75511">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="3"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="YES"/> 
+							<Attribute id="TimeToMove" value="0"/>
+							<Attribute id="Regenerate" value="NO"/>
+							<Attribute id="Roll" value="YES"/>
+							<Attribute id="InitialPosition" value="0.05,0.45,0"/> 
+							<Attribute id="MaxTimeAction" value="-1"/> 
+							<Attribute id="Type" value="1012"/> 
+							<Attribute id="MovType" value="0"/> 
+							<Attribute id="TypeShooting" value="1"/>
+							<Attribute id="TimeToShoot" value="4"/>
+							<Attribute id="ProbabilityToShoot" value="80"/> 
+							<Attribute id="ShootingForce" value="1"/>
+							<Attribute id="Speed" value="2"/>
+							<Attribute id="CombatFormation" value="1002"/> <!-- Dancing -->
+							<Attribute id="CombatFormationAttrs" value="0"/> 
+							<Attribute id="NumberUFOS" value="1"/>
+							<Attribute id="TimerEvery" value="5"/> 
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="100"/> 
+						</Attributes>
+					</Action>
+					
 					<!-- A pill of fuel -->
 					<Action id="71510">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="5"/>
-							<Attribute id="ProbabilityToAppear" value="30"/>
-							<Attribute id="EnergyAdded" value="20"/>
+							<Attribute id="ProbabilityToAppear" value="60"/>
+							<Attribute id="EnergyAdded" value="40"/>
 							<Attribute id="Speed" value="1"/>
 						</Attributes>
 					</Action>
@@ -71,17 +182,17 @@
 					<Action id="72510">
 						<Attributes>
 							<Attribute id="TimeToAppear" value="6"/>
-							<Attribute id="ProbabilityToAppear" value="40"/>
+							<Attribute id="ProbabilityToAppear" value="60"/>
 							<Attribute id="Type" value="-1"/>
 							<Attribute id="TypeShooting" value="-2"/> 
-							<Attribute id="Speed" value="3"/>
+							<Attribute id="Speed" value="2"/>
 						</Attributes>
 					</Action>
 					
 				</Actions>
 				
 				<Attributes>
-					<Attribute id="NAME" value="Second mothership"/>
+					<Attribute id="NAME" value="Two motherships"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60003"/> 
 					<Attribute id="SCENETIME" value="60"/> 
@@ -101,9 +212,37 @@
 				
 			</Scene>
 		
+			<!-- The last scene is made up of a mothership and a set of UFOs attacking continuosly -->
 			<Scene id="70042">
 			
 				<Actions>
+			
+					<!-- Related with a set of UFO's moving left to right and then attacking-->
+					<Action id="74520">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="ProbabilityToAppear" value="100"/>
+							<Attribute id="Emerge" value="YES"/> 
+							<Attribute id="TimeToMove" value="1"/>
+							<Attribute id="Regenerate" value="NO"/> 
+							<Attribute id="Roll" value="YES"/> 
+							<Attribute id="InitialPosition" value="0.457,0.55,0"/>
+							<Attribute id="MaxTimeAction" value="-1"/> 
+							<Attribute id="Type" value="1"/>
+							<Attribute id="MovType" value="4"/>
+							<Attribute id="TypeShooting" value="2"/> 
+							<Attribute id="TimeToShoot" value="3"/>
+							<Attribute id="ProbabilityToShoot" value="60"/>
+							<Attribute id="ShootingForce" value="2"/>
+							<Attribute id="Speed" value="2"/> 
+							<Attribute id="CombatFormation" value="0"/>
+							<Attribute id="CombatFormationAttrs" value="7,0.075,0.075"/>
+							<Attribute id="NumberUFOS" value="14"/> 
+							<Attribute id="TimerEvery" value="3"/>
+							<Attribute id="TimerForHowMany" value="-1"/> 
+							<Attribute id="TimerProbability" value="80"/>
+						</Attributes>
+					</Action>
 
 					<!-- The mothership -->
 					<Action id="75520">
@@ -116,17 +255,17 @@
 							<Attribute id="Roll" value="YES"/>
 							<Attribute id="InitialPosition" value="0.5,0.05,0"/> 
 							<Attribute id="MaxTimeAction" value="-1"/> 
-							<Attribute id="Type" value="1010"/> 
+							<Attribute id="Type" value="1012"/> 
 							<Attribute id="MovType" value="0"/> 
 							<Attribute id="TypeShooting" value="10"/>
 							<Attribute id="TimeToShoot" value="2"/>
 							<Attribute id="ProbabilityToShoot" value="100"/> 
 							<Attribute id="ShootingForce" value="3"/>
-							<Attribute id="Speed" value="3"/>
+							<Attribute id="Speed" value="4"/>
 							<Attribute id="CombatFormation" value="1002"/> 
 							<Attribute id="CombatFormationAttrs" value="0"/>
 							<Attribute id="NumberUFOS" value="1"/>
-							<Attribute id="TimerEvery" value="5"/> 
+							<Attribute id="TimerEvery" value="4"/> 
 							<Attribute id="TimerForHowMany" value="-1"/> 
 							<Attribute id="TimerProbability" value="100"/> 
 						</Attributes>
@@ -156,7 +295,7 @@
 				</Actions>
 				
 				<Attributes>
-					<Attribute id="NAME" value="Third mothership"/>
+					<Attribute id="NAME" value="The last stage"/>
 					<Attribute id="MOVEMENT" value="1,1,0"/> 
 					<Attribute id="BACKGROUNDMUSIC" value="60003"/> 
 					<Attribute id="SCENETIME" value="60"/> 

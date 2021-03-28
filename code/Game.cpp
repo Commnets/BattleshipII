@@ -5,7 +5,7 @@ BattleshipII::DataGame::DataGame ()
 	: BATTLESHIP::DataGame ()
 { 
 	_numberOfShootingTypes								= 9;
-	_numberOfUFOTypes									= 7; // To be aligned, with the size of the list...(_ufoTypesList.size ())
+	_numberOfUFOTypes									= 8; // To be aligned, with the size of the list...(_ufoTypesList.size ())
 
 	const int LEVELDATADEFAULTVALUES [11][5] = 
 		
@@ -56,13 +56,19 @@ std::vector <int> BattleshipII::DataGame::defaultStatesForUFOType (int uT) const
 		case __BATTLESHIPII_ENEMTYTYPE1010__:
 			result = std::vector <int> 
 				{ 10, __BATTLESHIP_ENEMYBLANKSTATE__, 11, 
-					/** __BATTLESHIP_ENEMYEXPLODINGSTATE__ */ 16, __BATTLESHIP_ENEMYBLANKSTATE__ } ;
+					/** Special state for exploding, still rotating. */ 18, __BATTLESHIP_ENEMYBLANKSTATE__ } ;
 			break;
 
 		case __BATTLESHIPII_ENEMTYTYPE1011__:
 			result = std::vector <int> 
 				{ 12, __BATTLESHIP_ENEMYBLANKSTATE__, 13, 
-					/** __BATTLESHIP_ENEMYEXPLODINGSTATE__ */ 17, __BATTLESHIP_ENEMYBLANKSTATE__ } ;
+					/** Special state for exploding, still rotating. */ 19, __BATTLESHIP_ENEMYBLANKSTATE__ } ;
+			break;
+
+		case __BATTLESHIPII_ENEMTYTYPE1012__:
+			result = std::vector <int> 
+				{ 14, __BATTLESHIP_ENEMYBLANKSTATE__, 15, 
+					/** Special state for exploding, still rotating. */ 20, __BATTLESHIP_ENEMYBLANKSTATE__ } ;
 			break;
 
 		default:
@@ -84,6 +90,7 @@ const std::vector <int>& BattleshipII::DataGame::ufoTypesList () const
 		_ufoTypesList.push_back (__BATTLESHIPII_ENEMTYTYPE1001__);
 		_ufoTypesList.push_back (__BATTLESHIPII_ENEMTYTYPE1010__);
 		_ufoTypesList.push_back (__BATTLESHIPII_ENEMTYTYPE1011__);
+		_ufoTypesList.push_back (__BATTLESHIPII_ENEMTYTYPE1012__);
 	}
 
 	return (_ufoTypesList);

@@ -145,7 +145,7 @@
 							<Attribute id="ShootingForce" value="-2"/>
 							<Attribute id="Speed" value="2"/> 
 							<Attribute id="CombatFormation" value="0"/>
-							<Attribute id="CombatFormationAttrs" value="7,0.075"/>
+							<Attribute id="CombatFormationAttrs" value="7,0.075,0.075"/>
 							<Attribute id="NumberUFOS" value="21"/> 
 							<Attribute id="TimerEvery" value="3"/>
 							<Attribute id="TimerForHowMany" value="3"/> 

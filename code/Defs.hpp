@@ -35,6 +35,7 @@
 #define __BATTLESHIPII_ENEMTYTYPE1001__						1001
 #define __BATTLESHIPII_ENEMTYTYPE1010__						1010
 #define __BATTLESHIPII_ENEMTYTYPE1011__						1011
+#define __BATTLESHIPII_ENEMTYTYPE1012__						1012
 
 // The new types of curves defined for the BattleshipII::CurveFactory 
 // used in the BattleshipII::MovementBuilder, defined at BattleshipII::Game level 

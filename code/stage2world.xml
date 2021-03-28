@@ -19,7 +19,7 @@
 							<Attribute id="ProbabilityToAppear" value="100"/>
 							<Attribute id="Emerge" value="YES"/> 
 							<Attribute id="TimeToMove" value="1"/>
-							<Attribute id="Regenerate" value="NO"/> 
+							<Attribute id="Regenerate" value="YES"/> 
 							<Attribute id="Roll" value="NO"/> 
 							<Attribute id="InitialPosition" value="0.457,0.55,0"/>
 							<Attribute id="MaxTimeAction" value="-1"/> 
@@ -31,7 +31,7 @@
 							<Attribute id="ShootingForce" value="1"/>
 							<Attribute id="Speed" value="1"/> 
 							<Attribute id="CombatFormation" value="0"/>
-							<Attribute id="CombatFormationAttrs" value="7,0.075"/>
+							<Attribute id="CombatFormationAttrs" value="7,0.075,0.075"/>
 							<Attribute id="NumberUFOS" value="21"/> 
 							<Attribute id="TimerEvery" value="4"/>
 							<Attribute id="TimerForHowMany" value="2"/> 
@@ -58,7 +58,7 @@
 							<Attribute id="ShootingForce" value="1"/>
 							<Attribute id="Speed" value="1"/>
 							<Attribute id="CombatFormation" value="0"/> 
-							<Attribute id="CombatFormationAttrs" value="7,0.075"/>
+							<Attribute id="CombatFormationAttrs" value="7,0.075,0.075"/>
 							<Attribute id="NumberUFOS" value="21"/> 
 							<Attribute id="TimerEvery" value="3"/>
 							<Attribute id="TimerForHowMany" value="4"/> 
@@ -85,7 +85,7 @@
 							<Attribute id="ShootingForce" value="1"/>
 							<Attribute id="Speed" value="2"/>
 							<Attribute id="CombatFormation" value="0"/> 
-							<Attribute id="CombatFormationAttrs" value="7,0.075"/>
+							<Attribute id="CombatFormationAttrs" value="7,0.075,0.075"/>
 							<Attribute id="NumberUFOS" value="14"/> 
 							<Attribute id="TimerEvery" value="3"/>
 							<Attribute id="TimerForHowMany" value="5"/> 

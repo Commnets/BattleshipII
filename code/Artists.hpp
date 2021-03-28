@@ -28,7 +28,7 @@ namespace BattleshipII
 		public:
 		MothershipUFO (int cId, 
 				BATTLESHIP::UFO::Behaviour* bhv = 
-					new BATTLESHIP::UFO::Behaviour (true, false, __BD 0, __BD 50, 100, __BD 3, 0, __BD 4.0), // A shield of 4.0 
+					new BATTLESHIP::UFO::Behaviour (true, false, __BD 0, __BD 50, 100, __BD 3, 0, __BD 8.0), // A shield of 8.0 
 				const QGAMES::Forms& f = QGAMES::Forms (), 
 				const QGAMES::Entity::Data& d = QGAMES::Entity::Data ());
 

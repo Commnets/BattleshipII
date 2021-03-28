@@ -164,17 +164,17 @@ QGAMES::SceneActionBlock* BattleshipII::WorldBuilder::createSceneActionBlockObje
 				new BATTLESHIP::StdSetUFOsSceneActionBlock::CombatFormationFactories 
 					({ new BATTLESHIP::StdSetUFOsSceneActionBlock::BlockAndFlyCombatFormationFactory 
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */), 
-						new BATTLESHIP::StdSetUFOsSceneActionBlock::QueueAndFlyCombatFormationFactory 
+					   new BATTLESHIP::StdSetUFOsSceneActionBlock::QueueAndFlyCombatFormationFactory 
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */), 
-						new BATTLESHIP::StdSetUFOsSceneActionBlock::DancingInLinesCombatFormationFactory 
+					   new BATTLESHIP::StdSetUFOsSceneActionBlock::DancingInLinesCombatFormationFactory 
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */), 
-
-						// The condition is really needed because this two new combat formations are added!
-						new BattleshipII::SinusoideFromLeftBlockAndFlyCombatFormationFactory
+					   
+					   // The condition is really needed because this two new combat formations are added!
+					   new BattleshipII::SinusoideFromLeftBlockAndFlyCombatFormationFactory
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */),
-						new BattleshipII::SinusoideFromRightBlockAndFlyCombatFormationFactory
+					   new BattleshipII::SinusoideFromRightBlockAndFlyCombatFormationFactory
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */),
-						new BattleshipII::DancingInLinesForBigUFOSCombatFormationFactory
+					   new BattleshipII::DancingInLinesForBigUFOSCombatFormationFactory
 							(new BATTLESHIP::StdUFOSceneActionBlock::CurveAndInitialPositionFactory /** Rest default. */) })); 
 	}
 

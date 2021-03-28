@@ -34,24 +34,16 @@ namespace BattleshipII
 		virtual void initialize () override;
 	};
 
-	/** Stage 5 Scene 1 
-		Thios belongs to a different type. */
-	class Stage5Scene1 : public BATTLESHIP::FocusingInOneElementScene
+	/** Stage 5 Scene 1 */
+	class Stage5Scene1 : public Stage5Scene
 	{
 		public:
 		Stage5Scene1 (const QGAMES::Maps& m, 
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: BATTLESHIP::FocusingInOneElementScene (__BATTLESHIPII_STAGE5SCENE1__, m, 
-					std::string ("Big MothershipUFO killed"), cn, p, ePL) // When the element is killed...
+			: Stage5Scene (__BATTLESHIPII_STAGE5SCENE1__, m, cn, p, ePL)
 							{ }
-
-		/** @see parent. */
-		virtual void initialize () override final;
-
-		/** @see parent. */
-		virtual void processEvent (const QGAMES::Event& evnt) override;
 	};
 
 	/** Stage 5 Scene 2 */
@@ -66,16 +58,43 @@ namespace BattleshipII
 							{ }
 	};
 
-	/** Stage 5 Scene 3 */
-	class Stage5Scene3 : public Stage5Scene
+	/** Stage 5 Scene 3
+		This belongs to a different type. */
+	class Stage5Scene3 : public BATTLESHIP::FocusingInOneElementScene
 	{
 		public:
 		Stage5Scene3 (const QGAMES::Maps& m, 
 			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
 			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
 			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
-			: Stage5Scene (__BATTLESHIPII_STAGE5SCENE3__, m, cn, p, ePL)
+			: BATTLESHIP::FocusingInOneElementScene (__BATTLESHIPII_STAGE5SCENE3__, m, 
+					std::string ("The Real McCoy"), cn, p, ePL), // When the element is killed...
+			  _blockWithElementFocused (nullptr),
+			  _fliesWithShield (), _flyWithLife (nullptr),
+			  _numberBlocksShieldAdded (0)
 							{ }
+
+		/** @see parent. */
+		virtual void initialize () override final;
+		virtual void finalize () override final;
+
+		/** @see parent. */
+		virtual void processEvent (const QGAMES::Event& evnt) override;
+
+		private:
+		/** Thee block with the element focused. */
+		BATTLESHIP::StdUFOSceneActionBlock* _blockWithElementFocused;
+		/** The flies selected to provide a shield */
+		using UFOSWithShield = std::vector <BATTLESHIP::UFO*>;
+		UFOSWithShield _fliesWithShield;
+		int _numberBlocksShieldAdded;
+		/** The flies selected to provide a live */
+		BATTLESHIP::UFO* _flyWithLife;
+
+		/** The number of the base internal action block for the shild object to move. */
+		static const int _SHIEDBASEBLOCKNUMBER = 100000;
+		/** The number of the internal action block for the life object to move. */
+		static const int _LIFEBLOCKNUMBER = 100100;
 	};
 }
 

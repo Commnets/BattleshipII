@@ -148,41 +148,66 @@ void BattleshipII::MothershipUFO::setStateFor (int st, const QGAMES::Vector& o)
 // ---
 QGAMES::Positions BattleshipII::MothershipUFO::calculateCentralShootingPositionsForFormAndAspect (int f, int a) const
 {
-	// The position of the shooting zones are the same for the aspect...
-	QGAMES::bdata ang = __BD (4 * a);
-	QGAMES::bdata fct = __PI / __BD 180;
-	return (QGAMES::Positions 
-		{ __BD 280 * -QGAMES::Position::_yNormal, 
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 24.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 48.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 72.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 96.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 120.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 144.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 168.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 192.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 216.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 240.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 264.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 288.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 312.0 + ang) * fct),
-		  __BD 280 * -QGAMES::Position::_yNormal.rotate 
-			(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 336.0 + ang) * fct),
-		}
-	);
+	QGAMES::Positions result;
+
+	if (type () == __BATTLESHIPII_ENEMTYTYPE1012__)
+	{
+		QGAMES::bdata ang = __BD (6 * a);
+		QGAMES::bdata fct = __PI / __BD 180;
+		result = QGAMES::Positions 
+			{ __BD 180 * -QGAMES::Position::_yNormal, 
+			  __BD 180 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 60.0 + ang) * fct),
+			  __BD 180 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 120.0 + ang) * fct),
+			  __BD 180 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 180.0 + ang) * fct),
+			  __BD 180 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 240.0 + ang) * fct),
+			  __BD 180 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 300.0 + ang) * fct)
+			};
+	}
+	else
+	{
+		// The position of the shooting zones are the same for the aspect 
+		// __BATTLESHIPII_ENEMTYTYPE1010__ and __BATTLESHIPII_ENEMTYTYPE1011__
+		QGAMES::bdata ang = __BD (4 * a);
+		QGAMES::bdata fct = __PI / __BD 180;
+		result = QGAMES::Positions 
+			{ __BD 280 * -QGAMES::Position::_yNormal, 
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 24.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 48.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 72.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 96.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 120.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 144.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 168.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 192.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 216.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 240.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 264.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 288.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 312.0 + ang) * fct),
+			  __BD 280 * -QGAMES::Position::_yNormal.rotate 
+				(QGAMES::Position::_cero, QGAMES::Position::_zNormal, (__BD 336.0 + ang) * fct),
+			};
+	}
+
+	return (result);
 }
 
 // --
@@ -192,8 +217,10 @@ QGAMES::Rectangles BattleshipII::MothershipUFO::calculateWeakAreasForFormAndAspe
 
 	QGAMES::Rectangles result;
 	QGAMES::Vector d (__BD 20, __BD 20, __BD 0);
-	for (auto i : cPos)
-		result.push_back (QGAMES::Rectangle (i - d, i + d));
+	if (type () != __BATTLESHIPII_ENEMTYTYPE1012__)
+		for (auto i : cPos)
+			result.push_back (QGAMES::Rectangle (i - d, i + d));
+	result.push_back (QGAMES::Rectangle (-d, d)); // Only the center in case of type == __BATTLESHIPII_ENEMTYTYPE1012__
 
 	return (result);
 }

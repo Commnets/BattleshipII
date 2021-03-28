@@ -307,7 +307,7 @@
 							<Attribute id="Emerge" value="YES"/>
 							<Attribute id="TimeToMove" value="1"/> 
 							<Attribute id="Regenerate" value="NO"/>
-							<!-- The initial position here refers to the first UFO of the combt formation
+							<!-- The initial position here refers to the first UFO of the combat formation
 								 The position of the rest will be calculate according to the combat formation itself. -->
 							<Attribute id="InitialPosition" value="0.23,0.25,0.0"/>
 							<Attribute id="Type" value="2"/> 
