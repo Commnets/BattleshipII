@@ -24,9 +24,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage4Scene (int c, const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: BATTLESHIP::TimeLimitScene (c, m, cn, p, ePL)
 							{ }
 
@@ -39,9 +39,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage4Scene1 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: Stage4Scene (__BATTLESHIPII_STAGE4SCENE1__, m, cn, p, ePL)
 							{ }
 	};
@@ -51,11 +51,11 @@ namespace BattleshipII
 	{
 		public:
 		Stage4Scene2 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: Stage4Scene (__BATTLESHIPII_STAGE4SCENE2__, m, cn, p, ePL)
-							{ }
+							{ _externalEventSceneCompletedFunction = _NOSTDUFOSINSCENEEXTERNALEVNT; }
 	};
 
 	/** Stage 4 Scene 3 */
@@ -63,9 +63,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage4Scene3 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: BATTLESHIP::FocusingInOneElementScene (__BATTLESHIPII_STAGE4SCENE3__, m, 
 					std::string ("Big Mothership UFO killed"), cn, p, ePL)
 							{ }

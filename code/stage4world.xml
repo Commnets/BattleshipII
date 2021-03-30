@@ -124,6 +124,24 @@
 			<Scene id="70031">
 			
 				<Actions>
+					
+					<!-- Asteroid 1 -->
+					<Action id="70410">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="0"/>
+							<Attribute id="PointsGiven" value="200"/> 
+							<Attribute id="Speed" value="-3"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 2 -->
+					<Action id="70411">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="PointsGiven" value="300"/> 
+							<Attribute id="Speed" value="2"/> 
+						</Attributes>
+					</Action>
 				
 					<!-- A set of UFOs moving in circles and then attacking -->
 					<Action id="74410">
@@ -201,6 +219,33 @@
 			<Scene id="70032">
 			
 				<Actions>
+					
+					<!-- Asteroid 1 -->
+					<Action id="70420">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="0"/>
+							<Attribute id="PointsGiven" value="200"/> 
+							<Attribute id="Speed" value="-3"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 2 -->
+					<Action id="70421">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="PointsGiven" value="300"/> 
+							<Attribute id="Speed" value="2"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 3 -->
+					<Action id="70422">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="PointsGiven" value="300"/> 
+							<Attribute id="Speed" value="2"/> 
+						</Attributes>
+					</Action>
 
 					<!-- The mothership -->
 					<Action id="75420">

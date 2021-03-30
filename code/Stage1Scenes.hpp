@@ -24,9 +24,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage1Scene (int c, const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: BATTLESHIP::TimeLimitScene (c, m, cn, p, ePL)
 							{ }
 
@@ -40,9 +40,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage1Scene1 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: Stage1Scene (__BATTLESHIPII_STAGE1SCENE1__, m, cn, p, ePL)
 							{ }
 	};
@@ -53,9 +53,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage1Scene2 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: Stage1Scene (__BATTLESHIPII_STAGE1SCENE2__, m, cn, p, ePL)
 							{ }
 	};
@@ -68,9 +68,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage1Scene3 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ());
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ());
 
 		/** @see parent. */
 		virtual void updatePositions () override final;

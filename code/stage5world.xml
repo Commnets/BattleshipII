@@ -11,6 +11,33 @@
 			<Scene id="70040">
 			
 				<Actions>
+					
+					<!-- Asteroid 1 -->
+					<Action id="70500">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="0"/>
+							<Attribute id="PointsGiven" value="200"/> 
+							<Attribute id="Speed" value="-3"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 2 -->
+					<Action id="70501">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="PointsGiven" value="300"/> 
+							<Attribute id="Speed" value="2"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 3 -->
+					<Action id="70502">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="PointsGiven" value="300"/> 
+							<Attribute id="Speed" value="2"/> 
+						</Attributes>
+					</Action>
 			
 					<!-- A set of UFOs moving horizontally and then attacking -->
 					<Action id="74500">
@@ -113,6 +140,42 @@
 			<Scene id="70041">
 			
 				<Actions>
+					
+					<!-- Asteroid 1 -->
+					<Action id="70510">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="0"/>
+							<Attribute id="PointsGiven" value="200"/> 
+							<Attribute id="Speed" value="-3"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 2 -->
+					<Action id="70511">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="PointsGiven" value="300"/> 
+							<Attribute id="Speed" value="-2"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 3 -->
+					<Action id="70512">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="2"/>
+							<Attribute id="PointsGiven" value="300"/> 
+							<Attribute id="Speed" value="2"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 4 -->
+					<Action id="70513">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="2"/>
+							<Attribute id="PointsGiven" value="300"/> 
+							<Attribute id="Speed" value="3"/> 
+						</Attributes>
+					</Action>
 
 					<!-- The mothership 1 -->
 					<Action id="75510">
@@ -216,6 +279,33 @@
 			<Scene id="70042">
 			
 				<Actions>
+					
+					<!-- Asteroid 1 -->
+					<Action id="70520">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="0"/>
+							<Attribute id="PointsGiven" value="200"/> 
+							<Attribute id="Speed" value="-3"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 2 -->
+					<Action id="70521">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="PointsGiven" value="300"/> 
+							<Attribute id="Speed" value="2"/> 
+						</Attributes>
+					</Action>
+					
+					<!-- Asteroid 3 -->
+					<Action id="70522">
+						<Attributes>
+							<Attribute id="TimeToAppear" value="1"/>
+							<Attribute id="PointsGiven" value="300"/> 
+							<Attribute id="Speed" value="2"/> 
+						</Attributes>
+					</Action>
 			
 					<!-- Related with a set of UFO's moving left to right and then attacking-->
 					<Action id="74520">
@@ -236,8 +326,8 @@
 							<Attribute id="ShootingForce" value="2"/>
 							<Attribute id="Speed" value="2"/> 
 							<Attribute id="CombatFormation" value="0"/>
-							<Attribute id="CombatFormationAttrs" value="7,0.075,0.075"/>
-							<Attribute id="NumberUFOS" value="14"/> 
+							<Attribute id="CombatFormationAttrs" value="7,0.075,0.070"/>
+							<Attribute id="NumberUFOS" value="21"/> 
 							<Attribute id="TimerEvery" value="3"/>
 							<Attribute id="TimerForHowMany" value="-1"/> 
 							<Attribute id="TimerProbability" value="80"/>

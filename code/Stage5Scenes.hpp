@@ -24,9 +24,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage5Scene (int c, const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: BATTLESHIP::TimeLimitScene (c, m, cn, p, ePL)
 							{ }
 
@@ -39,11 +39,11 @@ namespace BattleshipII
 	{
 		public:
 		Stage5Scene1 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: Stage5Scene (__BATTLESHIPII_STAGE5SCENE1__, m, cn, p, ePL)
-							{ }
+							{ _externalEventSceneCompletedFunction = _NOSTDUFOSINSCENEEXTERNALEVNT; }
 	};
 
 	/** Stage 5 Scene 2 */
@@ -51,11 +51,11 @@ namespace BattleshipII
 	{
 		public:
 		Stage5Scene2 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: Stage5Scene (__BATTLESHIPII_STAGE5SCENE2__, m, cn, p, ePL)
-							{ }
+							{ _externalEventSceneCompletedFunction = _NOSTDUFOSINSCENEEXTERNALEVNT; }
 	};
 
 	/** Stage 5 Scene 3
@@ -64,14 +64,15 @@ namespace BattleshipII
 	{
 		public:
 		Stage5Scene3 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: BATTLESHIP::FocusingInOneElementScene (__BATTLESHIPII_STAGE5SCENE3__, m, 
 					std::string ("The Real McCoy"), cn, p, ePL), // When the element is killed...
 			  _blockWithElementFocused (nullptr),
-			  _fliesWithShield (), _flyWithLife (nullptr),
-			  _numberBlocksShieldAdded (0)
+			  _fliesWithShield (), _numberBlocksShieldAdded (0),
+			  _flyWithLife (nullptr),
+			  _blocksWithUFOs (), _blockWithMothership (nullptr)
 							{ }
 
 		/** @see parent. */
@@ -90,6 +91,10 @@ namespace BattleshipII
 		int _numberBlocksShieldAdded;
 		/** The flies selected to provide a live */
 		BATTLESHIP::UFO* _flyWithLife;
+
+		// Implementation
+		std::vector <BATTLESHIP::StdUFOSceneActionBlock*> _blocksWithUFOs;
+		BATTLESHIP::StdUFOSceneActionBlock* _blockWithMothership;
 
 		/** The number of the base internal action block for the shild object to move. */
 		static const int _SHIEDBASEBLOCKNUMBER = 100000;

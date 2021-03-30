@@ -24,9 +24,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage3Scene (int c, const QGAMES::Maps& m, int pG,
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: BATTLESHIP::ChallengeScene (c, m, pG, cn, p, ePL)
 							{ }
 
@@ -39,9 +39,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage3Scene1 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: Stage3Scene (__BATTLESHIPII_STAGE3SCENE1__, m, 10 /** Per enemy killed. */ , cn, p, ePL)
 							{ }
 	};

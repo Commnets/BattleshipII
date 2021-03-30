@@ -24,9 +24,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage2Scene (int c, const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: BATTLESHIP::SequentialActionBlocksScene (c, m, cn, p, ePL)
 							{ }
 
@@ -40,9 +40,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage2Scene1 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: Stage2Scene (__BATTLESHIPII_STAGE2SCENE1__, m, cn, p, ePL)
 							{ }
 	};
@@ -53,9 +53,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage2Scene2 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: Stage2Scene (__BATTLESHIPII_STAGE2SCENE2__, m, cn, p, ePL)
 							{ }
 	};
@@ -68,9 +68,9 @@ namespace BattleshipII
 	{
 		public:
 		Stage2Scene3 (const QGAMES::Maps& m, 
-			   const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
-			   const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
-			   const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
+				const QGAMES::Scene::Connections& cn = QGAMES::Scene::Connections (), 
+				const QGAMES::SceneProperties& p = QGAMES::SceneProperties (), 
+				const QGAMES::EntitiesPerLayer& ePL = QGAMES::EntitiesPerLayer ())
 			: Stage2Scene (__BATTLESHIPII_STAGE2SCENE3__, m, cn, p, ePL),
 			  _flyWithLife (NULL)
 							{ }

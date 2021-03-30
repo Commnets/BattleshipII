@@ -21,11 +21,15 @@
 	<!-- The initial world -->
 	<Property id="INITIALWORLD" value="50005"/>
 	<!-- The initial scene -->
-	<Property id="INITIALSCENE" value="70042"/>
+	<Property id="INITIALSCENE" value="70041"/>
 	<!-- The number of lives -->
 	<Property id="LIVES" value="3"/>
 	<!-- Whether to show the FPS -->
 	<Property id="FPS" value="YES"/>
+	<!-- The property with the value of the initial power -->
+	<Property id="POWER" value="5"/>
+	<!-- The property with the number of shootings left at the beginning -->
+	<Property id="SHOOTINGSLFT" value="999"/>
 	
 	<!-- The password to avoid being destroyed -->
 	<Property id="PASSWORD" value="ICFNO"/>
