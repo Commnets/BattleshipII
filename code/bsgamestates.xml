@@ -7,7 +7,7 @@
 	<!-- The usual controlling form -->
 	<GameState id="50000" type="50101" name="Controller" main="YES">
 		<FlowConditions>
-			<FlowCondition on="50002" when="0" to="50300"/> <!-- After the game is loaded, the game is initialized -->
+			<FlowCondition on="100041" when="0" to="50300"/> <!-- After the game is loaded, the game is initialized -->
 			<FlowCondition on="50300" when="0" to="50003"/> <!-- After the game is initialized the logo of the owner appears -->
 			<FlowCondition on="50003" when="0" to="50004"/> <!-- After the loogo appears, then the introduction starts -->
 			<FlowCondition on="50004" when="0" to="50009"/> <!-- After introduction, the menu is shown -->
@@ -45,17 +45,33 @@
 		</Attributes>
 	</GameState>
 	
-	<!-- To load the game.
-		 One of the houses used as background in many scenes full filled little by little -->
-	<GameState id="50002" type="10050" name="0Loading" main="YES"> <!-- Type LOADING -->
+	<!-- A message about loading -->
+	<GameState id="100041" type="10007" name="0Loading message" main="YES"> 
 		<Attributes>
-			<Attribute id="FORMID" value="50600"/> <!-- The big red planet -->
-			<Attribute id="FADE" value="255"/>
+			<Attribute id="TEXT" value="Loading"/>
+			<Attribute id="FONT" value="20020"/>
+			<Attribute id="FADE" value="150"/>
+			<Attribute id="ELAPSEDCYCLES" value="1"/>
+			<Attribute id="NUMBERFADECHANGES" value="21"/>
+			<Attribute id="FADESTEP" value="5"/>
 			<Attribute id="POSITION" value="0.5,0.5,0"/>
-			<Attribute id="POSREFERENCE" value="0"/> 
-			<Attribute id="REVERSE" value="NO"/>
-			<Attribute id="HORIZONTAL" value="YES"/>
+			<Attribute id="POSREFERENCE" value="0"/> <!-- Meaning Center -->
+			<Attribute id="ORIENTATION" value="1,0,0"/>
 		</Attributes>
+		<Nested>
+			<!-- To load the game.
+				 One of the houses used as background in many scenes full filled little by little -->
+			<GameState id="50002" type="10050" name="0Loading" main="YES"> <!-- Type LOADING -->
+				<Attributes>
+					<Attribute id="FORMID" value="50600"/> <!-- The big red planet -->
+					<Attribute id="FADE" value="255"/>
+					<Attribute id="POSITION" value="0.5,0.5,0"/>
+					<Attribute id="POSREFERENCE" value="0"/> 
+					<Attribute id="REVERSE" value="NO"/>
+					<Attribute id="HORIZONTAL" value="YES"/>
+				</Attributes>
+			</GameState>
+		</Nested>
 	</GameState>
 	
 	<!-- To initialize the game -->
