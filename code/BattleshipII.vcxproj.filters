@@ -149,6 +149,9 @@
     <ClInclude Include="Artists.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="battleshipicon.ico">
@@ -257,7 +260,7 @@
     </Xml>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="TestBattleship.rc">
+    <ResourceCompile Include="BattleshipII.rc">
       <Filter>Archivos de recursos</Filter>
     </ResourceCompile>
   </ItemGroup>

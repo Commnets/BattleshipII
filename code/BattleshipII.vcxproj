@@ -15,19 +15,19 @@
     <ProjectGuid>{f2800089-8ef4-4885-b59b-fe623b8a9084}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>BattleshipII</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -124,6 +124,7 @@
     <ClInclude Include="Defs.hpp" />
     <ClInclude Include="doxy.hpp" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
     <ClInclude Include="SceneActionBlocks.hpp" />
     <ClInclude Include="Scenes.hpp" />
     <ClInclude Include="Stage1Scenes.hpp" />
@@ -276,7 +277,7 @@
     </Xml>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="TestBattleship.rc" />
+    <ResourceCompile Include="BattleshipII.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
